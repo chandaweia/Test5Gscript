@@ -12,7 +12,7 @@ function write_data()
 	then
 		return
 	else
-			echo "ke xieru"
+			echo "$1,$8,$9,${10},${12},${13}" >> $RESULT
 	fi
 
 }
