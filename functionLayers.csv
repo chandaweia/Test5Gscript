@@ -1,0 +1,75 @@
+Command	Object	Symbol	Layer	Layer2					
+TASK_RRC_GNB			RRC						
+TASK_GTPV1_U			NG	PDCP					
+RLC queue			RLC						
+thread_FH			PHY	LOW PHY					
+feptx			PHY	LOW PHY					
+feprx			PHY?	LOW PHY					
+									
+									
+									
+		rotate_cpx_vector	PHY	HIGH PHY		in MODULATION			
+		nr_generate_pdsch	PHY	HIGH PHY		"IN NR_TRANSPORT, so HIGH PHY"			
+		dft2048	PHY						
+		nr_codeword_scrambling	PHY	HIGH PHY		Scrambling?			
+		allowed_xlsch_re_in_dmrs_symbol	PHY	LOW PHY or RF		dmrs			https://www.techplayon.com/5g-nr-reference-signals-dmrs-ptrssrs-and-csi-rs/ 
+		nr_pdcch_scrambling	PHY			NR Channel			
+		dft1024	PHY						
+		gNB_I0_measurements	PHY	LOW PHY					
+		dft256	PHY						
+		nr_modulation	PHY	HIGH PHY		Modulation?			
+		nr_segmentation	PHY	HIGH PHY		Coding & decoding			
+		multadd_cpx_vector	PHY	LOW PHY		MODULATION/beamforming.c so LOW PHY or HIGH PHY			
+		ldpc	PHY	HIGH PHY	LDPC				
+		LDPC	PHY	HIGH PHY	LDPC				
+		signal_energy_nodc	PHY						
+		crc	PHY	HIGH PHY					
+		rx_nr_prach	PHY	LOW PHY					
+		idft64	PHY						
+		fill_ul_rb_mask	PHY	LOW PHY		???			
+		nr_est_timing_advance_pusch	PHY	HIGH PHY		estimate timing advance for MAC			
+		idft	PHY	LOW PHY					
+		get_pdsch_to_harq_feedback	MAC						
+		nr_ulsch_decoding	PHY	???		NR_TRANSPORT			
+pdcp			PDCP						
+		nr_rlc_sdu_segment_list_add	RLC						
+		rlc_	RLC			???			
+		get_dmrs_freq_idx	PHY	LOW PHY		dmrs			
+		nr_schedule_ulsch	MAC						
+		nr_fill_nfapi_pucch	MAC						
+		sn_compare_tx	RLC						
+		nr_fill_cce_list	PHY	LOW PHY		"NR_TRANSPORT,cce"			
+		phy_procedures_gNB_uespec_RX	PHY	LOW PHY					
+		phy_	PHY						
+		dB_fixed_times10	PHY	LOW PHY???					
+		nr_generate_dci	PHY	LOW PHY		dci			
+		nr_compute_tbslbrm	MAC						
+		nr_slot_select	PHY	LOW PHY		nr-ru.c			
+		schedule_control_sib1	MAC						
+		handle_nr_uci	MAC						
+		pf_dl	MAC						
+		polar_encoder_fast	PHY	HIGH PHY					
+		nr_schedule_ue_spec	MAC						
+		dB_fixed	PHY	LOW PHY???					
+		nr_rx_pusch	PHY	LOW PHY???		NR_TRANSPORT			
+		nr_generate_pbch	PHY	LOW PHY		present in downlink signals only.			
+		is_nr_UL_slot	MAC						
+		ru_thread	PHY	LOW PHY					
+		NR_UL_indication	PHY	LOW PHY???					
+		get_coreset_rballoc	PHY or MAC						
+		get_samples_per_slot	PHY	LOW PHY		nr-ru.c			
+		sn_compare_tx	RLC						
+		nr_pusch_dmrs_rx	PHY	LOW PHY					
+		nr_polar_params	PHY	HIGH PHY		coding			
+		schedule_nr_mib	MAC						
+		nr_ulsch_unscrambling	PHY	HIGH PHY		NR_TRANSPORT			
+		nr_schedule_response	PHY	HIGH PHY???					
+		pf_ul	MAC						
+		nr_feptx_ofdm_2thread	PHY	LOW PHY		nr-ru.c			
+		feptx	PHY	LOW PHY		??			
+		nr_fr1_ulsch_preprocessor	MAC						
+		pf_dl	MAC						
+		nr_ulsch_extract_rbs_single	PHY	???		NR_TRANSPORT			
+		PHY_ofdm_mod.part.0	PHY	HIGH PHY		in MODULATION			
+		PHY_	PHY	???		???			
+		nr_gnb_measurements	PHY			"NR_TRANSPORT,NR_ESTIMATION"			
