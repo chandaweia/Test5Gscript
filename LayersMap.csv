@@ -1,4 +1,4 @@
-Command,Object,Symbol,Layer,Layer2,,Notes
+Command,Object,Symbol,Layer,Layer2,Layer3,Notes
 thread_FH,,,PHY,LOW PHY,,
 feptx,,,PHY,LOW PHY,,
 feprx,,,PHY,LOW PHY,,

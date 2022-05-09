@@ -10,7 +10,6 @@ def readlayersmap(mapfile):
         list_of_rows =  list(csv_reader)
     csv_file.close()
 
-    
     commandlist.append(list_of_rows[0])
     objectlist.append(list_of_rows[0])
     symbollist.append(list_of_rows[0])
@@ -24,9 +23,48 @@ def readlayersmap(mapfile):
             symbollist.append(list_of_rows[i])
     #return list_of_rows
 
+"""def searchlist(layerlist, word):
+    print("searchlist:word:",word)
+    for i in range(1, len(layerlist)):
+        if layerlist[0].find(word) == 0: #-1 not found, 0 found
+            return layerlist[i]
+    return -1
+"""
+
+def layerclassify(str):
+    print("\nlayerclassify:+++++",str,end='')
+    str_list=str.split()
+    #str_list:  24.09%  thread_FH      librfsimulator.so   [.] rfsimulator_read
+    if len(str_list) < 5:
+        return ""
+    for i in range(1, len(commandlist)):
+        #print("commandlist[i][0]:{0},str_list[2]:{1},len(str_list):{2}".format(commandlist[i][0],str_list[1],len(str_list)))
+        if commandlist[i][0].find(str_list[1]) != -1: #-1 not found, 0 found
+            print("commandlist[i][0]:{0},str_list[1]:{1},len(str_list):{2}".format(commandlist[i][0],str_list[1],len(str_list)))
+            print("commandlist str_list[0]",str_list[0])
+            res = str_list[0]+","+str_list[1]+","+str_list[2]+","+str_list[4]+","\
+                +commandlist[i][3]+","+commandlist[i][4]+","+commandlist[i][5]+"\n"
+            return res
+    for i in range(1, len(symbollist)):
+        #print("symbollist str_list[0]",str_list[0])
+        if symbollist[i][2].find(str_list[4]) != -1: #-1 not found, 0 found
+            print("symbollist str_list[0]",str_list[0])
+            res = str_list[0]+","+str_list[1]+","+str_list[2]+","+str_list[4]+","\
+                +symbollist[i][3]+","+symbollist[i][4]+","+symbollist[i][5]+"\n"
+            return res
+    for i in range(1, len(objectlist)):
+        #print("objectlist str_list[0]",str_list[0])
+        if objectlist[i][1].find(str_list[2]) != -1: #-1 not found, 0 found
+            print("objectlist str_list[0]",str_list[0])
+            res = str_list[0]+","+str_list[1]+","+str_list[2]+","+str_list[3]+","+str_list[4]+","\
+                +objectlist[i][3]+","+objectlist[i][4]+","+objectlist[i][5]+"\n"
+            return res
+        
+    return ""
+
 def doclassify(filename):
-    filename_left=filename+"_remaining"
-    filename_classified=filename+"_classified"
+    filename_left=filename+"_remaining.txt"
+    filename_classified=filename+"_classified.csv"
 
     f = open(filename)
     fw_left = open(filename_left,"w")
@@ -35,17 +73,20 @@ def doclassify(filename):
     line = f.readline()
     while line:
         #print(line)
-        if line.startswith('#') or line.startswith('|') or line.startswith('-'):
-            print("Start with++",line)
+        linestr = line.lstrip(" ")
+        if linestr.startswith('#') or linestr.startswith('|') or linestr.startswith('-'):
+            #print("Start with++",linestr)
             #Write to another file
-            #print(line)
+            #print(linestr)
             fw_left.write(line)
-        elif line.find("%") != -1:
+        elif linestr.find("%") != "":
             #do classify
-            print("Contain++",line)
-            fw_classified.write(line)
+            #print("Contain++",linestr)
+            res_layer = layerclassify(linestr)
+            #print(res_layer)
+            fw_classified.write(res_layer) 
         else:
-            print("classify++",line)
+            #print("classify++",linestr)
             #print(line)
             fw_left.write(line)
             #Write to another file
@@ -54,27 +95,6 @@ def doclassify(filename):
     f.close()
     fw_left.close()
     fw_classified.close()
-
-
-def dellines(filename, str):
-    list = []
-    matchPattern = re.compile(r'INVALID PARAMETER')
-    f = open(filename)
-    line = f.readline()
-    while line:
-        print(line)
-        line = f.readline()
-    f.close()
-        
-    #elif matchPattern.search(line):
-    #pass
-    #else:
-    #list.append(line)
-    #file.close()
-    #file = open(r'C:\target.txt', 'w')
-    #for i in list:
-    #file.write(i)
-    #file.close()
 
 #main function
 commandlist=[]
