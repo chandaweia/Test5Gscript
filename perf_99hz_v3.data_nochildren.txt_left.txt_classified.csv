@@ -1,0 +1,72 @@
+1.09%,Tpool3_-1,libldpc.so,ldpc384_byte,PHY,HIGH PHY,LDPC
+0.86%,Tpool0_-1,libldpc.so,ldpc384_byte,PHY,HIGH PHY,LDPC
+0.82%,Tpool1_-1,libldpc.so,ldpc384_byte,PHY,HIGH PHY,LDPC
+0.82%,Tpool2_-1,libldpc.so,ldpc384_byte,PHY,HIGH PHY,LDPC
+0.72%,Tpool0_-1,libldpc.so,nrLDPC_encod,PHY,HIGH PHY,LDPC
+0.71%,Tpool2_-1,nr-softmodem,nr_interleaving_ldpc,PHY,HIGH PHY,LDPC
+0.67%,Tpool3_-1,nr-softmodem,nr_interleaving_ldpc,PHY,HIGH PHY,LDPC
+0.65%,Tpool1_-1,nr-softmodem,nr_interleaving_ldpc,PHY,HIGH PHY,LDPC
+0.64%,Tpool3_-1,libldpc.so,nrLDPC_encod,PHY,HIGH PHY,LDPC
+0.64%,Tpool1_-1,libldpc.so,nrLDPC_encod,PHY,HIGH PHY,LDPC
+0.63%,Tpool2_-1,libldpc.so,nrLDPC_encod,PHY,HIGH PHY,LDPC
+0.32%,Tpool0_-1,nr-softmodem,nr_interleaving_ldpc,PHY,HIGH PHY,LDPC
+0.08%,Tpool0_-1,nr-softmodem,crc24b,PHY,HIGH PHY,
+0.06%,Tpool3_-1,nr-softmodem,crc24a,PHY,HIGH PHY,
+0.06%,Tpool3_-1,nr-softmodem,crc24b,PHY,HIGH PHY,
+0.05%,Tpool3_-1,libdfts.so,idft256,PHY,,
+0.05%,Tpool1_-1,libdfts.so,idft1024,PHY,,
+0.04%,Tpool3_-1,libldpc.so,nrLDPC_bnProcPc,PHY,HIGH PHY,LDPC
+0.04%,Tpool3_-1,nr-softmodem,nr_rate_matching_ldpc,PHY,HIGH PHY,LDPC
+0.04%,Tpool2_-1,nr-softmodem,ldpc8blocks,PHY,HIGH PHY,LDPC
+0.04%,pdcp_timer,[kernel.kallsyms],do_syscall_64,PDCP,,
+0.04%,Tpool2_-1,nr-softmodem,nr_rate_matching_ldpc,PHY,HIGH PHY,LDPC
+0.04%,Tpool3_-1,nr-softmodem,nr_rlc_entity_am_recv_pdu,RLC,,
+0.04%,Tpool2_-1,nr-softmodem,crc24a,PHY,HIGH PHY,
+0.03%,Tpool1_-1,nr-softmodem,crc24b,PHY,HIGH PHY,
+0.03%,Tpool0_-1,nr-softmodem,nr_rlc_entity_am_recv_pdu,RLC,,
+0.03%,Tpool2_-1,libldpc.so,nrLDPC_decod,PHY,HIGH PHY,LDPC
+0.03%,Tpool3_-1,nr-softmodem,nr_rate_matching_ldpc_rx,PHY,HIGH PHY,LDPC
+0.03%,Tpool2_-1,nr-softmodem,nr_rate_matching_ldpc_rx,PHY,HIGH PHY,LDPC
+0.03%,Tpool3_-1,libldpc.so,nrLDPC_decoder_core.isra.1,PHY,HIGH PHY,LDPC
+0.03%,Tpool0_-1,nr-softmodem,nr_rate_matching_ldpc,PHY,HIGH PHY,LDPC
+0.03%,Tpool2_-1,libdfts.so,idft2048,PHY,,
+0.03%,Tpool3_-1,nr-softmodem,crc24c,PHY,HIGH PHY,
+0.03%,Tpool1_-1,nr-softmodem,ldpc8blocks,PHY,HIGH PHY,LDPC
+0.03%,Tpool1_-1,libldpc.so,ldpc_BG2_Zc88_byte,PHY,HIGH PHY,LDPC
+0.02%,Tpool3_-1,libdfts.so,idft1024,PHY,,
+0.02%,Tpool0_-1,nr-softmodem,crc24a,PHY,HIGH PHY,
+0.02%,Tpool3_-1,libldpc.so,nrLDPC_cn2bnProcBuf_BG2,PHY,HIGH PHY,LDPC
+0.02%,pdcp_timer,[kernel.kallsyms],entry_SYSCALL_64_after_hwframe,PDCP,,
+0.02%,Tpool0_-1,libldpc.so,nrLDPC_decoder_core.isra.1,PHY,HIGH PHY,LDPC
+0.02%,Tpool0_-1,nr-softmodem,nr_rlc_entity_am_buffer_status,RLC,,
+0.02%,Tpool0_-1,nr-softmodem,crc24c,PHY,HIGH PHY,
+0.02%,pdcp_timer,[kernel.kallsyms],syscall_return_via_sysret,PDCP,,
+0.02%,pdcp_timer,[kernel.kallsyms],cpupri_set,PDCP,,
+0.02%,Tpool2_-1,nr-softmodem,nr_rlc_manager_get_ue,RLC,,
+0.02%,Tpool0_-1,libldpc.so,nrLDPC_cn2bnProcBuf_BG2,PHY,HIGH PHY,LDPC
+0.02%,Tpool2_-1,nr-softmodem,nr_rlc_entity_am_recv_pdu,RLC,,
+0.02%,Tpool3_-1,nr-softmodem,nr_rlc_entity_am_generate_pdu,RLC,,
+0.02%,Tpool2_-1,libldpc.so,nrLDPC_decoder_core.isra.1,PHY,HIGH PHY,LDPC
+0.02%,pdcp_timer,[unknown],0xfffffe000009901b,PDCP,,
+0.02%,Tpool0_-1,nr-softmodem,nr_rate_matching_ldpc_rx,PHY,HIGH PHY,LDPC
+0.01%,Tpool0_-1,libdfts.so,idft64@plt,PHY,,
+0.01%,pdcp_timer,[kernel.kallsyms],do_futex,PDCP,,
+0.01%,Tpool0_-1,nr-softmodem,nr_rlc_pdu_encoder_put_bits,RLC,,
+0.01%,Tpool1_-1,libldpc.so,nrLDPC_decoder_core.isra.1,PHY,HIGH PHY,LDPC
+0.01%,Tpool0_-1,nr-softmodem,nr_rlc_pdu_decoder_get_bits,RLC,,
+0.01%,pdcp_timer,[kernel.kallsyms],futex_wait,PDCP,,
+0.01%,Tpool2_-1,libldpc.so,nrLDPC_bnProcPc,PHY,HIGH PHY,LDPC
+0.01%,pdcp_timer,[kernel.kallsyms],sys_futex,PDCP,,
+0.01%,Tpool1_-1,nr-softmodem,phy_procedures_gNB_TX,PHY,,
+0.01%,pdcp_timer,nr-softmodem,nr_pdcp_entity_set_time,PDCP,,
+0.01%,Tpool0_-1,nr-softmodem,ldpc8blocks,PHY,HIGH PHY,LDPC
+0.01%,pdcp_timer,[kernel.kallsyms],futex_wait_queue_me,PDCP,,
+0.01%,pdcp_timer,libpthread-2.27.so,pthread_cond_wait@@GLIBC_2.3.2,PDCP,,
+0.01%,pdcp_timer,[unknown],0xfffffe00000ca01b,PDCP,,
+0.01%,pdcp_timer,[kernel.kallsyms],find_next_bit,PDCP,,
+0.01%,pdcp_timer,[kernel.kallsyms],__perf_event_task_sched_in,PDCP,,
+0.00%,pdcp_timer,[kernel.kallsyms],native_apic_msr_write,PDCP,,
+0.00%,pdcp_timer,[kernel.kallsyms],intel_bts_enable_local,PDCP,,
+0.00%,pdcp_timer,[kernel.kallsyms],intel_pmu_handle_irq,PDCP,,
+0.00%,pdcp_timer,[kernel.kallsyms],__indirect_thunk_start,PDCP,,
+0.00%,pdcp_timer,[kernel.kallsyms],x86_pmu_enable,PDCP,,

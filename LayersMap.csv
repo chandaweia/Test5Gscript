@@ -2,7 +2,7 @@ Command,Object,Symbol,Layer,Layer2,Layer3,Notes
 thread_FH,,,PHY,LOW PHY,,
 feptx,,,PHY,LOW PHY,,
 feprx,,,PHY,LOW PHY,,
-RLC queue,,,RLC,,,
+RLC,,,RLC,,,
 TASK_GTPV1_U,,,NG,PDCP,,
 pdcp,,,PDCP,,,
 TASK_RRC_GNB,,,RRC,,,
