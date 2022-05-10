@@ -1,0 +1,1102 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 3K of event 'cycles:ppp'
+# Event count (approx.): 74706780522
+#
+# Overhead  Command       Shared Object       Symbol                                        
+# ........  ............  ..................  ..............................................
+#
+    11.52%  thread_FH     librfsimulator.so   [.] rfsimulator_read
+            |
+            ---rfsimulator_read
+               rx_rf
+               ru_thread
+               0x3000000000006a
+
+     3.28%  TASK_GTPV1_U  [kernel.kallsyms]   [k] do_syscall_64
+            |
+            ---do_syscall_64
+               |          
+                --3.25%--entry_SYSCALL_64_after_hwframe
+                          |          
+                          |--1.52%--epoll_wait
+                          |          0
+                          |          
+                          |--0.66%--__libc_write
+                          |          0x395b2020205d5550
+                          |          
+                           --0.64%--__libc_recvfrom
+
+     2.71%  nr-softmodem  librfsimulator.so   [.] rfsimulator_write_internal.constprop.1
+            |
+            ---rfsimulator_write_internal.constprop.1
+               tx_rf
+               ru_tx_func
+               0
+
+     2.68%  feptx         libdfts.so          [.] idft64
+            |
+            ---idft64
+               idft1024
+               idft2048
+               idft
+               PHY_ofdm_mod.part.0
+               nr_feptx0
+
+     2.23%  feptx         libc-2.27.so        [.] __memmove_avx_unaligned_erms
+            |
+            ---__memmove_avx_unaligned_erms
+               |          
+                --1.68%--nr_feptx0
+
+     1.88%  TASK_GTPV1_U  [kernel.kallsyms]   [k] syscall_return_via_sysret
+            |
+            ---syscall_return_via_sysret
+               |          
+                --1.03%--__libc_write
+                          0x395b2020205d5550
+
+     1.72%  thread_FH     [kernel.kallsyms]   [k] copy_user_enhanced_fast_string
+            |
+            ---copy_user_enhanced_fast_string
+               copy_page_to_iter
+               skb_copy_datagram_iter
+               tcp_recvmsg
+               inet_recvmsg
+               sock_recvmsg
+               SYSC_recvfrom
+               sys_recvfrom
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __libc_recv
+
+     1.48%  Tpool0_-1     libc-2.27.so        [.] __memmove_avx_unaligned_erms
+            |
+            ---__memmove_avx_unaligned_erms
+               |          
+                --0.97%--ldpc8blocks
+                          one_thread
+                          |          
+                           --0.94%--0x100000000
+
+     1.35%  Tpool3_-1     nr-softmodem        [.] nr_generate_pdsch
+            |
+            ---nr_generate_pdsch
+               phy_procedures_gNB_TX
+               |          
+                --0.71%--0x5fb2c000
+
+     1.34%  feptx         libdfts.so          [.] idft1024
+            |
+            ---idft1024
+               idft2048
+               idft
+               PHY_ofdm_mod.part.0
+               nr_feptx0
+
+     1.30%  feptx         libdfts.so          [.] idft256
+            |
+            ---idft256
+               |          
+                --1.29%--idft1024
+                          idft2048
+                          idft
+                          PHY_ofdm_mod.part.0
+                          nr_feptx0
+
+     1.25%  Tpool3_-1     nr-softmodem        [.] rotate_cpx_vector
+            |
+            ---rotate_cpx_vector
+               |          
+                --0.68%--0x3000000000006a
+
+     1.22%  feprx         libdfts.so          [.] dft2048
+            |
+            ---dft2048
+               dft
+               nr_slot_fep_ul
+               nr_fep0
+
+     1.17%  TASK_GTPV1_U  libc-2.27.so        [.] vfprintf
+            |
+            ---vfprintf
+               |          
+                --0.94%--__vsnprintf_chk
+
+     1.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] vfs_write
+            |
+            ---vfs_write
+               sys_write
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __libc_write
+               0x395b2020205d5550
+
+     0.98%  TASK_GTPV1_U  [kernel.kallsyms]   [k] n_tty_write
+            |
+            ---n_tty_write
+               tty_write
+               __vfs_write
+               vfs_write
+               sys_write
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __libc_write
+               0x395b2020205d5550
+
+     0.89%  Tpool2_-1     libc-2.27.so        [.] __memset_avx2_erms
+            |
+            ---__memset_avx2_erms
+               |          
+                --0.77%--one_thread
+                          0x200000000
+
+     0.87%  TASK_GTPV1_U  [kernel.kallsyms]   [k] resched_curr
+            |
+            ---resched_curr
+               |          
+                --0.84%--check_preempt_curr
+                          ttwu_do_wakeup
+                          ttwu_do_activate
+                          try_to_wake_up
+                          |          
+                           --0.66%--wake_up_process
+                                     insert_work
+                                     __queue_work
+                                     queue_work_on
+                                     tty_flip_buffer_push
+                                     pty_write
+                                     n_tty_write
+                                     tty_write
+                                     __vfs_write
+                                     vfs_write
+                                     sys_write
+                                     do_syscall_64
+                                     entry_SYSCALL_64_after_hwframe
+                                     __libc_write
+                                     0x395b2020205d5550
+
+     0.80%  RLC queue     [kernel.kallsyms]   [k] do_syscall_64
+            |
+            ---do_syscall_64
+               |          
+                --0.70%--entry_SYSCALL_64_after_hwframe
+
+     0.80%  Tpool0_-1     nr-softmodem        [.] nr_generate_pdsch
+            |
+            ---nr_generate_pdsch
+               phy_procedures_gNB_TX
+               |          
+                --0.53%--0x5e4d9000
+
+     0.80%  Tpool1_-1     nr-softmodem        [.] nr_generate_pdsch
+            |
+            ---nr_generate_pdsch
+               phy_procedures_gNB_TX
+
+     0.80%  TASK_RRC_GNB  [kernel.kallsyms]   [k] do_syscall_64
+            |
+            ---do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               epoll_wait
+               0
+
+     0.79%  Tpool2_-1     libpthread-2.27.so  [.] __pthread_mutex_unlock
+            |
+            ---__pthread_mutex_unlock
+               0x400003437
+
+     0.76%  TASK_GTPV1_U  libc-2.27.so        [.] _IO_default_xsputn
+            |
+            ---_IO_default_xsputn
+
+     0.76%  TASK_GTPV1_U  [kernel.kallsyms]   [k] mark_wake_futex
+            |
+            ---mark_wake_futex
+               futex_wake
+               do_futex
+               sys_futex
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               pthread_cond_signal@@GLIBC_2.3.2
+
+     0.76%  nr-softmodem  [kernel.kallsyms]   [k] __cgroup_account_cputime
+            |
+            ---__cgroup_account_cputime
+               update_curr_rt
+               dequeue_task_rt
+               deactivate_task
+               __sched_text_start
+               schedule
+               futex_wait_queue_me
+               futex_wait
+               do_futex
+               sys_futex
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               pthread_cond_wait@@GLIBC_2.3.2
+               0
+
+     0.75%  nr-softmodem  libpthread-2.27.so  [.] pthread_cond_signal@@GLIBC_2.3.2
+            |
+            ---pthread_cond_signal@@GLIBC_2.3.2
+
+     0.74%  Tpool1_-1     [kernel.kallsyms]   [k] put_prev_task_rt
+            |
+            ---put_prev_task_rt
+               __sched_text_start
+               schedule
+               futex_wait_queue_me
+               futex_wait
+               do_futex
+               sys_futex
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               pthread_cond_wait@@GLIBC_2.3.2
+               0
+
+     0.73%  feprx         libdfts.so          [.] dft1024
+            |
+            ---dft1024
+               dft2048
+               dft
+               nr_slot_fep_ul
+               nr_fep0
+
+     0.73%  nr-softmodem  libc-2.27.so        [.] __memset_avx2_erms
+            |
+            ---__memset_avx2_erms
+
+     0.71%  TASK_GTPV1_U  [kernel.kallsyms]   [k] _raw_spin_lock_irqsave
+            |
+            ---_raw_spin_lock_irqsave
+
+     0.71%  Tpool2_-1     libc-2.27.so        [.] __memmove_avx_unaligned_erms
+            |
+            ---__memmove_avx_unaligned_erms
+               |          
+                --0.52%--ldpc8blocks
+                          one_thread
+
+     0.70%  Tpool2_-1     nr-softmodem        [.] fill_ul_rb_mask
+            |
+            ---fill_ul_rb_mask
+
+     0.67%  Tpool2_-1     libpthread-2.27.so  [.] pthread_cond_wait@@GLIBC_2.3.2
+            |
+            ---pthread_cond_wait@@GLIBC_2.3.2
+               0x4230f4c000000002
+
+     0.66%  feptx         libdfts.so          [.] idft2048
+            |
+            ---idft2048
+               idft
+               PHY_ofdm_mod.part.0
+               nr_feptx0
+
+     0.65%  TASK_GTPV1_U  [kernel.kallsyms]   [k] datagram_poll
+            |
+            ---datagram_poll
+               udp_poll
+               sock_poll
+               ep_item_poll.isra.12
+               ep_send_events_proc
+               ep_scan_ready_list.constprop.17
+               ep_poll
+               sys_epoll_wait
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               epoll_wait
+               0
+
+     0.63%  TASK_GTPV1_U  [kernel.kallsyms]   [k] finish_task_switch
+            |
+            ---finish_task_switch
+               __sched_text_start
+               schedule
+               schedule_hrtimeout_range_clock
+               schedule_hrtimeout_range
+               ep_poll
+               sys_epoll_wait
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               epoll_wait
+               0
+
+     0.62%  Tpool0_-1     nr-softmodem        [.] nr_interleaving_ldpc
+            |
+            ---nr_interleaving_ldpc
+
+     0.62%  TASK_GTPV1_U  [kernel.kallsyms]   [k] entry_SYSCALL_64_after_hwframe
+            |
+            ---entry_SYSCALL_64_after_hwframe
+
+     0.61%  TASK_GTPV1_U  [kernel.kallsyms]   [k] select_idle_sibling
+            |
+            ---select_idle_sibling
+               try_to_wake_up
+               wake_up_process
+               insert_work
+               __queue_work
+               queue_work_on
+               tty_flip_buffer_push
+               pty_write
+               n_tty_write
+               tty_write
+               __vfs_write
+               vfs_write
+               sys_write
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __libc_write
+               0x395b2020205d5550
+
+     0.61%  pdcp_timer    libpthread-2.27.so  [.] __pthread_mutex_lock
+            |
+            ---__pthread_mutex_lock
+
+     0.57%  TASK_RRC_GNB  [kernel.kallsyms]   [k] cpupri_set
+            |
+            ---cpupri_set
+               dequeue_rt_stack
+               dequeue_task_rt
+               deactivate_task
+               __sched_text_start
+               schedule
+               schedule_hrtimeout_range_clock
+               schedule_hrtimeout_range
+               ep_poll
+               sys_epoll_wait
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               epoll_wait
+               0
+
+     0.56%  Tpool1_-1     [kernel.kallsyms]   [k] do_futex
+            |
+            ---do_futex
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __lll_unlock_wake
+               0
+
+     0.56%  thread_FH     [kernel.kallsyms]   [k] ep_poll
+            |
+            ---ep_poll
+               sys_epoll_wait
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               epoll_wait
+               0
+
+     0.56%  Tpool1_-1     nr-softmodem        [.] crc24a
+            |
+            ---crc24a
+               0
+
+     0.56%  Tpool3_-1     libc-2.27.so        [.] __memmove_avx_unaligned_erms
+            |
+            ---__memmove_avx_unaligned_erms
+
+     0.55%  thread_FH     [kernel.kallsyms]   [k] __kmalloc_node_track_caller
+            |
+            ---__kmalloc_node_track_caller
+               __kmalloc_reserve.isra.40
+               __alloc_skb
+               __tcp_send_ack.part.38
+               tcp_send_ack
+               tcp_cleanup_rbuf
+               tcp_recvmsg
+               inet_recvmsg
+               sock_recvmsg
+               SYSC_recvfrom
+               sys_recvfrom
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __libc_recv
+
+     0.54%  thread_FH     libc-2.27.so        [.] __memset_avx2_erms
+            |
+            ---__memset_avx2_erms
+
+     0.54%  TASK_GNB_APP  nr-softmodem        [.] dump_mac_stats
+            |
+            ---dump_mac_stats
+
+     0.53%  RLC queue     [kernel.kallsyms]   [k] syscall_return_via_sysret
+            |
+            ---syscall_return_via_sysret
+
+     0.52%  RLC queue     libc-2.27.so        [.] cfree@GLIBC_2.2.5
+            |
+            ---cfree@GLIBC_2.2.5
+
+     0.51%  feprx         libpthread-2.27.so  [.] __lll_unlock_wake
+            |
+            ---__lll_unlock_wake
+               0
+
+     0.51%  Tpool1_-1     libc-2.27.so        [.] __memmove_avx_unaligned_erms
+            |
+            ---__memmove_avx_unaligned_erms
+
+     0.51%  Tpool0_-1     nr-softmodem        [.] nr_modulation
+            |
+            ---nr_modulation
+
+     0.50%  Tpool1_-1     [kernel.kallsyms]   [k] dequeue_task_rt
+            |
+            ---dequeue_task_rt
+               deactivate_task
+               __sched_text_start
+               schedule
+               futex_wait_queue_me
+               futex_wait
+               do_futex
+               sys_futex
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               pthread_cond_wait@@GLIBC_2.3.2
+               0x100010000000000
+
+     0.47%  TASK_GNB_APP  [kernel.kallsyms]   [k] ext4_write_begin
+     0.45%  Tpool1_-1     libldpc.so          [.] nrLDPC_encod
+     0.43%  TASK_GTPV1_U  [kernel.kallsyms]   [k] skb_release_data
+     0.40%  Tpool3_-1     libldpc.so          [.] ldpc384_byte
+     0.39%  TASK_GTPV1_U  [kernel.kallsyms]   [k] cpupri_set
+     0.39%  feprx         libdfts.so          [.] dft256
+     0.39%  TASK_GTPV1_U  [kernel.kallsyms]   [k] _raw_spin_lock
+     0.38%  Tpool1_-1     nr-softmodem        [.] nr_interleaving_ldpc
+     0.37%  nr-softmodem  [kernel.kallsyms]   [k] copy_user_enhanced_fast_string
+     0.37%  TASK_GTPV1_U  [kernel.kallsyms]   [k] pty_write
+     0.37%  TASK_GTPV1_U  [kernel.kallsyms]   [k] do_csum
+     0.35%  Tpool1_-1     libldpc.so          [.] ldpc384_byte
+     0.35%  TASK_GTPV1_U  [kernel.kallsyms]   [k] select_task_rq_fair
+     0.33%  Tpool2_-1     nr-softmodem        [.] rx_nr_prach
+     0.31%  TASK_GTPV1_U  libpthread-2.27.so  [.] __pthread_mutex_lock
+     0.31%  Tpool2_-1     libldpc.so          [.] ldpc384_byte
+     0.30%  TASK_GTPV1_U  libc-2.27.so        [.] malloc
+     0.29%  pdcp_timer    [kernel.kallsyms]   [k] syscall_return_via_sysret
+     0.28%  Tpool0_-1     libc-2.27.so        [.] __memset_avx2_erms
+     0.28%  feptx         nr-softmodem        [.] nr_feptx_thread
+     0.27%  Tpool2_-1     nr-softmodem        [.] nr_generate_pdsch
+     0.27%  TASK_GTPV1_U  [kernel.kallsyms]   [k] __tty_buffer_request_room
+     0.26%  TASK_GTPV1_U  nr-softmodem        [.] log_output_memory.isra.1
+     0.26%  TASK_GTPV1_U  [kernel.kallsyms]   [k] __indirect_thunk_start
+     0.26%  TASK_GTPV1_U  [kernel.kallsyms]   [k] __skb_checksum
+     0.26%  thread_FH     [kernel.kallsyms]   [k] do_syscall_64
+     0.26%  Tpool0_-1     libldpc.so          [.] nrLDPC_encod
+     0.26%  TASK_GTPV1_U  [kernel.kallsyms]   [k] __check_object_size
+     0.25%  TASK_GTPV1_U  [kernel.kallsyms]   [k] mutex_lock
+     0.25%  TASK_GTPV1_U  [kernel.kallsyms]   [k] check_preempt_curr
+     0.24%  TASK_GTPV1_U  [kernel.kallsyms]   [k] update_load_avg
+     0.24%  Tpool0_-1     nr-softmodem        [.] rotate_cpx_vector
+     0.23%  Tpool3_-1     libc-2.27.so        [.] __memset_avx2_erms
+     0.23%  TASK_GTPV1_U  [kernel.kallsyms]   [k] ep_send_events_proc
+     0.23%  TASK_GTPV1_U  [kernel.kallsyms]   [k] _raw_spin_unlock_irqrestore
+     0.23%  TASK_GTPV1_U  [unknown]           [k] 0xfffffe000003701b
+     0.23%  Tpool2_-1     libldpc.so          [.] nrLDPC_encod
+     0.23%  Tpool0_-1     libldpc.so          [.] ldpc384_byte
+     0.22%  Tpool1_-1     libc-2.27.so        [.] __memset_avx2_erms
+     0.21%  RLC queue     [kernel.kallsyms]   [k] futex_wait
+     0.21%  TASK_GTPV1_U  [kernel.kallsyms]   [k] __fget
+     0.21%  TASK_GTPV1_U  libpthread-2.27.so  [.] __pthread_disable_asynccancel
+     0.20%  TASK_GTPV1_U  nr-softmodem        [.] gtpv1uReceiver
+     0.20%  RLC queue     [kernel.kallsyms]   [k] sys_futex
+     0.20%  RLC queue     libpthread-2.27.so  [.] pthread_cond_wait@@GLIBC_2.3.2
+     0.19%  Tpool2_-1     nr-softmodem        [.] nr_interleaving_ldpc
+     0.18%  TASK_GTPV1_U  [kernel.kallsyms]   [k] idle_cpu
+     0.18%  TASK_GTPV1_U  [kernel.kallsyms]   [k] __rcu_read_unlock
+     0.18%  TASK_GTPV1_U  [kernel.kallsyms]   [k] native_sched_clock
+     0.17%  TASK_GTPV1_U  [kernel.kallsyms]   [k] mutex_unlock
+     0.17%  RLC queue     nr-softmodem        [.] rlc_data_req_thread
+     0.17%  TASK_GTPV1_U  [kernel.kallsyms]   [k] try_to_wake_up
+     0.17%  thread_FH     libdfts.so          [.] dft1024
+     0.17%  TASK_GTPV1_U  [kernel.kallsyms]   [k] __slab_free
+     0.16%  Tpool2_-1     nr-softmodem        [.] nr_modulation
+     0.16%  TASK_GTPV1_U  libc-2.27.so        [.] __memmove_avx_unaligned_erms
+     0.16%  thread_FH     libdfts.so          [.] dft64
+     0.16%  TASK_GTPV1_U  [kernel.kallsyms]   [k] cpuacct_charge
+     0.16%  Tpool3_-1     libldpc.so          [.] nrLDPC_encod
+     0.16%  RLC queue     [kernel.kallsyms]   [k] __perf_event_task_sched_in
+     0.15%  thread_FH     [kernel.kallsyms]   [k] skb_copy_datagram_iter
+     0.15%  TASK_GTPV1_U  [kernel.kallsyms]   [k] kfree
+     0.15%  RLC queue     [kernel.kallsyms]   [k] update_curr_rt
+     0.15%  thread_FH     libdfts.so          [.] dft256
+     0.14%  Tpool1_-1     libldpc.so          [.] nrLDPC_cnProc_BG1
+     0.14%  Tpool1_-1     nr-softmodem        [.] rotate_cpx_vector
+     0.14%  feprx         libdfts.so          [.] dft64
+     0.14%  TASK_GTPV1_U  [kernel.kallsyms]   [k] dequeue_rt_stack
+     0.13%  TASK_GTPV1_U  [kernel.kallsyms]   [k] ttwu_do_activate
+     0.13%  TASK_GTPV1_U  [kernel.kallsyms]   [k] inet_recvmsg
+     0.13%  TASK_GTPV1_U  libc-2.27.so        [.] __strchrnul_avx2
+     0.13%  TASK_GTPV1_U  [unknown]           [k] 0xfffffe000015d01b
+     0.13%  thread_FH     [kernel.kallsyms]   [k] syscall_return_via_sysret
+     0.13%  TASK_GTPV1_U  [kernel.kallsyms]   [k] __perf_event_task_sched_in
+     0.13%  Tpool2_-1     nr-softmodem        [.] rotate_cpx_vector
+     0.13%  TASK_GTPV1_U  [kernel.kallsyms]   [k] ep_poll
+     0.13%  TASK_GTPV1_U  [kernel.kallsyms]   [k] move_addr_to_user
+     0.12%  TASK_GTPV1_U  [kernel.kallsyms]   [k] __wake_up_common_lock
+     0.12%  thread_FH     [kernel.kallsyms]   [k] __tcp_transmit_skb
+     0.12%  thread_FH     [kernel.kallsyms]   [k] skb_release_data
+     0.12%  RLC queue     [kernel.kallsyms]   [k] cpupri_set
+     0.12%  TASK_GTPV1_U  [kernel.kallsyms]   [k] udp_recvmsg
+     0.12%  RLC queue     libpthread-2.27.so  [.] __pthread_mutex_unlock
+     0.11%  TASK_GTPV1_U  libc-2.27.so        [.] _int_malloc
+     0.11%  RLC queue     [unknown]           [k] 0xfffffe000006801b
+     0.11%  TASK_GTPV1_U  [kernel.kallsyms]   [k] enqueue_task_rt
+     0.11%  TASK_GTPV1_U  [kernel.kallsyms]   [k] queue_work_on
+     0.11%  TASK_GTPV1_U  libc-2.27.so        [.] epoll_wait
+     0.11%  Tpool3_-1     nr-softmodem        [.] nr_interleaving_ldpc
+     0.11%  TASK_GTPV1_U  libc-2.27.so        [.] _IO_setb
+     0.11%  thread_FH     libdfts.so          [.] dft2048
+     0.11%  TASK_GTPV1_U  [kernel.kallsyms]   [k] first_packet_length
+     0.11%  Tpool2_-1     libldpc.so          [.] nrLDPC_cnProc_BG1
+     0.11%  TASK_GTPV1_U  libpthread-2.27.so  [.] pthread_cond_signal@@GLIBC_2.3.2
+     0.10%  RLC queue     [kernel.kallsyms]   [k] pick_next_task_fair
+     0.10%  TASK_GTPV1_U  [unknown]           [k] 0xfffffe00000fb01b
+     0.10%  TASK_GTPV1_U  [kernel.kallsyms]   [k] put_prev_task_rt
+     0.10%  TASK_GTPV1_U  [kernel.kallsyms]   [k] ttwu_do_wakeup
+     0.10%  Tpool2_-1     libldpc.so          [.] nrLDPC_decoder_core.isra.1
+     0.10%  TASK_GTPV1_U  libc-2.27.so        [.] __strlen_avx2
+     0.10%  RLC queue     [kernel.kallsyms]   [k] entry_SYSCALL_64_after_hwframe
+     0.10%  TASK_GTPV1_U  [kernel.kallsyms]   [k] aa_file_perm
+     0.10%  TASK_GTPV1_U  [kernel.kallsyms]   [k] __first_packet_length
+     0.10%  RLC queue     [kernel.kallsyms]   [k] __entry_trampoline_start
+     0.10%  Tpool2_-1     nr-softmodem        [.] nr_codeword_scrambling
+     0.10%  Tpool0_-1     [kernel.kallsyms]   [k] do_syscall_64
+     0.10%  TASK_GTPV1_U  [kernel.kallsyms]   [k] sys_epoll_wait
+     0.10%  nr-softmodem  [kernel.kallsyms]   [k] tcp_sendmsg_locked
+     0.10%  TASK_GTPV1_U  [kernel.kallsyms]   [k] tty_ldisc_ref_wait
+     0.10%  TASK_GTPV1_U  [kernel.kallsyms]   [k] udp_skb_destructor
+     0.10%  TASK_GTPV1_U  [kernel.kallsyms]   [k] native_write_msr
+     0.10%  TASK_GTPV1_U  [kernel.kallsyms]   [k] fput_many
+     0.10%  TASK_GTPV1_U  [kernel.kallsyms]   [k] schedule
+     0.09%  RLC queue     [kernel.kallsyms]   [k] do_futex
+     0.09%  TASK_GTPV1_U  [kernel.kallsyms]   [k] select_task_rq_rt
+     0.09%  TASK_GTPV1_U  [kernel.kallsyms]   [k] cmpxchg_double_slab.isra.33
+     0.09%  RLC queue     [kernel.kallsyms]   [k] __perf_event_task_sched_out
+     0.09%  RLC queue     [kernel.kallsyms]   [k] native_write_msr
+     0.09%  TASK_GTPV1_U  [kernel.kallsyms]   [k] tty_insert_flip_string_fixed_flag
+     0.09%  TASK_GTPV1_U  [kernel.kallsyms]   [k] __fsnotify_parent
+     0.09%  Tpool0_-1     nr-softmodem        [.] nr_segmentation
+     0.09%  nr-softmodem  [kernel.kallsyms]   [k] do_syscall_64
+     0.09%  RLC queue     [kernel.kallsyms]   [k] futex_wake
+     0.09%  TASK_GTPV1_U  [kernel.kallsyms]   [k] __sched_text_start
+     0.09%  Tpool3_-1     nr-softmodem        [.] nr_segmentation
+     0.09%  Tpool0_-1     nr-softmodem        [.] multadd_cpx_vector
+     0.09%  TASK_GTPV1_U  [kernel.kallsyms]   [k] copy_user_generic_unrolled
+     0.08%  RLC queue     [kernel.kallsyms]   [k] hash_futex
+     0.08%  RLC queue     [kernel.kallsyms]   [k] futex_wait_queue_me
+     0.08%  TASK_GTPV1_U  [kernel.kallsyms]   [k] __update_load_avg_se.isra.36
+     0.08%  RLC queue     libpthread-2.27.so  [.] __pthread_disable_asynccancel
+     0.08%  TASK_GTPV1_U  [kernel.kallsyms]   [k] enqueue_task_fair
+     0.08%  TASK_GTPV1_U  [kernel.kallsyms]   [k] __unqueue_futex
+     0.08%  thread_FH     [kernel.kallsyms]   [k] cmpxchg_double_slab.isra.33
+     0.08%  TASK_GTPV1_U  libc-2.27.so        [.] _IO_old_init
+     0.08%  Tpool3_-1     nr-softmodem        [.] multadd_cpx_vector
+     0.08%  Tpool1_-1     nr-softmodem        [.] memcpy1
+     0.08%  RLC queue     [unknown]           [k] 0xfffffe000003701b
+     0.08%  TASK_GTPV1_U  [kernel.kallsyms]   [k] sockfd_lookup_light
+     0.08%  TASK_GTPV1_U  nr-softmodem        [.] logRecord_mt
+     0.08%  Tpool3_-1     nr-softmodem        [.] nr_modulation
+     0.07%  Tpool3_-1     nr-softmodem        [.] crc24b
+     0.07%  TASK_GTPV1_U  [kernel.kallsyms]   [k] schedule_hrtimeout_range_clock
+     0.07%  TASK_GTPV1_U  [kernel.kallsyms]   [k] update_curr_rt
+     0.07%  RLC queue     [kernel.kallsyms]   [k] dequeue_rt_stack
+     0.07%  TASK_GTPV1_U  [unknown]           [k] 0xfffffe00000ca01b
+     0.07%  TASK_GTPV1_U  [kernel.kallsyms]   [k] copy_user_enhanced_fast_string
+     0.07%  Tpool3_-1     [kernel.kallsyms]   [k] cpupri_set
+     0.07%  Tpool1_-1     nr-softmodem        [.] nr_codeword_scrambling
+     0.07%  Tpool0_-1     nr-softmodem        [.] nr_codeword_scrambling
+     0.07%  TASK_GTPV1_U  nr-softmodem        [.] itti_get_events_locked
+     0.07%  TASK_GTPV1_U  [kernel.kallsyms]   [k] get_futex_key
+     0.07%  TASK_GTPV1_U  [kernel.kallsyms]   [k] futex_wake
+     0.07%  nr-softmodem  [kernel.kallsyms]   [k] syscall_return_via_sysret
+     0.07%  TASK_GTPV1_U  [unknown]           [k] 0xfffffe000009901b
+     0.07%  TASK_GTPV1_U  [kernel.kallsyms]   [k] __fget_light
+     0.07%  TASK_GTPV1_U  [kernel.kallsyms]   [k] __entry_trampoline_start
+     0.07%  TASK_GTPV1_U  [kernel.kallsyms]   [k] pty_write_room
+     0.07%  TASK_GTPV1_U  [kernel.kallsyms]   [k] skb_copy_datagram_iter
+     0.07%  Tpool3_-1     libldpc.so          [.] nrLDPC_cnProc_BG1
+     0.07%  TASK_GTPV1_U  [kernel.kallsyms]   [k] activate_task
+     0.07%  TASK_GTPV1_U  [kernel.kallsyms]   [k] enqueue_top_rt_rq
+     0.07%  TASK_GTPV1_U  nr-softmodem        [.] itti_get_events
+     0.07%  thread_FH     [kernel.kallsyms]   [k] irq_work_run_list
+     0.07%  TASK_GTPV1_U  [kernel.kallsyms]   [k] dequeue_top_rt_rq
+     0.06%  TASK_GTPV1_U  [unknown]           [k] 0xfffffe00000fb01e
+     0.06%  TASK_GTPV1_U  [kernel.kallsyms]   [k] tty_write
+     0.06%  TASK_GTPV1_U  [kernel.kallsyms]   [k] sys_write
+     0.06%  Tpool0_-1     [kernel.kallsyms]   [k] native_irq_return_iret
+     0.06%  Tpool2_-1     nr-softmodem        [.] multadd_cpx_vector
+     0.06%  TASK_GTPV1_U  [kernel.kallsyms]   [k] __wake_up_common
+     0.06%  RLC queue     [kernel.kallsyms]   [k] futex_wait_setup
+     0.06%  Tpool1_-1     nr-softmodem        [.] gNB_I0_measurements
+     0.06%  Tpool2_-1     nr-softmodem        [.] nr_segmentation
+     0.06%  Tpool3_-1     nr-softmodem        [.] memcpy1
+     0.06%  RLC queue     [kernel.kallsyms]   [k] __sched_text_start
+     0.06%  TASK_GTPV1_U  [kernel.kallsyms]   [k] tty_write_unlock
+     0.06%  Tpool1_-1     nr-softmodem        [.] get_dmrs_freq_idx
+     0.06%  Tpool0_-1     nr-softmodem        [.] multadd_real_vector_complex_scalar
+     0.06%  RLC queue     [kernel.kallsyms]   [k] __cgroup_account_cputime
+     0.06%  TASK_GTPV1_U  [kernel.kallsyms]   [k] __queue_work
+     0.06%  RLC queue     [kernel.kallsyms]   [k] _raw_spin_lock
+     0.06%  TASK_GTPV1_U  [kernel.kallsyms]   [k] __sk_mem_reduce_allocated
+     0.06%  Tpool3_-1     libldpc.so          [.] nrLDPC_decoder_core.isra.1
+     0.06%  Tpool1_-1     [kernel.kallsyms]   [k] _raw_spin_lock
+     0.05%  TASK_GTPV1_U  [unknown]           [k] 0xfffffe00000fb000
+     0.05%  feptx         [kernel.kallsyms]   [k] entry_SYSCALL_64_after_hwframe
+     0.05%  TASK_GTPV1_U  [kernel.kallsyms]   [k] ep_item_poll.isra.12
+     0.05%  TASK_GTPV1_U  libc-2.27.so        [.] __libc_disable_asynccancel
+     0.05%  TASK_GTPV1_U  [kernel.kallsyms]   [k] copy_page_to_iter
+     0.05%  TASK_GTPV1_U  [kernel.kallsyms]   [k] get_work_pool
+     0.05%  thread_FH     [kernel.kallsyms]   [k] native_apic_msr_eoi_write
+     0.05%  TASK_GTPV1_U  libc-2.27.so        [.] calloc@plt
+     0.05%  Tpool1_-1     libldpc.so          [.] nrLDPC_decoder_core.isra.1
+     0.05%  TASK_GTPV1_U  [kernel.kallsyms]   [k] enqueue_entity
+     0.05%  thread_FH     [kernel.kallsyms]   [k] ep_item_poll.isra.12
+     0.05%  TASK_GTPV1_U  [kernel.kallsyms]   [k] security_socket_recvmsg
+     0.05%  TASK_GTPV1_U  [unknown]           [k] 0xfffffe00000fb00c
+     0.05%  TASK_GTPV1_U  [kernel.kallsyms]   [k] apparmor_file_permission
+     0.05%  TASK_GTPV1_U  [unknown]           [k] 0xfffffe000012c01b
+     0.05%  thread_FH     [kernel.kallsyms]   [k] call_function_single_interrupt
+     0.05%  feptx         [kernel.kallsyms]   [k] syscall_return_via_sysret
+     0.05%  Tpool3_-1     nr-softmodem        [.] nr_rate_matching_ldpc_rx
+     0.05%  TASK_GTPV1_U  nr-softmodem        [.] enqueue_rlc_data_req
+     0.05%  TASK_GTPV1_U  [kernel.kallsyms]   [k] SYSC_recvfrom
+     0.05%  nr-softmodem  [kernel.kallsyms]   [k] native_queued_spin_lock_slowpath
+     0.05%  Tpool3_-1     nr-softmodem        [.] gNB_I0_measurements
+     0.05%  TASK_GTPV1_U  [kernel.kallsyms]   [k] rcu_note_context_switch
+     0.05%  TASK_GTPV1_U  [kernel.kallsyms]   [k] entry_SYSCALL_64_stage2
+     0.05%  TASK_GTPV1_U  [kernel.kallsyms]   [k] __perf_event_task_sched_out
+     0.05%  Tpool0_-1     nr-softmodem        [.] crc24b
+     0.05%  Tpool0_-1     libldpc.so          [.] nrLDPC_cnProc_BG1
+     0.05%  feptx         [kernel.kallsyms]   [k] do_syscall_64
+     0.05%  thread_FH     [kernel.kallsyms]   [k] prepare_exit_to_usermode
+     0.05%  Tpool2_-1     libldpc.so          [.] nrLDPC_bnProc
+     0.05%  RLC queue     [kernel.kallsyms]   [k] ctx_sched_out
+     0.05%  Tpool3_-1     [kernel.kallsyms]   [k] sys_futex
+     0.05%  TASK_GTPV1_U  [kernel.kallsyms]   [k] aa_sk_perm
+     0.05%  Tpool0_-1     [kernel.kallsyms]   [k] cpupri_set
+     0.05%  feptx         [kernel.kallsyms]   [k] swapgs_restore_regs_and_return_to_usermode
+     0.05%  TASK_GTPV1_U  [kernel.kallsyms]   [k] tty_paranoia_check
+     0.05%  TASK_GTPV1_U  [kernel.kallsyms]   [k] pick_next_task_rt
+     0.04%  TASK_GTPV1_U  [kernel.kallsyms]   [k] cgroup_cpu_stat_account_end.isra.5
+     0.04%  TASK_GTPV1_U  [kernel.kallsyms]   [k] tty_write_lock
+     0.04%  pdcp_timer    libpthread-2.27.so  [.] pthread_cond_wait@@GLIBC_2.3.2
+     0.04%  Tpool0_-1     [kernel.kallsyms]   [k] finish_task_switch
+     0.04%  Tpool2_-1     nr-softmodem        [.] factor2
+     0.04%  TASK_GTPV1_U  [kernel.kallsyms]   [k] sock_poll
+     0.04%  Tpool3_-1     [kernel.kallsyms]   [k] do_syscall_64
+     0.04%  Tpool1_-1     nr-softmodem        [.] multadd_cpx_vector
+     0.04%  TASK_GTPV1_U  [kernel.kallsyms]   [k] do_output_char
+     0.04%  TASK_GTPV1_U  [kernel.kallsyms]   [k] tty_buffer_space_avail
+     0.04%  Tpool0_-1     [kernel.kallsyms]   [k] enqueue_task_rt
+     0.04%  RLC queue     nr-softmodem        [.] nr_rlc_manager_unlock
+     0.04%  Tpool2_-1     [kernel.kallsyms]   [k] handle_irq_event
+     0.04%  RLC queue     libpthread-2.27.so  [.] __pthread_enable_asynccancel
+     0.04%  TASK_RRC_GNB  [kernel.kallsyms]   [k] pick_next_task_rt
+     0.04%  Tpool1_-1     nr-softmodem        [.] signal_energy_nodc
+     0.04%  Tpool0_-1     nr-softmodem        [.] nr_generate_dci
+     0.04%  Tpool0_-1     [kernel.kallsyms]   [k] _raw_spin_lock
+     0.04%  TASK_GTPV1_U  [kernel.kallsyms]   [k] ctx_sched_out
+     0.04%  TASK_GTPV1_U  [kernel.kallsyms]   [k] plist_del
+     0.04%  RLC queue     libpthread-2.27.so  [.] __pthread_mutex_lock
+     0.04%  TASK_GTPV1_U  libc-2.27.so        [.] _itoa_word
+     0.04%  RLC queue     libc-2.27.so        [.] __memmove_avx_unaligned_erms
+     0.04%  nr-softmodem  [kernel.kallsyms]   [k] iov_iter_advance
+     0.04%  thread_FH     [kernel.kallsyms]   [k] __slab_free
+     0.04%  TASK_GTPV1_U  [kernel.kallsyms]   [k] native_queued_spin_lock_slowpath
+     0.04%  thread_FH     [kernel.kallsyms]   [k] kfree
+     0.04%  feptx         libdfts.so          [.] idft64@plt
+     0.04%  thread_FH     [kernel.kallsyms]   [k] release_sock
+     0.04%  nr-softmodem  [kernel.kallsyms]   [k] ctx_sched_out
+     0.04%  Tpool0_-1     nr-softmodem        [.] ldpc8blocks
+     0.04%  thread_FH     [kernel.kallsyms]   [k] mutex_lock
+     0.04%  thread_FH     [kernel.kallsyms]   [k] _raw_spin_lock_bh
+     0.04%  feprx         libc-2.27.so        [.] __memmove_avx_unaligned_erms
+     0.04%  RLC queue     [kernel.kallsyms]   [k] sched_clock
+     0.04%  Tpool1_-1     [kernel.kallsyms]   [k] do_syscall_64
+     0.04%  thread_FH     libc-2.27.so        [.] epoll_wait
+     0.03%  thread_FH     libc-2.27.so        [.] __memmove_avx_unaligned_erms
+     0.03%  TASK_GTPV1_U  [kernel.kallsyms]   [k] _raw_spin_unlock_bh
+     0.03%  RLC queue     [kernel.kallsyms]   [k] finish_task_switch
+     0.03%  thread_FH     [kernel.kallsyms]   [k] native_irq_return_iret
+     0.03%  Tpool1_-1     nr-softmodem        [.] nr_get_E
+     0.03%  Tpool0_-1     nr-softmodem        [.] get_pdsch_to_harq_feedback
+     0.03%  Tpool0_-1     nr-softmodem        [.] rx_func
+     0.03%  RLC queue     [kernel.kallsyms]   [k] entry_SYSCALL_64_stage2
+     0.03%  thread_FH     [kernel.kallsyms]   [k] __cgroup_account_cputime
+     0.03%  thread_FH     [kernel.kallsyms]   [k] sched_clock_cpu
+     0.03%  thread_FH     [kernel.kallsyms]   [k] flush_smp_call_function_queue
+     0.03%  Tpool3_-1     [kernel.kallsyms]   [k] get_futex_key
+     0.03%  Tpool0_-1     [kernel.kallsyms]   [k] irq_default_primary_handler
+     0.03%  Tpool2_-1     nr-softmodem        [.] nr_rlc_entity_am_recv_pdu
+     0.03%  thread_FH     [kernel.kallsyms]   [k] __entry_trampoline_start
+     0.03%  Tpool3_-1     nr-softmodem        [.] nr_fr1_dlsch_preprocessor
+     0.03%  thread_FH     [kernel.kallsyms]   [k] sys_futex
+     0.03%  Tpool3_-1     nr-softmodem        [.] nr_pdcch_scrambling
+     0.03%  Tpool3_-1     nr-softmodem        [.] nr_fill_pucch
+     0.03%  TASK_GTPV1_U  [kernel.kallsyms]   [k] remove_wait_queue
+     0.03%  Tpool2_-1     libc-2.27.so        [.] cfree@GLIBC_2.2.5
+     0.03%  Tpool3_-1     nr-softmodem        [.] rx_nr_prach
+     0.03%  TASK_GTPV1_U  [kernel.kallsyms]   [k] _raw_spin_unlock
+     0.03%  RLC queue     nr-softmodem        [.] rlc_data_req
+     0.03%  Tpool1_-1     libldpc.so          [.] nrLDPC_bnProc
+     0.03%  Tpool1_-1     [kernel.kallsyms]   [k] plist_add
+     0.03%  nr-softmodem  [kernel.kallsyms]   [k] get_futex_key_refs.isra.11
+     0.03%  TASK_GTPV1_U  [kernel.kallsyms]   [k] cpupri_find
+     0.03%  Tpool3_-1     [kernel.kallsyms]   [k] _raw_spin_lock
+     0.03%  feptx         [kernel.kallsyms]   [k] dequeue_rt_stack
+     0.03%  Tpool0_-1     nr-softmodem        [.] find_nr_ulsch
+     0.03%  Tpool3_-1     libc-2.27.so        [.] @plt
+     0.03%  TASK_GTPV1_U  libpthread-2.27.so  [.] __pthread_enable_asynccancel
+     0.03%  Tpool2_-1     [kernel.kallsyms]   [k] mark_wake_futex
+     0.03%  nr-softmodem  [kernel.kallsyms]   [k] tcp_established_options
+     0.03%  Tpool2_-1     nr-softmodem        [.] nr_compute_tbs
+     0.03%  Tpool0_-1     libpthread-2.27.so  [.] pthread_cond_signal@@GLIBC_2.3.2
+     0.03%  Tpool1_-1     nr-softmodem        [.] log2@plt
+     0.03%  thread_FH     [kernel.kallsyms]   [k] irq_enter
+     0.03%  Tpool3_-1     [kernel.kallsyms]   [k] try_to_wake_up
+     0.03%  Tpool1_-1     [kernel.kallsyms]   [k] __sched_text_start
+     0.03%  TASK_GTPV1_U  libc-2.27.so        [.] _IO_str_init_static_internal
+     0.03%  thread_FH     [kernel.kallsyms]   [k] tcp_options_write
+     0.03%  Tpool1_-1     nr-softmodem        [.] nr_store_dlsch_buffer
+     0.03%  RLC queue     [kernel.kallsyms]   [k] get_futex_value_locked
+     0.03%  thread_FH     [kernel.kallsyms]   [k] rcu_note_context_switch
+     0.03%  nr-softmodem  [kernel.kallsyms]   [k] tcp_tx_timestamp
+     0.03%  Tpool3_-1     nr-softmodem        [.] nr_rlc_entity_am_generate_pdu
+     0.03%  TASK_GTPV1_U  [kernel.kallsyms]   [k] update_blocked_averages
+     0.03%  thread_FH     [kernel.kallsyms]   [k] ep_poll_callback
+     0.03%  thread_FH     [kernel.kallsyms]   [k] copy_page_to_iter
+     0.03%  Tpool2_-1     nr-softmodem        [.] nr_rate_matching_ldpc_rx
+     0.03%  nr-softmodem  libpthread-2.27.so  [.] pthread_cond_wait@@GLIBC_2.3.2
+     0.03%  Tpool1_-1     [kernel.kallsyms]   [k] native_write_msr
+     0.03%  Tpool0_-1     libldpc.so          [.] nrLDPC_bnProc
+     0.03%  Tpool3_-1     libm-2.27.so        [.] __log2_finite
+     0.03%  nr-softmodem  [kernel.kallsyms]   [k] sock_write_iter
+     0.03%  Tpool2_-1     [kernel.kallsyms]   [k] hash_futex
+     0.03%  RLC queue     [unknown]           [k] 0xfffffe0000068014
+     0.03%  Tpool3_-1     [kernel.kallsyms]   [k] syscall_return_via_sysret
+     0.03%  TASK_GTPV1_U  [kernel.kallsyms]   [k] attach_entity_load_avg
+     0.03%  Tpool1_-1     nr-softmodem        [.] nr_ulsch_extract_rbs_single
+     0.03%  thread_FH     [kernel.kallsyms]   [k] cpuacct_charge
+     0.03%  Tpool0_-1     [kernel.kallsyms]   [k] __hrtimer_run_queues
+     0.03%  thread_FH     [kernel.kallsyms]   [k] cpupri_set
+     0.03%  TASK_GTPV1_U  [kernel.kallsyms]   [k] kfree_skbmem
+     0.03%  feptx         libpthread-2.27.so  [.] pthread_cond_wait@@GLIBC_2.3.2
+     0.03%  thread_FH     [kernel.kallsyms]   [k] tcp_queue_rcv
+     0.03%  Tpool2_-1     libldpc.so          [.] nrLDPC_bnProcPc
+     0.03%  Tpool1_-1     [kernel.kallsyms]   [k] entry_SYSCALL_64_after_hwframe
+     0.03%  Tpool2_-1     nr-softmodem        [.] nr_ulsch_channel_compensation
+     0.03%  TASK_GTPV1_U  [kernel.kallsyms]   [k] pick_next_task_fair
+     0.03%  feptx         [kernel.kallsyms]   [k] sched_avg_update
+     0.03%  Tpool2_-1     [kernel.kallsyms]   [k] enqueue_task_fair
+     0.03%  Tpool2_-1     [kernel.kallsyms]   [k] _raw_spin_lock
+     0.03%  thread_FH     [kernel.kallsyms]   [k] x86_pmu_disable
+     0.03%  Tpool2_-1     nr-softmodem        [.] nr_rlc_pdu_decoder_get_bits
+     0.03%  Tpool3_-1     [kernel.kallsyms]   [k] prepare_exit_to_usermode
+     0.03%  TASK_GTPV1_U  [unknown]           [k] 0xfffffe000015d025
+     0.03%  Tpool2_-1     libc-2.27.so        [.] __libc_calloc
+     0.03%  TASK_GTPV1_U  nr-softmodem        [.] itti_receive_msg
+     0.03%  RLC queue     [kernel.kallsyms]   [k] schedule
+     0.03%  thread_FH     [unknown]           [k] 0xfffffe00000ca01b
+     0.03%  nr-softmodem  [kernel.kallsyms]   [k] sock_sendmsg
+     0.03%  Tpool1_-1     [kernel.kallsyms]   [k] __indirect_thunk_start
+     0.03%  TASK_GTPV1_U  libpthread-2.27.so  [.] __libc_write
+     0.03%  Tpool2_-1     nr-softmodem        [.] nr_pusch_channel_estimation
+     0.03%  Tpool2_-1     nr-softmodem        [.] multadd_real_vector_complex_scalar
+     0.03%  Tpool2_-1     [kernel.kallsyms]   [k] native_write_msr
+     0.03%  Tpool0_-1     nr-softmodem        [.] nr_rlc_sdu_segment_list_add
+     0.03%  Tpool0_-1     nr-softmodem        [.] crc24a
+     0.03%  TASK_GTPV1_U  libc-2.27.so        [.] _IO_vsnprintf
+     0.03%  TASK_GTPV1_U  [kernel.kallsyms]   [k] update_cfs_rq_h_load
+     0.03%  thread_FH     [kernel.kallsyms]   [k] sched_clock
+     0.03%  Tpool1_-1     nr-softmodem        [.] nr_modulation
+     0.03%  Tpool3_-1     nr-softmodem        [.] nr_codeword_scrambling
+     0.03%  nr-softmodem  [kernel.kallsyms]   [k] tcp_stream_memory_free
+     0.03%  Tpool0_-1     [kernel.kallsyms]   [k] rcu_note_context_switch
+     0.03%  Tpool0_-1     nr-softmodem        [.] rx_nr_prach
+     0.03%  TASK_GTPV1_U  [kernel.kallsyms]   [k] insert_work
+     0.03%  TASK_GTPV1_U  [kernel.kallsyms]   [k] account_entity_enqueue
+     0.03%  Tpool3_-1     nr-softmodem        [.] sn_compare_tx
+     0.03%  thread_FH     libdfts.so          [.] dft256@plt
+     0.03%  nr-softmodem  libpthread-2.27.so  [.] __libc_fcntl
+     0.03%  TASK_GTPV1_U  libc-2.27.so        [.] __vsnprintf_chk
+     0.03%  Tpool3_-1     libpthread-2.27.so  [.] __pthread_mutex_lock
+     0.03%  Tpool0_-1     nr-softmodem        [.] nr_pusch_channel_estimation
+     0.03%  thread_FH     nr-softmodem        [.] get_samples_per_slot
+     0.03%  thread_FH     [unknown]           [k] 0xfffffe00000fb01b
+     0.03%  thread_FH     [kernel.kallsyms]   [k] mlx4_en_xmit
+     0.03%  Tpool0_-1     libldpc.so          [.] memset@plt
+     0.03%  nr-softmodem  libpthread-2.27.so  [.] __pthread_mutex_lock
+     0.03%  TASK_GTPV1_U  [kernel.kallsyms]   [k] down_read
+     0.03%  thread_FH     [kernel.kallsyms]   [k] sock_poll
+     0.03%  TASK_GTPV1_U  [kernel.kallsyms]   [k] __x86_indirect_thunk_r8
+     0.03%  nr-softmodem  [kernel.kallsyms]   [k] cpupri_set
+     0.03%  Tpool1_-1     nr-softmodem        [.] fill_ul_rb_mask
+     0.03%  feprx         [kernel.kallsyms]   [k] select_task_rq_rt
+     0.03%  Tpool3_-1     nr-softmodem        [.] nr_ulsch_extract_rbs_single
+     0.03%  Tpool1_-1     libc-2.27.so        [.] __libc_calloc
+     0.03%  TASK_GTPV1_U  [kernel.kallsyms]   [k] tty_write_room
+     0.03%  Tpool2_-1     [kernel.kallsyms]   [k] do_syscall_64
+     0.03%  TASK_GTPV1_U  [kernel.kallsyms]   [k] skb_release_head_state
+     0.03%  thread_FH     nr-softmodem        [.] rx_rf
+     0.03%  Tpool1_-1     libdfts.so          [.] idft1024
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] __virt_addr_valid
+     0.02%  Tpool2_-1     nr-softmodem        [.] polar_encoder_fast
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] update_curr
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] wake_up_q
+     0.02%  RLC queue     [kernel.kallsyms]   [k] enqueue_task_rt
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] tty_flip_buffer_push
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] do_futex
+     0.02%  RLC queue     libc-2.27.so        [.] malloc_consolidate
+     0.02%  Tpool3_-1     [kernel.kallsyms]   [k] entry_SYSCALL_64_after_hwframe
+     0.02%  thread_FH     [kernel.kallsyms]   [k] llist_add_batch
+     0.02%  Tpool2_-1     nr-softmodem        [.] nr_rlc_pdu_encoder_put_bits
+     0.02%  thread_FH     libpthread-2.27.so  [.] pthread_cond_wait@@GLIBC_2.3.2
+     0.02%  thread_FH     [unknown]           [k] 0xfffffe00000fb01e
+     0.02%  Tpool2_-1     [kernel.kallsyms]   [k] syscall_return_via_sysret
+     0.02%  Tpool0_-1     nr-softmodem        [.] signal_energy_nodc
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] pick_next_task_idle
+     0.02%  feptx         [kernel.kallsyms]   [k] pick_next_task_fair
+     0.02%  Tpool2_-1     nr-softmodem        [.] nr_pdcch_scrambling
+     0.02%  Tpool3_-1     libdfts.so          [.] idft1024
+     0.02%  Tpool1_-1     nr-softmodem        [.] nr_pdcch_scrambling
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] plist_add
+     0.02%  Tpool0_-1     nr-softmodem        [.] nr_rx_pusch
+     0.02%  feptx         [kernel.kallsyms]   [k] __entry_trampoline_start
+     0.02%  TASK_GTPV1_U  nr-softmodem        [.] gtpv1uTask
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] up_read
+     0.02%  thread_FH     [kernel.kallsyms]   [k] __tcp_send_ack.part.38
+     0.02%  Tpool2_-1     nr-softmodem        [.] nr_rlc_sdu_segment_list_add
+     0.02%  Tpool3_-1     [kernel.kallsyms]   [k] __entry_trampoline_start
+     0.02%  Tpool0_-1     nr-softmodem        [.] nr_rlc_pdu_decoder_get_bits
+     0.02%  Tpool1_-1     nr-softmodem        [.] nr_segmentation
+     0.02%  Tpool0_-1     nr-softmodem        [.] nr_decode_pucch0
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] ep_scan_ready_list.constprop.17
+     0.02%  feptx         [kernel.kallsyms]   [k] balance_runtime
+     0.02%  nr-softmodem  [kernel.kallsyms]   [k] __virt_addr_valid
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] check_stack_object
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] switch_to_thread_stack
+     0.02%  thread_FH     [kernel.kallsyms]   [k] kmem_cache_alloc_node
+     0.02%  feptx         [kernel.kallsyms]   [k] futex_wait
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] mutex_trylock
+     0.02%  thread_FH     [kernel.kallsyms]   [k] raise_softirq
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] csum_block_add_ext
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] wake_up_process
+     0.02%  Tpool0_-1     nr-softmodem        [.] fill_ul_rb_mask
+     0.02%  Tpool0_-1     [kernel.kallsyms]   [k] find_busiest_group
+     0.02%  Tpool0_-1     nr-softmodem        [.] gNB_I0_measurements
+     0.02%  feptx         libdfts.so          [.] idft
+     0.02%  Tpool0_-1     libldpc.so          [.] nrLDPC_cnProc_BG2
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] llist_del_first
+     0.02%  Tpool2_-1     [kernel.kallsyms]   [k] dequeue_rt_stack
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] task_tick_rt
+     0.02%  thread_FH     [kernel.kallsyms]   [k] schedule_hrtimeout_range
+     0.02%  Tpool0_-1     libm-2.27.so        [.] __log2_finite
+     0.02%  feprx         [kernel.kallsyms]   [k] _raw_spin_lock
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] update_rq_clock
+     0.02%  Tpool3_-1     nr-softmodem        [.] get_dmrs_freq_idx
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] irq_work_run_list
+     0.02%  Tpool2_-1     libc-2.27.so        [.] malloc
+     0.02%  Tpool2_-1     [kernel.kallsyms]   [k] sys_futex
+     0.02%  Tpool2_-1     nr-softmodem        [.] get_spf
+     0.02%  RLC queue     [unknown]           [k] 0xfffffe000006801e
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] _raw_spin_unlock_irq
+     0.02%  RLC queue     nr-softmodem        [.] nr_rlc_manager_lock
+     0.02%  RLC queue     [kernel.kallsyms]   [k] put_prev_task_rt
+     0.02%  Tpool2_-1     nr-softmodem        [.] gNB_I0_measurements
+     0.02%  thread_FH     [kernel.kallsyms]   [k] _raw_spin_unlock_irqrestore
+     0.02%  RLC queue     [kernel.kallsyms]   [k] irq_work_queue_on
+     0.02%  Tpool1_-1     nr-softmodem        [.] dB_fixed_times10
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] hash_futex
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] __fdget_pos
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] rb_insert_color_cached
+     0.02%  RLC queue     nr-softmodem        [.] pthread_mutex_lock@plt
+     0.02%  Tpool2_-1     nr-softmodem        [.] nr_set_pdsch_semi_static
+     0.02%  RLC queue     [unknown]           [k] 0xfffffe000015d000
+     0.02%  TASK_RRC_GNB  [kernel.kallsyms]   [k] schedule_hrtimeout_range_clock
+     0.02%  TASK_RRC_GNB  nr-softmodem        [.] itti_receive_msg
+     0.02%  TASK_GTPV1_U  libpthread-2.27.so  [.] __libc_recvfrom
+     0.02%  RLC queue     nr-softmodem        [.] 0x00000000008b4f60
+     0.02%  Tpool0_-1     libc-2.27.so        [.] cfree@GLIBC_2.2.5
+     0.02%  feprx         [kernel.kallsyms]   [k] __sched_text_start
+     0.02%  Tpool3_-1     nr-softmodem        [.] polar_encoder_fast
+     0.02%  RLC queue     libpthread-2.27.so  [.] __lll_unlock_wake
+     0.02%  RLC queue     [kernel.kallsyms]   [k] enqueue_top_rt_rq
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] x86_pmu_disable
+     0.02%  feprx         [kernel.kallsyms]   [k] futex_wait_queue_me
+     0.02%  RLC queue     [kernel.kallsyms]   [k] cpuacct_charge
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] skb_checksum
+     0.02%  TASK_GNB_APP  libc-2.27.so        [.] __mpn_cmp
+     0.02%  feptx         [kernel.kallsyms]   [k] prepare_exit_to_usermode
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] _copy_from_user
+     0.02%  feptx         [kernel.kallsyms]   [k] _raw_spin_lock
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] kmem_cache_free
+     0.02%  feptx         nr-softmodem        [.] PHY_ofdm_mod.part.0
+     0.02%  Tpool3_-1     nr-softmodem        [.] nr_acknack_scheduling
+     0.02%  feptx         [kernel.kallsyms]   [k] add_interrupt_randomness
+     0.02%  RLC queue     [kernel.kallsyms]   [k] deactivate_task
+     0.02%  nr-softmodem  [kernel.kallsyms]   [k] tcp_event_new_data_sent
+     0.02%  L1_stats      [kernel.kallsyms]   [k] do_syscall_64
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] import_single_range
+     0.02%  Tpool1_-1     [kernel.kallsyms]   [k] update_curr_rt
+     0.02%  Tpool1_-1     nr-softmodem        [.] prepare_dci
+     0.02%  RLC queue     [unknown]           [k] 0xfffffe0000068025
+     0.02%  TASK_GNB_APP  libc-2.27.so        [.] _IO_default_xsputn
+     0.02%  TASK_GTPV1_U  nr-softmodem        [.] pthread_mutex_lock@plt
+     0.02%  feptx         [kernel.kallsyms]   [k] __perf_event_task_sched_out
+     0.02%  TASK_GTPV1_U  [unknown]           [k] 0xfffffe000003700c
+     0.02%  Tpool0_-1     nr-softmodem        [.] allowed_xlsch_re_in_dmrs_symbol
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] update_cfs_group
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] fsnotify
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] schedule_hrtimeout_range
+     0.02%  Tpool1_-1     nr-softmodem        [.] schedule_nr_sib1
+     0.02%  Tpool2_-1     nr-softmodem        [.] NR_UL_indication
+     0.02%  Tpool3_-1     nr-softmodem        [.] dB_fixed_times10
+     0.02%  Tpool0_-1     nr-softmodem        [.] sn_compare_tx
+     0.02%  Tpool1_-1     [kernel.kallsyms]   [k] enqueue_task_rt
+     0.02%  RLC queue     [kernel.kallsyms]   [k] get_futex_key_refs.isra.11
+     0.02%  Tpool3_-1     nr-softmodem        [.] nr_pbch_scrambling
+     0.02%  RLC queue     [kernel.kallsyms]   [k] native_sched_clock
+     0.02%  Tpool3_-1     nr-softmodem        [.] fill_ul_rb_mask
+     0.02%  RLC queue     [kernel.kallsyms]   [k] update_blocked_averages
+     0.02%  RLC queue     [kernel.kallsyms]   [k] apic_ack_irq
+     0.02%  TASK_GTPV1_U  [kernel.kallsyms]   [k] udp_poll
+     0.02%  feptx         [kernel.kallsyms]   [k] cpupri_set
+     0.02%  Tpool3_-1     nr-softmodem        [.] allowed_xlsch_re_in_dmrs_symbol
+     0.02%  RLC queue     [kernel.kallsyms]   [k] pick_next_task_rt
+     0.02%  RLC queue     [unknown]           [k] 0xfffffe000015d01b
+     0.02%  pdcp_timer    [kernel.kallsyms]   [k] scheduler_tick
+     0.02%  TASK_RRC_GNB  [kernel.kallsyms]   [k] entry_SYSCALL_64_after_hwframe
+     0.02%  RLC queue     [unknown]           [k] 0xfffffe00000fb01b
+     0.01%  RLC queue     libc-2.27.so        [.] _int_malloc
+     0.01%  RLC queue     [kernel.kallsyms]   [k] pull_rt_task
+     0.01%  TASK_GTPV1_U  [kernel.kallsyms]   [k] intel_pmu_disable_all
+     0.01%  RLC queue     [kernel.kallsyms]   [k] intel_pmu_disable_all
+     0.01%  TASK_GNB_APP  [kernel.kallsyms]   [k] do_nanosleep
+     0.01%  RLC queue     [kernel.kallsyms]   [k] find_busiest_group
+     0.01%  RLC queue     [kernel.kallsyms]   [k] rb_next
+     0.01%  pdcp_timer    [kernel.kallsyms]   [k] update_curr_rt
+     0.01%  nr-softmodem  [kernel.kallsyms]   [k] release_sock
+     0.01%  RLC queue     [kernel.kallsyms]   [k] __indirect_thunk_start
+     0.01%  TASK_RRC_GNB  [kernel.kallsyms]   [k] ep_send_events_proc
+     0.01%  L1_stats      [kernel.kallsyms]   [k] locked_inode_to_wb_and_lock_list
+     0.01%  TASK_RRC_GNB  [kernel.kallsyms]   [k] ep_item_poll.isra.12
+     0.01%  RLC queue     [unknown]           [k] 0xfffffe000003701e
+     0.01%  feprx         [kernel.kallsyms]   [k] add_interrupt_randomness
+     0.01%  Tpool0_-1     nr-softmodem        [.] nr_compute_tbs
+     0.01%  TASK_RRC_GNB  [kernel.kallsyms]   [k] __indirect_thunk_start
+     0.01%  RLC queue     [kernel.kallsyms]   [k] balance_runtime
+     0.01%  TASK_RRC_GNB  [kernel.kallsyms]   [k] _raw_spin_lock_irqsave
+     0.01%  RLC queue     [kernel.kallsyms]   [k] plist_add
+     0.01%  Tpool1_-1     libldpc.so          [.] nrLDPC_cnProc_BG2
+     0.01%  feptx         libpthread-2.27.so  [.] __lll_unlock_wake
+     0.01%  RLC queue     [unknown]           [k] 0xfffffe000012c01e
+     0.01%  RLC queue     [kernel.kallsyms]   [k] update_rt_migration
+     0.01%  TASK_RRC_GNB  [kernel.kallsyms]   [k] ep_poll_callback
+     0.01%  Tpool3_-1     [kernel.kallsyms]   [k] native_write_msr
+     0.01%  TASK_GTPV1_U  [kernel.kallsyms]   [k] wq_worker_waking_up
+     0.01%  L1_stats      [kernel.kallsyms]   [k] ext4_ind_trans_blocks
+     0.01%  TASK_GNB_APP  [kernel.kallsyms]   [k] ext4_llseek
+     0.01%  RLC queue     [kernel.kallsyms]   [k] get_futex_key
+     0.01%  pdcp_timer    [kernel.kallsyms]   [k] sched_avg_update
+     0.01%  thread_FH     [kernel.kallsyms]   [k] smp_call_function_single_interrupt
+     0.01%  feprx         nr-softmodem        [.] nr_slot_fep_ul
+     0.01%  L1_stats      libc-2.27.so        [.] vfprintf
+     0.01%  L1_stats      [kernel.kallsyms]   [k] update_curr_rt
+     0.01%  RLC queue     [unknown]           [k] 0xfffffe000006804a
+     0.01%  pdcp_timer    [kernel.kallsyms]   [k] __cgroup_account_cputime
+     0.01%  L1_stats      libc-2.27.so        [.] @plt
+     0.01%  TASK_RRC_GNB  nr-softmodem        [.] rrc_nr_ue_tree_s_RB_MINMAX
+     0.01%  thread_FH     [kernel.kallsyms]   [k] aa_sock_msg_perm
+     0.01%  Tpool3_-1     [kernel.kallsyms]   [k] dequeue_rt_stack
+     0.01%  feprx         libdfts.so          [.] dft
+     0.01%  Tpool1_-1     nr-softmodem        [.] nr_compute_tbs
+     0.01%  feptx         [kernel.kallsyms]   [k] switch_to_thread_stack
+     0.01%  feptx         [kernel.kallsyms]   [k] __sched_text_start
+     0.01%  thread_FH     [kernel.kallsyms]   [k] __fget
+     0.01%  Tpool0_-1     [kernel.kallsyms]   [k] sys_futex
+     0.01%  pdcp_timer    [kernel.kallsyms]   [k] sched_clock_cpu
+     0.01%  nr-softmodem  librfsimulator.so   [.] fullwrite
+     0.00%  Tpool0_-1     [kernel.kallsyms]   [k] futex_wait_queue_me
+     0.00%  RLC queue     [kernel.kallsyms]   [k] end_repeat_nmi
+     0.00%  feptx         [kernel.kallsyms]   [k] native_apic_msr_write
+     0.00%  TASK_RRC_GNB  [kernel.kallsyms]   [k] native_apic_msr_write
+     0.00%  pdcp_timer    [kernel.kallsyms]   [k] native_apic_msr_write
+     0.00%  Tpool2_-1     [kernel.kallsyms]   [k] native_apic_msr_write
+     0.00%  TASK_GTPV1_U  [kernel.kallsyms]   [k] native_apic_msr_write
+     0.00%  Tpool1_-1     [kernel.kallsyms]   [k] native_apic_msr_write
+     0.00%  RLC queue     [kernel.kallsyms]   [k] native_apic_msr_write
+     0.00%  nr-softmodem  [kernel.kallsyms]   [k] native_apic_msr_write
+     0.00%  thread_FH     [kernel.kallsyms]   [k] native_apic_msr_write
+     0.00%  L1_stats      [kernel.kallsyms]   [k] native_apic_msr_write
+     0.00%  Tpool0_-1     [kernel.kallsyms]   [k] native_apic_msr_write
+     0.00%  TASK_GNB_APP  [kernel.kallsyms]   [k] native_apic_msr_write
+     0.00%  feprx         [kernel.kallsyms]   [k] native_apic_msr_write
+     0.00%  Tpool3_-1     [kernel.kallsyms]   [k] native_apic_msr_write
+     0.00%  Tpool0_-1     [kernel.kallsyms]   [k] native_write_msr
+     0.00%  TASK_GNB_APP  [kernel.kallsyms]   [k] native_write_msr
+     0.00%  feptx         [kernel.kallsyms]   [k] native_write_msr
+     0.00%  feptx         [kernel.kallsyms]   [k] __perf_event_task_sched_in
+     0.00%  Tpool1_-1     [kernel.kallsyms]   [k] __perf_event_task_sched_in
+     0.00%  pdcp_timer    [kernel.kallsyms]   [k] __perf_event_task_sched_in
+     0.00%  Tpool0_-1     [kernel.kallsyms]   [k] __perf_event_task_sched_in
+     0.00%  Tpool2_-1     [kernel.kallsyms]   [k] __perf_event_task_sched_in
+     0.00%  Tpool3_-1     [kernel.kallsyms]   [k] __perf_event_task_sched_in
+     0.00%  TASK_RRC_GNB  [kernel.kallsyms]   [k] __perf_event_task_sched_in
+     0.00%  feprx         [kernel.kallsyms]   [k] __perf_event_task_sched_in
+     0.00%  feptx         [kernel.kallsyms]   [k] intel_bts_enable_local
+     0.00%  nr-softmodem  [kernel.kallsyms]   [k] __perf_event_task_sched_in
+     0.00%  nr-softmodem  [kernel.kallsyms]   [k] intel_bts_enable_local
+     0.00%  pdcp_timer    [kernel.kallsyms]   [k] intel_bts_enable_local
+     0.00%  L1_stats      [kernel.kallsyms]   [k] intel_bts_enable_local
+     0.00%  TASK_GNB_APP  [kernel.kallsyms]   [k] __perf_event_task_sched_in
+     0.00%  TASK_GTPV1_U  [kernel.kallsyms]   [k] intel_bts_enable_local
+     0.00%  TASK_RRC_GNB  [kernel.kallsyms]   [k] intel_bts_enable_local
+     0.00%  thread_FH     [kernel.kallsyms]   [k] intel_bts_enable_local
+     0.00%  L1_stats      [kernel.kallsyms]   [k] __perf_event_task_sched_in
+     0.00%  L1_stats      [kernel.kallsyms]   [k] _raw_spin_unlock
+     0.00%  RLC queue     [kernel.kallsyms]   [k] intel_bts_enable_local
+     0.00%  Tpool2_-1     [kernel.kallsyms]   [k] intel_bts_enable_local
+     0.00%  thread_FH     [kernel.kallsyms]   [k] __perf_event_task_sched_in
+     0.00%  thread_FH     [kernel.kallsyms]   [k] _raw_spin_unlock
+     0.00%  TASK_GNB_APP  [kernel.kallsyms]   [k] intel_bts_enable_local
+     0.00%  TASK_RRC_GNB  [kernel.kallsyms]   [k] _raw_spin_unlock
+     0.00%  Tpool0_-1     [kernel.kallsyms]   [k] intel_bts_enable_local
+     0.00%  Tpool0_-1     [kernel.kallsyms]   [k] intel_pmu_handle_irq
+     0.00%  Tpool3_-1     [kernel.kallsyms]   [k] _raw_spin_unlock
+     0.00%  feprx         [kernel.kallsyms]   [k] __indirect_thunk_start
+     0.00%  feprx         [kernel.kallsyms]   [k] intel_bts_enable_local
+     0.00%  nr-softmodem  [kernel.kallsyms]   [k] _raw_spin_unlock
+     0.00%  thread_FH     [kernel.kallsyms]   [k] __indirect_thunk_start
+     0.00%  L1_stats      [kernel.kallsyms]   [k] __indirect_thunk_start
+     0.00%  RLC queue     [kernel.kallsyms]   [k] _raw_spin_unlock
+     0.00%  RLC queue     [kernel.kallsyms]   [k] x86_pmu_enable
+     0.00%  TASK_GNB_APP  [kernel.kallsyms]   [k] __indirect_thunk_start
+     0.00%  TASK_GNB_APP  [kernel.kallsyms]   [k] _raw_spin_unlock
+     0.00%  TASK_GTPV1_U  [kernel.kallsyms]   [k] intel_pmu_enable_all
+     0.00%  TASK_RRC_GNB  [kernel.kallsyms]   [k] finish_task_switch
+     0.00%  TASK_RRC_GNB  [kernel.kallsyms]   [k] intel_pmu_handle_irq
+     0.00%  Tpool0_-1     [kernel.kallsyms]   [k] __indirect_thunk_start
+     0.00%  Tpool0_-1     [kernel.kallsyms]   [k] __perf_event_enable
+     0.00%  Tpool0_-1     [kernel.kallsyms]   [k] _raw_spin_unlock
+     0.00%  Tpool1_-1     [kernel.kallsyms]   [k] intel_bts_enable_local
+     0.00%  Tpool1_-1     [kernel.kallsyms]   [k] intel_pmu_handle_irq
+     0.00%  Tpool2_-1     [kernel.kallsyms]   [k] _raw_spin_unlock
+     0.00%  Tpool2_-1     [kernel.kallsyms]   [k] intel_pmu_enable_all
+     0.00%  Tpool3_-1     [kernel.kallsyms]   [k] intel_bts_enable_local
+     0.00%  feprx         [kernel.kallsyms]   [k] _raw_spin_unlock
+     0.00%  feprx         [kernel.kallsyms]   [k] intel_pmu_handle_irq
+     0.00%  feptx         [kernel.kallsyms]   [k] __indirect_thunk_start
+     0.00%  pdcp_timer    [kernel.kallsyms]   [k] _raw_spin_unlock
+     0.00%  thread_FH     [kernel.kallsyms]   [k] intel_pmu_enable_all
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

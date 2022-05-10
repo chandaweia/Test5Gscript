@@ -73,6 +73,7 @@ def doclassify(filename):
     f = open(filename)
     fw_left = open(filename_left,"w")
     fw_classified = open(filename_classified,"w")
+    fw_classified.write("Overhead,Command,Object,Symbol,Layer,Layer2,Layer3\n")
 
     line = f.readline()
     while line:
@@ -116,8 +117,8 @@ layer2list=[]
 #print(str(sys.argv[1]))
 readlayersmap('LayersMap.csv')
 
-#doclassify(str(sys.argv[1]))
-doclassify("perf_99hz_v3.data_nochildren.txt")
+doclassify(str(sys.argv[1]))
+#doclassify("perf_99hz_v3.data_nochildren.txt")
 """print("Command:++++++++",len(commandlist))
 print(commandlist)
 print("Object:++++++++++",len(objectlist))

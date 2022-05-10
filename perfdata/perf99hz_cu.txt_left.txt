@@ -1,0 +1,590 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 892  of event 'cycles:ppp'
+# Event count (approx.): 17599922179
+#
+# Overhead  Command        Shared Object       Symbol                                  
+# ........  .............  ..................  ........................................
+#
+            |
+            ---do_syscall_64
+               |          
+                --14.71%--entry_SYSCALL_64_after_hwframe
+                          |          
+                          |--4.70%--__libc_sendto
+                          |          
+                          |--4.32%--epoll_wait
+                          |          |          
+                          |           --4.20%--0
+                          |          
+                          |--2.33%--__libc_write
+                          |          0x1a
+                          |          
+                          |--1.89%--__libc_recvfrom
+                          |          
+                           --1.47%--__libc_read
+                                     0x7efd64007a90
+
+            |
+            ---syscall_return_via_sysret
+               |          
+               |--2.35%--epoll_wait
+               |          0
+               |          
+               |--0.90%--__libc_read
+               |          0x7efd64007a90
+               |          
+               |--0.83%--__libc_write
+               |          0x1a
+               |          
+               |--0.69%--__libc_sendto
+               |          
+                --0.61%--__libc_recvfrom
+
+            |
+            ---0xfffffe000003701b
+               |          
+               |--1.69%--epoll_wait
+               |          0
+               |          
+                --0.51%--__libc_sendto
+
+            |
+            ---cfree@GLIBC_2.2.5
+
+            |
+            ---ep_send_events_proc
+               |          
+                --1.88%--ep_scan_ready_list.constprop.17
+                          ep_poll
+                          sys_epoll_wait
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          epoll_wait
+                          0
+
+            |
+            ---_raw_spin_lock
+               |          
+                --1.44%--sch_direct_xmit
+                          __dev_queue_xmit
+                          dev_queue_xmit
+                          |          
+                           --1.26%--ip_finish_output2
+                                     ip_do_fragment
+                                     ip_fragment.constprop.45
+                                     ip_finish_output
+                                     ip_output
+                                     ip_local_out
+                                     ip_send_skb
+                                     udp_send_skb
+                                     udp_sendmsg
+                                     inet_sendmsg
+                                     sock_sendmsg
+                                     SYSC_sendto
+                                     sys_sendto
+                                     do_syscall_64
+                                     entry_SYSCALL_64_after_hwframe
+                                     __libc_sendto
+
+            |
+            ---__fget
+               __fget_light
+               |          
+               |--1.04%--__fdget
+               |          |          
+               |           --0.70%--sys_epoll_wait
+               |                     do_syscall_64
+               |                     entry_SYSCALL_64_after_hwframe
+               |                     epoll_wait
+               |                     0
+               |          
+                --0.85%--__fdget_pos
+                          |          
+                           --0.73%--sys_write
+                                     do_syscall_64
+                                     entry_SYSCALL_64_after_hwframe
+                                     __libc_write
+                                     0x1a
+
+            |
+            ---__skb_checksum
+               |          
+               |--1.06%--__skb_checksum
+               |          skb_checksum
+               |          __skb_checksum_complete
+               |          __first_packet_length
+               |          first_packet_length
+               |          udp_poll
+               |          sock_poll
+               |          ep_item_poll.isra.12
+               |          ep_send_events_proc
+               |          ep_scan_ready_list.constprop.17
+               |          ep_poll
+               |          sys_epoll_wait
+               |          do_syscall_64
+               |          entry_SYSCALL_64_after_hwframe
+               |          epoll_wait
+               |          0
+               |          
+                --0.83%--skb_checksum
+                          __skb_checksum_complete
+                          __first_packet_length
+                          first_packet_length
+                          udp_poll
+                          sock_poll
+                          ep_item_poll.isra.12
+                          ep_send_events_proc
+                          ep_scan_ready_list.constprop.17
+                          ep_poll
+                          sys_epoll_wait
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          epoll_wait
+                          0
+
+            |
+            ---ip_finish_output2
+               ip_do_fragment
+               ip_fragment.constprop.45
+               ip_finish_output
+               ip_output
+               ip_local_out
+               ip_send_skb
+               udp_send_skb
+               udp_sendmsg
+               inet_sendmsg
+               sock_sendmsg
+               SYSC_sendto
+               sys_sendto
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __libc_sendto
+
+            |
+            ---__pthread_mutex_lock
+               |          
+                --1.07%--0
+
+            |
+            ---skb_release_data
+               |          
+                --0.96%--__consume_stateless_skb
+                          skb_consume_udp
+                          udp_recvmsg
+                          inet_recvmsg
+                          sock_recvmsg
+                          SYSC_recvfrom
+                          sys_recvfrom
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          __libc_recvfrom
+
+            |
+            ---_raw_spin_lock_irqsave
+               |          
+                --0.72%--ep_poll
+                          sys_epoll_wait
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          epoll_wait
+                          0
+
+            |
+            ---mlx4_en_xmit
+               dev_hard_start_xmit
+               sch_direct_xmit
+               __dev_queue_xmit
+               dev_queue_xmit
+               |          
+                --1.07%--ip_finish_output2
+                          ip_do_fragment
+                          ip_fragment.constprop.45
+                          ip_finish_output
+                          ip_output
+                          ip_local_out
+                          ip_send_skb
+                          udp_send_skb
+                          udp_sendmsg
+                          inet_sendmsg
+                          sock_sendmsg
+                          SYSC_sendto
+                          sys_sendto
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          __libc_sendto
+
+            |
+            ---do_csum
+               csum_partial
+               csum_partial_ext
+               __skb_checksum
+               |          
+                --1.10%--skb_checksum
+                          __skb_checksum_complete
+                          __first_packet_length
+                          first_packet_length
+                          udp_poll
+                          sock_poll
+                          ep_item_poll.isra.12
+                          ep_send_events_proc
+                          ep_scan_ready_list.constprop.17
+                          ep_poll
+                          sys_epoll_wait
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          epoll_wait
+                          0
+
+            |
+            ---entry_SYSCALL_64_after_hwframe
+               |          
+                --0.53%--epoll_wait
+                          0
+
+            |
+            ---ep_poll
+               sys_epoll_wait
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               epoll_wait
+               0
+
+            |
+            ---_raw_spin_unlock_irqrestore
+               |          
+                --0.52%--ep_scan_ready_list.constprop.17
+                          ep_poll
+                          sys_epoll_wait
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          epoll_wait
+                          0
+
+            |
+            ---sock_poll
+               |          
+                --0.79%--ep_item_poll.isra.12
+                          ep_send_events_proc
+                          ep_scan_ready_list.constprop.17
+                          ep_poll
+                          sys_epoll_wait
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          epoll_wait
+                          0
+
+            |
+            ---0xfffffe000003701e
+               |          
+                --0.54%--epoll_wait
+                          0
+
+            |
+            ---gtpv1uTask
+
+            |
+            ---__memset_avx2_unaligned_erms
+
+            |
+            ---__indirect_thunk_start
+
+            |
+            ---skb_set_owner_w
+               |          
+                --0.65%--sock_alloc_send_pskb
+                          sock_alloc_send_skb
+                          __ip_append_data.isra.43
+                          ip_make_skb
+                          udp_sendmsg
+                          inet_sendmsg
+                          sock_sendmsg
+                          SYSC_sendto
+                          sys_sendto
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          __libc_sendto
+
+            |
+            ---fib_table_lookup
+               ip_route_output_key_hash_rcu
+               ip_route_output_key_hash
+               ip_route_output_flow
+               udp_sendmsg
+               inet_sendmsg
+               sock_sendmsg
+               SYSC_sendto
+               sys_sendto
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __libc_sendto
+
+            |
+            ---native_write_msr
+               __intel_pmu_enable_all.constprop.23
+               intel_pmu_enable_all
+               x86_pmu_enable
+               __perf_event_task_sched_in
+               finish_task_switch
+               __sched_text_start
+               schedule
+               schedule_hrtimeout_range_clock
+               schedule_hrtimeout_range
+               ep_poll
+               sys_epoll_wait
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               epoll_wait
+               0
+
+            |
+            ---__iowrite64_copy
+               mlx4_en_xmit
+               dev_hard_start_xmit
+               sch_direct_xmit
+               __dev_queue_xmit
+               dev_queue_xmit
+               |          
+                --0.60%--ip_finish_output2
+                          ip_do_fragment
+                          ip_fragment.constprop.45
+                          ip_finish_output
+                          ip_output
+                          ip_local_out
+                          ip_send_skb
+                          udp_send_skb
+                          udp_sendmsg
+                          inet_sendmsg
+                          sock_sendmsg
+                          SYSC_sendto
+                          sys_sendto
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          __libc_sendto
+
+            |
+            ---update_curr_rt
+
+            |
+            ---ep_scan_ready_list.constprop.17
+               ep_poll
+               sys_epoll_wait
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               epoll_wait
+               0
+
+            |
+            ---__perf_event_task_sched_in
+               finish_task_switch
+               __sched_text_start
+               |          
+                --0.79%--schedule
+                          schedule_hrtimeout_range_clock
+                          schedule_hrtimeout_range
+                          ep_poll
+                          sys_epoll_wait
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          epoll_wait
+                          0
+
+            |
+            ---__memmove_avx_unaligned_erms
+
+            |
+            ---__pthread_mutex_unlock
+
+            |
+            ---0xfffffe00000ca01b
+
+            |
+            ---dequeue_task_rt
+
+            |
+            ---ep_poll_callback
+               __wake_up_common
+               __wake_up_locked_key
+               |          
+                --0.53%--eventfd_write
+                          __vfs_write
+                          vfs_write
+                          sys_write
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          __libc_write
+                          0x1a
+
+            |
+            ---sys_epoll_wait
+               |          
+                --0.62%--do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          epoll_wait
+                          0
+
+            |
+            ---csum_partial_copy_generic
+               csum_and_copy_from_iter_full
+               ip_generic_getfrag
+               __ip_append_data.isra.43
+               ip_make_skb
+               udp_sendmsg
+               inet_sendmsg
+               sock_sendmsg
+               SYSC_sendto
+               sys_sendto
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __libc_sendto
+
+            |
+            ---udp_sendmsg
+               inet_sendmsg
+               sock_sendmsg
+               SYSC_sendto
+               sys_sendto
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __libc_sendto
+
+            |
+            ---cpupri_set
+               |          
+                --0.55%--dequeue_rt_stack
+                          dequeue_task_rt
+                          deactivate_task
+                          __sched_text_start
+                          schedule
+                          schedule_hrtimeout_range_clock
+                          schedule_hrtimeout_range
+                          ep_poll
+                          sys_epoll_wait
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          epoll_wait
+                          0
+
+            |
+            ---__slab_free
+
+            |
+            ---__libc_calloc
+
+            |
+            ---sockfd_lookup_light
+               SYSC_recvfrom
+               sys_recvfrom
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __libc_recvfrom
+
+            |
+            ---__alloc_skb
+
+            |
+            ---import_single_range
+
+            |
+            ---__dev_queue_xmit
+               dev_queue_xmit
+               ip_finish_output2
+               ip_do_fragment
+               ip_fragment.constprop.45
+               ip_finish_output
+               ip_output
+               ip_local_out
+               ip_send_skb
+               udp_send_skb
+               udp_sendmsg
+               inet_sendmsg
+               sock_sendmsg
+               SYSC_sendto
+               sys_sendto
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __libc_sendto
+
+            |
+            ---__rcu_read_unlock
+
+            |
+            ---ep_item_poll.isra.12
+               ep_send_events_proc
+               ep_scan_ready_list.constprop.17
+               ep_poll
+               sys_epoll_wait
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               epoll_wait
+               0
+
+            |
+            ---__netdev_pick_tx
+
+            |
+            ---security_socket_recvmsg
+               sock_recvmsg
+               SYSC_recvfrom
+               sys_recvfrom
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __libc_recvfrom
+
+            |
+            ---cpuacct_charge
+               update_curr_rt
+               dequeue_task_rt
+               deactivate_task
+               __sched_text_start
+               schedule
+               schedule_hrtimeout_range_clock
+               schedule_hrtimeout_range
+               ep_poll
+               sys_epoll_wait
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               epoll_wait
+               0
+
+            |
+            ---gtpv1uReceiver
+
+            |
+            ---skb_copy_datagram_iter
+               skb_copy_datagram_iter
+               udp_recvmsg
+               inet_recvmsg
+               sock_recvmsg
+               SYSC_recvfrom
+               sys_recvfrom
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __libc_recvfrom
+
+            |
+            ---__sk_mem_reduce_allocated
+               udp_rmem_release
+               udp_skb_destructor
+               __skb_try_recv_from_queue
+               __skb_recv_udp
+               udp_recvmsg
+               inet_recvmsg
+               sock_recvmsg
+               SYSC_recvfrom
+               sys_recvfrom
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __libc_recvfrom
+
+            |
+            ---__check_object_size
+
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

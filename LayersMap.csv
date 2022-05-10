@@ -4,6 +4,7 @@ feptx,,,PHY,LOW PHY,,
 feprx,,,PHY,LOW PHY,,
 RLC,,,RLC,,,
 TASK_GTPV1_U,,,NG,PDCP,,
+PDCP,,,PDCP,,,
 pdcp,,,PDCP,,,
 TASK_RRC_GNB,,,RRC,,,
 ,,rotate_cpx_vector,PHY,HIGH PHY,,in MODULATION
