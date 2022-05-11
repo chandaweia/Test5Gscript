@@ -1,0 +1,825 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 884  of event 'cycles:ppp'
+# Event count (approx.): 17136249580
+#
+# Overhead  Command        Shared Object       Symbol                                  
+# ........  .............  ..................  ........................................
+#
+    14.41%  TASK_GTPV1_U   [kernel.kallsyms]   [k] do_syscall_64
+            |
+            ---do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               |          
+               |--6.06%--epoll_wait
+               |          |          
+               |           --5.94%--0
+               |          
+               |--2.66%--__libc_write
+               |          0x1a
+               |          
+               |--2.04%--__libc_recvfrom
+               |          
+               |--1.84%--__libc_read
+               |          0x7f8030007a90
+               |          
+                --1.80%--__libc_sendto
+
+     5.62%  TASK_GTPV1_U   [kernel.kallsyms]   [k] syscall_return_via_sysret
+            |
+            ---syscall_return_via_sysret
+               |          
+               |--1.95%--epoll_wait
+               |          0
+               |          
+               |--1.42%--__libc_read
+               |          0x7f8030007a90
+               |          
+               |--1.09%--__libc_recvfrom
+               |          
+                --0.68%--__libc_sendto
+
+     3.26%  TASK_GTPV1_U   [unknown]           [k] 0xfffffe000003701b
+            |
+            ---0xfffffe000003701b
+               |          
+               |--0.99%--epoll_wait
+               |          0
+               |          
+               |--0.90%--__libc_read
+               |          0x7f8030007a90
+               |          
+               |--0.66%--__libc_write
+               |          0x1a
+               |          
+                --0.60%--__libc_sendto
+
+     2.10%  TASK_GTPV1_U   [kernel.kallsyms]   [k] ep_send_events_proc
+            |
+            ---ep_send_events_proc
+               |          
+               |--1.57%--ep_scan_ready_list.constprop.17
+               |          ep_poll
+               |          sys_epoll_wait
+               |          do_syscall_64
+               |          entry_SYSCALL_64_after_hwframe
+               |          epoll_wait
+               |          0
+               |          
+                --0.54%--ep_poll
+                          sys_epoll_wait
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          epoll_wait
+                          0
+
+     2.01%  TASK_GTPV1_U   [kernel.kallsyms]   [k] mlx4_en_xmit
+            |
+            ---mlx4_en_xmit
+               dev_hard_start_xmit
+               sch_direct_xmit
+               __dev_queue_xmit
+               dev_queue_xmit
+               |          
+                --1.91%--ip_finish_output2
+                          ip_do_fragment
+                          ip_fragment.constprop.45
+                          ip_finish_output
+                          ip_output
+                          ip_local_out
+                          ip_send_skb
+                          udp_send_skb
+                          udp_sendmsg
+                          inet_sendmsg
+                          sock_sendmsg
+                          SYSC_sendto
+                          sys_sendto
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          __libc_sendto
+
+     1.88%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __fdget_pos
+            |
+            ---__fdget_pos
+               |          
+                --1.74%--sys_write
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          __libc_write
+                          0x1a
+
+     1.66%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __fget
+            |
+            ---__fget
+               |          
+                --1.44%--__fget_light
+                          |          
+                           --1.24%--__fdget
+                                     |          
+                                      --1.02%--sys_epoll_wait
+                                                do_syscall_64
+                                                entry_SYSCALL_64_after_hwframe
+                                                epoll_wait
+                                                0
+
+     1.61%  TASK_GTPV1_U   [kernel.kallsyms]   [k] _raw_spin_lock
+            |
+            ---_raw_spin_lock
+               |          
+                --1.30%--sch_direct_xmit
+                          __dev_queue_xmit
+                          dev_queue_xmit
+                          |          
+                           --1.10%--ip_finish_output2
+                                     ip_do_fragment
+                                     ip_fragment.constprop.45
+                                     ip_finish_output
+                                     ip_output
+                                     ip_local_out
+                                     ip_send_skb
+                                     udp_send_skb
+                                     udp_sendmsg
+                                     inet_sendmsg
+                                     sock_sendmsg
+                                     SYSC_sendto
+                                     sys_sendto
+                                     do_syscall_64
+                                     entry_SYSCALL_64_after_hwframe
+                                     __libc_sendto
+
+     1.55%  TASK_GTPV1_U   [kernel.kallsyms]   [k] _raw_spin_lock_irqsave
+            |
+            ---_raw_spin_lock_irqsave
+               |          
+               |--0.73%--ep_poll
+               |          sys_epoll_wait
+               |          do_syscall_64
+               |          entry_SYSCALL_64_after_hwframe
+               |          epoll_wait
+               |          0
+               |          
+                --0.68%--ep_scan_ready_list.constprop.17
+                          ep_poll
+                          sys_epoll_wait
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          epoll_wait
+                          0
+
+     1.43%  TASK_GTPV1_U   nr-softmodem        [.] gtpv1uTask
+            |
+            ---gtpv1uTask
+
+     1.41%  TASK_GTPV1_U   [kernel.kallsyms]   [k] ip_do_fragment
+            |
+            ---ip_do_fragment
+               ip_fragment.constprop.45
+               ip_finish_output
+               ip_output
+               ip_local_out
+               ip_send_skb
+               udp_send_skb
+               udp_sendmsg
+               inet_sendmsg
+               sock_sendmsg
+               SYSC_sendto
+               sys_sendto
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __libc_sendto
+
+     1.34%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __skb_checksum
+            |
+            ---__skb_checksum
+               |          
+               |--0.82%--__skb_checksum
+               |          skb_checksum
+               |          __skb_checksum_complete
+               |          __first_packet_length
+               |          first_packet_length
+               |          udp_poll
+               |          sock_poll
+               |          ep_item_poll.isra.12
+               |          ep_send_events_proc
+               |          ep_scan_ready_list.constprop.17
+               |          ep_poll
+               |          sys_epoll_wait
+               |          do_syscall_64
+               |          entry_SYSCALL_64_after_hwframe
+               |          epoll_wait
+               |          0
+               |          
+                --0.52%--skb_checksum
+                          __skb_checksum_complete
+                          __first_packet_length
+                          first_packet_length
+                          udp_poll
+                          sock_poll
+                          ep_item_poll.isra.12
+                          ep_send_events_proc
+                          ep_scan_ready_list.constprop.17
+                          ep_poll
+                          sys_epoll_wait
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          epoll_wait
+                          0
+
+     1.28%  TASK_GTPV1_U   [kernel.kallsyms]   [k] sys_epoll_wait
+            |
+            ---sys_epoll_wait
+               |          
+                --1.04%--do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          epoll_wait
+                          0
+
+     1.19%  TASK_GTPV1_U   [kernel.kallsyms]   [k] csum_partial_copy_generic
+            |
+            ---csum_partial_copy_generic
+               csum_and_copy_from_iter_full
+               ip_generic_getfrag
+               __ip_append_data.isra.43
+               ip_make_skb
+               udp_sendmsg
+               inet_sendmsg
+               sock_sendmsg
+               SYSC_sendto
+               sys_sendto
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __libc_sendto
+
+     1.17%  TASK_GTPV1_U   libpthread-2.27.so  [.] __pthread_mutex_lock
+            |
+            ---__pthread_mutex_lock
+               |          
+                --1.08%--0
+                          |          
+                           --0.63%--0
+
+     1.16%  TASK_GTPV1_U   [kernel.kallsyms]   [k] inet_lookup_ifaddr_rcu
+            |
+            ---inet_lookup_ifaddr_rcu
+               |          
+                --0.88%--__ip_dev_find
+                          ip_route_output_key_hash_rcu
+                          ip_route_output_key_hash
+                          ip_route_output_flow
+                          udp_sendmsg
+                          inet_sendmsg
+                          sock_sendmsg
+                          SYSC_sendto
+                          sys_sendto
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          __libc_sendto
+
+     1.15%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __alloc_skb
+            |
+            ---__alloc_skb
+               |          
+                --0.82%--sock_wmalloc
+                          __ip_append_data.isra.43
+                          ip_make_skb
+                          udp_sendmsg
+                          inet_sendmsg
+                          sock_sendmsg
+                          SYSC_sendto
+                          sys_sendto
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          __libc_sendto
+
+     1.13%  TASK_GTPV1_U   [kernel.kallsyms]   [k] entry_SYSCALL_64_after_hwframe
+            |
+            ---entry_SYSCALL_64_after_hwframe
+               |          
+                --0.66%--epoll_wait
+                          0
+
+     1.04%  TASK_GTPV1_U   [kernel.kallsyms]   [k] cpupri_set
+            |
+            ---cpupri_set
+               dequeue_rt_stack
+               dequeue_task_rt
+               deactivate_task
+               __sched_text_start
+               schedule
+               schedule_hrtimeout_range_clock
+               schedule_hrtimeout_range
+               ep_poll
+               sys_epoll_wait
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               epoll_wait
+               0
+
+     0.98%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __indirect_thunk_start
+            |
+            ---__indirect_thunk_start
+
+     0.97%  TASK_GTPV1_U   [kernel.kallsyms]   [k] _raw_spin_unlock_irqrestore
+            |
+            ---_raw_spin_unlock_irqrestore
+
+     0.96%  TASK_GTPV1_U   [kernel.kallsyms]   [k] schedule
+            |
+            ---schedule
+               |          
+                --0.84%--schedule_hrtimeout_range_clock
+                          schedule_hrtimeout_range
+                          ep_poll
+                          sys_epoll_wait
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          epoll_wait
+                          0
+
+     0.93%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __dev_queue_xmit
+            |
+            ---__dev_queue_xmit
+               |          
+                --0.83%--dev_queue_xmit
+                          |          
+                           --0.72%--ip_finish_output2
+                                     ip_do_fragment
+                                     ip_fragment.constprop.45
+                                     ip_finish_output
+                                     ip_output
+                                     ip_local_out
+                                     ip_send_skb
+                                     udp_send_skb
+                                     udp_sendmsg
+                                     inet_sendmsg
+                                     sock_sendmsg
+                                     SYSC_sendto
+                                     sys_sendto
+                                     do_syscall_64
+                                     entry_SYSCALL_64_after_hwframe
+                                     __libc_sendto
+
+     0.93%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __iowrite64_copy
+            |
+            ---__iowrite64_copy
+               mlx4_en_xmit
+               dev_hard_start_xmit
+               sch_direct_xmit
+               __dev_queue_xmit
+               dev_queue_xmit
+               |          
+                --0.85%--ip_finish_output2
+                          ip_do_fragment
+                          ip_fragment.constprop.45
+                          ip_finish_output
+                          ip_output
+                          ip_local_out
+                          ip_send_skb
+                          udp_send_skb
+                          udp_sendmsg
+                          inet_sendmsg
+                          sock_sendmsg
+                          SYSC_sendto
+                          sys_sendto
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          __libc_sendto
+
+     0.90%  TASK_GTPV1_U   [kernel.kallsyms]   [k] skb_release_data
+            |
+            ---skb_release_data
+               |          
+                --0.65%--__consume_stateless_skb
+                          skb_consume_udp
+                          udp_recvmsg
+                          inet_recvmsg
+                          sock_recvmsg
+                          SYSC_recvfrom
+                          sys_recvfrom
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          __libc_recvfrom
+
+     0.89%  TASK_GTPV1_U   [kernel.kallsyms]   [k] fib_table_lookup
+            |
+            ---fib_table_lookup
+               ip_route_output_key_hash_rcu
+               ip_route_output_key_hash
+               ip_route_output_flow
+               udp_sendmsg
+               inet_sendmsg
+               sock_sendmsg
+               SYSC_sendto
+               sys_sendto
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __libc_sendto
+
+     0.87%  TASK_GTPV1_U   [kernel.kallsyms]   [k] copy_user_enhanced_fast_string
+            |
+            ---copy_user_enhanced_fast_string
+               copy_page_to_iter
+               skb_copy_datagram_iter
+               udp_recvmsg
+               inet_recvmsg
+               sock_recvmsg
+               SYSC_recvfrom
+               sys_recvfrom
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __libc_recvfrom
+
+     0.86%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __slab_free
+            |
+            ---__slab_free
+
+     0.85%  TASK_GTPV1_U   [kernel.kallsyms]   [k] sock_poll
+            |
+            ---sock_poll
+               ep_item_poll.isra.12
+               ep_send_events_proc
+               ep_scan_ready_list.constprop.17
+               ep_poll
+               sys_epoll_wait
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               epoll_wait
+               0
+
+     0.84%  TASK_GTPV1_U   [kernel.kallsyms]   [k] ip_route_output_key_hash_rcu
+            |
+            ---ip_route_output_key_hash_rcu
+               ip_route_output_key_hash
+               ip_route_output_flow
+               udp_sendmsg
+               inet_sendmsg
+               sock_sendmsg
+               SYSC_sendto
+               sys_sendto
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __libc_sendto
+
+     0.78%  TASK_GTPV1_U   [kernel.kallsyms]   [k] pick_next_task_fair
+            |
+            ---pick_next_task_fair
+               __sched_text_start
+               schedule
+               schedule_hrtimeout_range_clock
+               schedule_hrtimeout_range
+               ep_poll
+               sys_epoll_wait
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               epoll_wait
+               0
+
+     0.73%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __sk_mem_reduce_allocated
+            |
+            ---__sk_mem_reduce_allocated
+               udp_rmem_release
+               udp_skb_destructor
+               __skb_try_recv_from_queue
+               __skb_recv_udp
+               udp_recvmsg
+               inet_recvmsg
+               sock_recvmsg
+               SYSC_recvfrom
+               sys_recvfrom
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __libc_recvfrom
+
+     0.72%  TASK_GTPV1_U   [kernel.kallsyms]   [k] skb_copy_datagram_iter
+            |
+            ---skb_copy_datagram_iter
+               |          
+                --0.51%--skb_copy_datagram_iter
+                          udp_recvmsg
+                          inet_recvmsg
+                          sock_recvmsg
+                          SYSC_recvfrom
+                          sys_recvfrom
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          __libc_recvfrom
+
+     0.69%  TASK_GTPV1_U   [kernel.kallsyms]   [k] kfree
+            |
+            ---kfree
+
+     0.68%  TASK_GTPV1_U   [kernel.kallsyms]   [k] ksize
+            |
+            ---ksize
+
+     0.66%  TASK_GTPV1_U   [kernel.kallsyms]   [k] kmem_cache_free
+            |
+            ---kmem_cache_free
+               kfree_skbmem
+               kfree_skb
+               skb_release_data
+               __consume_stateless_skb
+               skb_consume_udp
+               udp_recvmsg
+               inet_recvmsg
+               sock_recvmsg
+               SYSC_recvfrom
+               sys_recvfrom
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __libc_recvfrom
+
+     0.66%  TASK_GTPV1_U   [kernel.kallsyms]   [k] datagram_poll
+            |
+            ---datagram_poll
+               |          
+                --0.54%--udp_poll
+                          sock_poll
+                          ep_item_poll.isra.12
+                          ep_send_events_proc
+                          ep_scan_ready_list.constprop.17
+                          ep_poll
+                          sys_epoll_wait
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          epoll_wait
+                          0
+
+     0.66%  TASK_GTPV1_U   [kernel.kallsyms]   [k] udp_sendmsg
+            |
+            ---udp_sendmsg
+               inet_sendmsg
+               sock_sendmsg
+               SYSC_sendto
+               sys_sendto
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __libc_sendto
+
+     0.65%  TASK_GTPV1_U   [kernel.kallsyms]   [k] ep_poll
+            |
+            ---ep_poll
+               sys_epoll_wait
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               epoll_wait
+               0
+
+     0.64%  TASK_GTPV1_U   [unknown]           [k] 0xfffffe0000037025
+            |
+            ---0xfffffe0000037025
+
+     0.63%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __ip_append_data.isra.43
+            |
+            ---__ip_append_data.isra.43
+               ip_make_skb
+               udp_sendmsg
+               inet_sendmsg
+               sock_sendmsg
+               SYSC_sendto
+               sys_sendto
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __libc_sendto
+
+     0.63%  TASK_GTPV1_U   [kernel.kallsyms]   [k] netif_skb_features
+            |
+            ---netif_skb_features
+
+     0.61%  TASK_GTPV1_U   [kernel.kallsyms]   [k] do_csum
+            |
+            ---do_csum
+               csum_partial
+
+     0.61%  TASK_GTPV1_U   libc-2.27.so        [.] cfree@GLIBC_2.2.5
+            |
+            ---cfree@GLIBC_2.2.5
+
+     0.58%  TASK_GTPV1_U   [kernel.kallsyms]   [k] copy_page_to_iter
+            |
+            ---copy_page_to_iter
+               skb_copy_datagram_iter
+
+     0.57%  TASK_GTPV1_U   [kernel.kallsyms]   [k] ip_setup_cork
+            |
+            ---ip_setup_cork
+
+     0.56%  TASK_GTPV1_U   libc-2.27.so        [.] __memset_avx2_unaligned_erms
+            |
+            ---__memset_avx2_unaligned_erms
+
+     0.56%  TASK_GTPV1_U   [kernel.kallsyms]   [k] dev_hard_start_xmit
+            |
+            ---dev_hard_start_xmit
+
+     0.56%  TASK_GTPV1_U   [kernel.kallsyms]   [k] skb_set_owner_w
+            |
+            ---skb_set_owner_w
+
+     0.55%  TASK_GTPV1_U   nr-softmodem        [.] itti_get_events_locked
+            |
+            ---itti_get_events_locked
+
+     0.55%  TASK_GTPV1_U   [kernel.kallsyms]   [k] mutex_lock
+            |
+            ---mutex_lock
+               ep_scan_ready_list.constprop.17
+               ep_poll
+               sys_epoll_wait
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               epoll_wait
+               0
+
+     0.54%  TASK_GTPV1_U   libc-2.27.so        [.] epoll_wait
+            |
+            ---epoll_wait
+
+     0.54%  TASK_GTPV1_U   libpthread-2.27.so  [.] __pthread_mutex_unlock
+            |
+            ---__pthread_mutex_unlock
+
+     0.54%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __rcu_read_lock
+            |
+            ---__rcu_read_lock
+               __fget_light
+
+     0.54%  TASK_GTPV1_U   [kernel.kallsyms]   [k] SYSC_recvfrom
+            |
+            ---SYSC_recvfrom
+               sys_recvfrom
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __libc_recvfrom
+
+     0.53%  TASK_GTPV1_U   [kernel.kallsyms]   [k] skb_network_protocol
+            |
+            ---skb_network_protocol
+               netif_skb_features
+               validate_xmit_skb
+               validate_xmit_skb_list
+               sch_direct_xmit
+               __dev_queue_xmit
+               dev_queue_xmit
+
+     0.52%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __perf_event_task_sched_in
+            |
+            ---__perf_event_task_sched_in
+               finish_task_switch
+               __sched_text_start
+               schedule
+               schedule_hrtimeout_range_clock
+               schedule_hrtimeout_range
+               ep_poll
+               sys_epoll_wait
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               epoll_wait
+               0
+
+     0.51%  TASK_GTPV1_U   [kernel.kallsyms]   [k] ip_finish_output2
+            |
+            ---ip_finish_output2
+               ip_do_fragment
+               ip_fragment.constprop.45
+               ip_finish_output
+               ip_output
+               ip_local_out
+               ip_send_skb
+               udp_send_skb
+               udp_sendmsg
+               inet_sendmsg
+               sock_sendmsg
+               SYSC_sendto
+               sys_sendto
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __libc_sendto
+
+     0.48%  TASK_GTPV1_U   [kernel.kallsyms]   [k] ep_poll_callback
+     0.48%  TASK_GTPV1_U   [kernel.kallsyms]   [k] common_file_perm
+     0.48%  TASK_GTPV1_U   [kernel.kallsyms]   [k] eventfd_ctx_read
+     0.48%  TASK_GTPV1_U   [kernel.kallsyms]   [k] fput_many
+     0.48%  TASK_GTPV1_U   [kernel.kallsyms]   [k] udp_recvmsg
+     0.47%  TASK_GTPV1_U   nr-softmodem        [.] gtpv1uReceiver
+     0.47%  TASK_GTPV1_U   [kernel.kallsyms]   [k] update_curr_rt
+     0.45%  TASK_GTPV1_U   [kernel.kallsyms]   [k] SYSC_sendto
+     0.44%  TASK_GTPV1_U   [kernel.kallsyms]   [k] security_file_permission
+     0.44%  TASK_GTPV1_U   [kernel.kallsyms]   [k] entry_SYSCALL_64_stage2
+     0.44%  TASK_GTPV1_U   [kernel.kallsyms]   [k] cpuacct_charge
+     0.43%  TASK_GTPV1_U   [kernel.kallsyms]   [k] move_addr_to_user
+     0.43%  TASK_GTPV1_U   [kernel.kallsyms]   [k] schedule_hrtimeout_range_clock
+     0.41%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __rcu_read_unlock
+     0.38%  TASK_GTPV1_U   [kernel.kallsyms]   [k] enqueue_top_rt_rq
+     0.38%  TASK_GTPV1_U   [kernel.kallsyms]   [k] skb_put
+     0.37%  TASK_GTPV1_U   libpthread-2.27.so  [.] __pthread_enable_asynccancel
+     0.37%  TASK_GTPV1_U   [kernel.kallsyms]   [k] _raw_spin_unlock
+     0.36%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __local_bh_enable_ip
+     0.35%  TASK_GTPV1_U   [kernel.kallsyms]   [k] native_sched_clock
+     0.35%  TASK_GTPV1_U   [kernel.kallsyms]   [k] ip_finish_output
+     0.35%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __netdev_pick_tx
+     0.34%  TASK_GTPV1_U   libc-2.27.so        [.] __memmove_avx_unaligned_erms
+     0.34%  TASK_GTPV1_U   [kernel.kallsyms]   [k] import_single_range
+     0.34%  TASK_GTPV1_U   nr-softmodem        [.] sdap_data_req
+     0.34%  TASK_GTPV1_U   [kernel.kallsyms]   [k] security_socket_recvmsg
+     0.34%  TASK_GTPV1_U   [unknown]           [k] 0xfffffe000003701e
+     0.34%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __first_packet_length
+     0.33%  TASK_GTPV1_U   [kernel.kallsyms]   [k] mlx4_en_select_queue
+     0.33%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __kmalloc_node_track_caller
+     0.33%  TASK_GTPV1_U   [kernel.kallsyms]   [k] rcu_note_context_switch
+     0.33%  TASK_GTPV1_U   [kernel.kallsyms]   [k] ip_send_skb
+     0.33%  TASK_GTPV1_U   [unknown]           [k] 0xfffffe000003700c
+     0.31%  TASK_GTPV1_U   [kernel.kallsyms]   [k] sch_direct_xmit
+     0.30%  TASK_GTPV1_U   [kernel.kallsyms]   [k] skb_release_head_state
+     0.29%  TASK_GTPV1_U   [kernel.kallsyms]   [k] _raw_spin_unlock_bh
+     0.28%  TASK_GTPV1_U   [kernel.kallsyms]   [k] deactivate_task
+     0.28%  TASK_GTPV1_U   [kernel.kallsyms]   [k] kfree_skbmem
+     0.27%  TASK_GTPV1_U   nr-softmodem        [.] nr_pdcp_entity_recv_sdu
+     0.26%  TASK_GTPV1_U   [kernel.kallsyms]   [k] vfs_write
+     0.25%  TASK_GTPV1_U   [kernel.kallsyms]   [k] neigh_resolve_output
+     0.25%  TASK_GTPV1_U   [kernel.kallsyms]   [k] eth_header
+     0.24%  TASK_GTPV1_U   [kernel.kallsyms]   [k] skb_clone_tx_timestamp
+     0.24%  TASK_GTPV1_U   [kernel.kallsyms]   [k] _raw_spin_lock_bh
+     0.24%  TASK_GTPV1_U   [kernel.kallsyms]   [k] ep_scan_ready_list.constprop.17
+     0.24%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __fget_light
+     0.24%  TASK_GTPV1_U   [kernel.kallsyms]   [k] validate_xmit_skb
+     0.24%  TASK_GTPV1_U   [kernel.kallsyms]   [k] kmem_cache_alloc_node
+     0.24%  TASK_GTPV1_U   [kernel.kallsyms]   [k] native_write_msr
+     0.23%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __wake_up_common
+     0.23%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __cgroup_bpf_run_filter_skb
+     0.23%  TASK_GTPV1_U   nr-softmodem        [.] pdcp_data_req
+     0.23%  TASK_GTPV1_U   [kernel.kallsyms]   [k] ep_item_poll.isra.12
+     0.23%  TASK_GTPV1_U   libc-2.27.so        [.] _int_malloc
+     0.23%  TASK_GTPV1_U   [kernel.kallsyms]   [k] udp_poll
+     0.22%  TASK_GTPV1_U   [kernel.kallsyms]   [k] pick_next_task_rt
+     0.22%  TASK_GTPV1_U   [kernel.kallsyms]   [k] eventfd_write
+     0.22%  TASK_GTPV1_U   libpthread-2.27.so  [.] __libc_read
+     0.22%  TASK_GTPV1_U   [kernel.kallsyms]   [k] first_packet_length
+     0.22%  TASK_GTPV1_U   libc-2.27.so        [.] __libc_calloc
+     0.22%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __check_object_size
+     0.22%  TASK_GTPV1_U   [kernel.kallsyms]   [k] aa_file_perm
+     0.21%  TASK_GTPV1_U   [kernel.kallsyms]   [k] cmpxchg_double_slab.isra.33
+     0.21%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __sched_text_start
+     0.21%  TASK_GTPV1_U   [kernel.kallsyms]   [k] mutex_unlock
+     0.21%  TASK_GTPV1_U   [kernel.kallsyms]   [k] iov_iter_advance
+     0.21%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __skb_recv_udp
+     0.21%  TASK_GTPV1_U   [kernel.kallsyms]   [k] validate_xmit_xfrm
+     0.20%  TASK_GTPV1_U   [kernel.kallsyms]   [k] aa_sk_perm
+     0.20%  TASK_GTPV1_U   [kernel.kallsyms]   [k] mlx4_en_features_check
+     0.18%  TASK_GTPV1_U   [kernel.kallsyms]   [k] ip_output
+     0.15%  TASK_GTPV1_U   [kernel.kallsyms]   [k] sockfd_lookup_light
+     0.15%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __fdget
+     0.14%  TASK_GTPV1_U   [kernel.kallsyms]   [k] skb_consume_udp
+     0.14%  TASK_GTPV1_U   [kernel.kallsyms]   [k] sock_alloc_send_pskb
+     0.14%  TASK_GTPV1_U   libpthread-2.27.so  [.] __libc_sendto
+     0.13%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __put_user_8
+     0.13%  TASK_GTPV1_U   nr-softmodem        [.] itti_send_msg_to_task_locked
+     0.12%  TASK_GTPV1_U   [kernel.kallsyms]   [k] fib_select_path
+     0.12%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __x86_indirect_thunk_rbx
+     0.12%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __x86_indirect_thunk_r8
+     0.12%  TASK_GTPV1_U   [kernel.kallsyms]   [k] put_prev_task_rt
+     0.12%  TASK_GTPV1_U   [kernel.kallsyms]   [k] udp_rmem_release
+     0.12%  TASK_GTPV1_U   [kernel.kallsyms]   [k] ctx_sched_out
+     0.12%  TASK_GTPV1_U   nr-softmodem        [.] gtpv1uCreateAndSendMsg.constprop.130
+     0.11%  TASK_GTPV1_U   [kernel.kallsyms]   [k] inet_sendmsg
+     0.11%  TASK_GTPV1_U   [kernel.kallsyms]   [k] eventfd_read
+     0.11%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __ip_local_out
+     0.11%  TASK_GTPV1_U   [kernel.kallsyms]   [k] skb_checksum
+     0.11%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __perf_event_task_sched_out
+     0.11%  TASK_GTPV1_U   [kernel.kallsyms]   [k] security_sk_classify_flow
+     0.11%  TASK_GTPV1_U   [kernel.kallsyms]   [k] native_apic_msr_eoi_write
+     0.11%  TASK_GTPV1_U   libpthread-2.27.so  [.] __libc_recvfrom
+     0.11%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __kmalloc_reserve.isra.40
+     0.11%  TASK_GTPV1_U   nr-softmodem        [.] itti_send_msg_to_task
+     0.11%  TASK_GTPV1_U   [kernel.kallsyms]   [k] fput
+     0.10%  TASK_GTPV1_U   nr-softmodem        [.] itti_get_events
+     0.10%  TASK_GTPV1_U   [kernel.kallsyms]   [k] ipv4_mtu
+     0.10%  TASK_GTPV1_U   [kernel.kallsyms]   [k] inet_recvmsg
+     0.10%  TASK_GTPV1_U   nr-softmodem        [.] itti_receive_msg
+     0.10%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __ip_make_skb
+     0.10%  TASK_GTPV1_U   [kernel.kallsyms]   [k] udp_skb_destructor
+     0.10%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __fsnotify_parent
+     0.10%  TASK_GTPV1_U   [kernel.kallsyms]   [k] pick_next_task_idle
+     0.10%  TASK_GTPV1_U   nr-softmodem        [.] nr_sdap_qfi2drb_map
+     0.10%  TASK_GTPV1_U   [kernel.kallsyms]   [k] sys_recvfrom
+     0.09%  TASK_GTPV1_U   [kernel.kallsyms]   [k] csum_partial_copy_from_user
+     0.09%  TASK_GTPV1_U   [kernel.kallsyms]   [k] xfrm_lookup
+     0.09%  TASK_GTPV1_U   [kernel.kallsyms]   [k] pick_next_task_dl
+     0.09%  TASK_GTPV1_U   libpthread-2.27.so  [.] __pthread_disable_asynccancel
+     0.09%  TASK_GTPV1_U   [kernel.kallsyms]   [k] ip_send_check
+     0.09%  TASK_GTPV1_U   [kernel.kallsyms]   [k] __x86_indirect_thunk_rcx
+     0.09%  TASK_GTPV1_U   [kernel.kallsyms]   [k] dequeue_rt_stack
+     0.05%  PDCP data ind  [kernel.kallsyms]   [k] do_syscall_64
+     0.00%  TASK_GTPV1_U   [kernel.kallsyms]   [k] native_apic_msr_write
+     0.00%  PDCP data ind  [kernel.kallsyms]   [k] native_apic_msr_write
+     0.00%  TASK_GTPV1_U   [kernel.kallsyms]   [k] intel_pmu_handle_irq
+     0.00%  TASK_GTPV1_U   [kernel.kallsyms]   [k] intel_bts_enable_local
+     0.00%  PDCP data ind  [kernel.kallsyms]   [k] _raw_spin_unlock
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

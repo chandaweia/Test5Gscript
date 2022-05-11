@@ -522,8 +522,6 @@
      0.01%  Tpool3_-1      libpthread-2.27.so  [.] _pthread_cleanup_push
      0.01%  Tpool0_-1      [kernel.kallsyms]   [k] update_blocked_averages
      0.01%  TASK_GNB_APP   libc-2.27.so        [.] __strchrnul_avx2
-     0.01%  PDCP data ind  libpthread-2.27.so  [.] __pthread_mutex_lock
-     0.00%  PDCP data ind  nr-softmodem        [.] sdap_data_ind
      0.00%  Tpool1_-1      [kernel.kallsyms]   [k] idle_cpu
      0.00%  Tpool2_-1      [kernel.kallsyms]   [k] native_write_msr
      0.00%  Tpool0_-1      [kernel.kallsyms]   [k] native_apic_msr_write
@@ -534,7 +532,6 @@
      0.00%  L1_stats       [kernel.kallsyms]   [k] native_apic_msr_write
      0.00%  Tpool2_-1      [kernel.kallsyms]   [k] native_apic_msr_write
      0.00%  TASK_GNB_APP   [kernel.kallsyms]   [k] native_apic_msr_write
-     0.00%  PDCP data ind  [kernel.kallsyms]   [k] native_apic_msr_write
      0.00%  L1_stats       [kernel.kallsyms]   [k] native_write_msr
      0.00%  TASK_GNB_APP   [kernel.kallsyms]   [k] native_write_msr
      0.00%  Tpool1_-1      [kernel.kallsyms]   [k] __perf_event_task_sched_in
@@ -543,8 +540,6 @@
      0.00%  L1_stats       [kernel.kallsyms]   [k] __perf_event_task_sched_in
      0.00%  TASK_GNB_APP   [kernel.kallsyms]   [k] __perf_event_task_sched_in
      0.00%  Tpool1_-1      [kernel.kallsyms]   [k] intel_pmu_handle_irq
-     0.00%  PDCP data ind  [kernel.kallsyms]   [k] __perf_event_task_sched_in
-     0.00%  PDCP data ind  [kernel.kallsyms]   [k] intel_bts_enable_local
      0.00%  TASK_GNB_APP   [kernel.kallsyms]   [k] intel_bts_enable_local
      0.00%  Tpool0_-1      [kernel.kallsyms]   [k] intel_bts_enable_local
      0.00%  Tpool0_-1      [kernel.kallsyms]   [k] intel_pmu_handle_irq

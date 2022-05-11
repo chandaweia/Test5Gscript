@@ -1,74 +1,74 @@
-Command,Object,Symbol,Layer,Layer2,Layer3,Notes
-thread_FH,,,PHY,LOW PHY,,
-feptx,,,PHY,LOW PHY,,
-feprx,,,PHY,LOW PHY,,
-RLC,,,RLC,,,
-TASK_GTPV1_U,,,NG,PDCP,,
-PDCP,,,PDCP,,,
-pdcp,,,PDCP,,,
-TASK_RRC_GNB,,,RRC,,,
-,,rotate_cpx_vector,PHY,HIGH PHY,,in MODULATION
-,,nr_generate_pdsch,PHY,HIGH PHY,,"IN NR_TRANSPORT, so HIGH PHY"
-,,dft2048,PHY,,,
-,,nr_codeword_scrambling,PHY,HIGH PHY,,Scrambling?
-,,allowed_xlsch_re_in_dmrs_symbol,PHY,LOW PHY or RF,,dmrs
-,,nr_pdcch_scrambling,PHY,,,NR Channel
-,,dft1024,PHY,,,
-,,gNB_I0_measurements,PHY,LOW PHY,,
-,,dft256,PHY,,,
-,,nr_modulation,PHY,HIGH PHY,,Modulation?
-,,nr_segmentation,PHY,HIGH PHY,,Coding & decoding
-,,multadd_cpx_vector,PHY,LOW PHY,,MODULATION/beamforming.c so LOW PHY or HIGH PHY
-,,ldpc,PHY,HIGH PHY,LDPC,
-,,LDPC,PHY,HIGH PHY,LDPC,
-,,signal_energy_nodc,PHY,,,
-,,crc,PHY,HIGH PHY,,
-,,rx_nr_prach,PHY,LOW PHY,,
-,,idft64,PHY,,,
-,,fill_ul_rb_mask,PHY,LOW PHY,,???
-,,nr_est_timing_advance_pusch,PHY,HIGH PHY,,estimate timing advance for MAC
-,,idft,PHY,LOW PHY,,
-,,nr_ulsch_decoding,PHY,HIGH PHY,,"NR_TRANSPORT, decoding"
-,,get_dmrs_freq_idx,PHY,LOW PHY,,dmrs
-,,nr_fill_cce_list,PHY,LOW PHY,,"NR_TRANSPORT,cce"
-,,phy_procedures_gNB_uespec_RX,PHY,LOW PHY,,
-,,phy_,PHY,,,
-,,dB_fixed_times10,PHY,LOW PHY???,,
-,,nr_generate_dci,PHY,LOW PHY,,dci
-,,nr_slot_select,PHY,LOW PHY,,nr-ru.c
-,,polar_encoder_fast,PHY,HIGH PHY,,
-,,dB_fixed,PHY,LOW PHY???,,
-,,nr_rx_pusch,PHY,LOW PHY???,,NR_TRANSPORT
-,,nr_generate_pbch,PHY,LOW PHY,,present in downlink signals only.
-,,ru_thread,PHY,LOW PHY,,
-,,NR_UL_indication,PHY,LOW PHY???,,
-,,get_coreset_rballoc,PHY or MAC,,,
-,,get_samples_per_slot,PHY,LOW PHY,,nr-ru.c
-,,nr_pusch_dmrs_rx,PHY,LOW PHY,,
-,,nr_polar_params,PHY,HIGH PHY,,coding
-,,nr_ulsch_unscrambling,PHY,HIGH PHY,,NR_TRANSPORT
-,,nr_schedule_response,PHY,HIGH PHY???,,
-,,nr_feptx_ofdm_2thread,PHY,LOW PHY,,nr-ru.c
-,,feptx,PHY,LOW PHY,,
-,,nr_ulsch_extract_rbs_single,PHY,???,,NR_TRANSPORT
-,,PHY_ofdm_mod.part.0,PHY,HIGH PHY,,in MODULATION
-,,PHY_,PHY,???,,???
-,,nr_gnb_measurements,PHY,???,,"NR_TRANSPORT,NR_ESTIMATION"
-,,,,,,
-,,get_pdsch_to_harq_feedback,MAC,,,
-,,nr_schedule_ulsch,MAC,,,
-,,nr_fill_nfapi_pucch,MAC,,,
-,,nr_compute_tbslbrm,MAC,,,
-,,schedule_control_sib1,MAC,,,
-,,handle_nr_uci,MAC,,,
-,,pf_ul,MAC,,,
-,,pf_dl,MAC,,,
-,,nr_schedule_ue_spec,MAC,,,
-,,is_nr_UL_slot,MAC,,,
-,,schedule_nr_mib,MAC,,,
-,,nr_fr1_ulsch_preprocessor,MAC,,,
-,,,,,,
-,,nr_rlc_sdu_segment_list_add,RLC,,,
-,,rlc_,RLC,,,???
-,,sn_compare_tx,RLC,,,
-,,sn_compare_tx,RLC,,,
+Command,Object,Symbol,Layer,Layer2,Layer3,Notes,Ahan Notes
+thread_FH,,,PHY,LOW PHY,,,LOW PHY
+feptx,,,PHY,LOW PHY,,,LOW PHY
+feprx,,,PHY,LOW PHY,,,LOW PHY
+RLC,,,RLC,,,,RLC
+TASK_GTPV1_U,,,NG,,,,"Not PDCP, just NG"
+PDCP,,,PDCP,,,,PDCP
+pdcp,,,PDCP,,,,PDCP
+TASK_RRC_GNB,,,RRC,,,,RRC
+TASK_GNB_APP,,,SL,,,SL: System-level,System-level Tasks
+,,rotate_cpx_vector,PHY,HIGH PHY,,in MODULATION,HIGH PHY
+,,nr_generate_pdsch,PHY,HIGH PHY,,"IN NR_TRANSPORT, so HIGH PHY",Not sure
+,,dft2048,PHY,LOW PHY,,,FFT/IFFT- Low PHY
+,,nr_codeword_scrambling,PHY,HIGH PHY,,Scrambling?,High PHY
+,,allowed_xlsch_re_in_dmrs_symbol,PHY,HIGH PHY,,dmrs,High PHY (done before precoding)
+,,nr_pdcch_scrambling,PHY,LOW PHY,,NR Channel,High PHY
+,,dft1024,PHY,LOW PHY,,,FFT/IFFT- Low PHY
+,,gNB_I0_measurements,PHY,LOW PHY,,,Seems HIGH PHY because it includes decoding
+,,dft256,PHY,LOW PHY,,,FFT/IFFT- Low PHY
+,,nr_modulation,PHY,HIGH PHY,,Modulation?,High PHY
+,,nr_segmentation,PHY,HIGH PHY,,Coding & decoding,High PHY
+,,multadd_cpx_vector,PHY,LOW PHY,,MODULATION/beamforming.c so LOW PHY or HIGH PHY,LOW PHY
+,,ldpc,PHY,HIGH PHY,LDPC,,HIGH PHY
+,,LDPC,PHY,HIGH PHY,LDPC,,HIGH PHY
+,,signal_energy_nodc,PHY,HIGH PHY,,,HIGH PHY
+,,crc,PHY,HIGH PHY,,,HIGH PHY
+,,rx_nr_prach,PHY,LOW PHY,,,LOW PHY
+,,idft64,PHY,LOW PHY,,,LOW PHY
+,,fill_ul_rb_mask,PHY,HIGH PHY,,,HIGH PHY-- this is done just before decoding
+,,nr_est_timing_advance_pusch,PHY,HIGH PHY,,estimate timing advance for MAC,HIGH PHY
+,,idft,PHY,LOW PHY,,,LOW PHY
+,,nr_ulsch_decoding,PHY,HIGH PHY,,"NR_TRANSPORT, decoding",HIGH PHY
+,,get_dmrs_freq_idx,PHY,HIGH PHY,,dmrs,HIGH PHY
+,,nr_fill_cce_list,PHY,LOW PHY,,"NR_TRANSPORT,cce",Not sure
+,,phy_procedures_gNB_uespec_RX,PHY,HIGH PHY,,,High PHY since most of the decoding is done here
+,,phy_,PHY,,,,
+,,nr_generate_dci,PHY,HIGH PHY,,dci,High PHY
+,,nr_slot_select,PHY,LOW PHY,,nr-ru.c,LOW PHY
+,,polar_encoder_fast,PHY,HIGH PHY,,,HIGH PHY
+,,dB_fixed,PHY,LOW PHY,,,LOW PHY
+,,nr_rx_pusch,PHY,HIGH PHY,,NR_TRANSPORT,"HIGH PHY, done after decoding"
+,,nr_generate_pbch,PHY,HIGH PHY,,present in downlink signals only.,HIGH PHY
+,,ru_thread,PHY,LOW PHY,,,LOW PHY
+,,NR_UL_indication,MAC,,,,MAC
+,,get_coreset_rballoc,PHY,HIGH PHY,,,HIGH PHY
+,,get_samples_per_slot,PHY,LOW PHY,,nr-ru.c,LOW PHY
+,,nr_pusch_dmrs_rx,PHY,LOW PHY,,,LOW PHY but not sure
+,,nr_polar_params,PHY,HIGH PHY,,coding,HIGH PHY
+,,nr_ulsch_unscrambling,PHY,HIGH PHY,,NR_TRANSPORT,HIGH PHY
+,,nr_schedule_response,PHY,HIGH PHY,,,HIGH PHY
+,,nr_feptx_ofdm_2thread,PHY,LOW PHY,,nr-ru.c,LOW PHY
+,,feptx,PHY,LOW PHY,,,LOW PHY
+,,nr_ulsch_extract_rbs_single,PHY,HIGH PHY,,NR_TRANSPORT,"HIGH PHY, done after decoding"
+,,PHY_ofdm_mod.part.0,PHY,HIGH PHY,,in MODULATION,HIGH PHY
+,,PHY_,PHY,,,???,
+,,nr_gnb_measurements,PHY,HIGH PHY,,"NR_TRANSPORT,NR_ESTIMATION",HIGH PHY
+,,,,,,,
+,,get_pdsch_to_harq_feedback,MAC,,,,MAC
+,,nr_schedule_ulsch,MAC,,,,MAC
+,,nr_fill_nfapi_pucch,MAC,,,,MAC
+,,nr_compute_tbslbrm,MAC,,,,MAC
+,,schedule_control_sib1,MAC,,,,MAC
+,,handle_nr_uci,MAC,,,,MAC
+,,pf_ul,MAC,,,,MAC
+,,pf_dl,MAC,,,,MAC
+,,nr_schedule_ue_spec,MAC,,,,MAC
+,,is_nr_UL_slot,MAC,,,,MAC
+,,schedule_nr_mib,MAC,,,,MAC
+,,nr_fr1_ulsch_preprocessor,MAC,,,,MAC
+,,,,,,,
+,,nr_rlc_sdu_segment_list_add,RLC,,,,RLC
+,,rlc_,RLC,,,,RLC
+,,sn_compare_tx,RLC,,,,RLC
+,,sn_compare_tx,RLC,,,,RLC
