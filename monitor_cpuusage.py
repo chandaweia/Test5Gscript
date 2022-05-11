@@ -21,7 +21,7 @@ def getcpu(pid):
         print("pid:{0},time:{1},cpu ratio:{2}".format(pid,i,cpures))
 
     avgusage=round(usage/times,2)
-    print("--------Result--------pid:{0},avg usage:{1}".format(pid, avgusage))
+    print("--------Result--------pid:{0},avg usage:{1}%".format(pid, avgusage))
 
 #---------------main()--------------------
 pids=get_pid('nr-softmodem')
