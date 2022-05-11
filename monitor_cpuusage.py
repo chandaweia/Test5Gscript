@@ -5,7 +5,9 @@ import thread
 import time
 from subprocess import check_output
 
+#----PreRequirement to use the script-------
 #pip install psutil
+
 times=int(sys.argv[1])
 #PID=int(sys.argv[1])
 
