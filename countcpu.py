@@ -38,16 +38,16 @@ def bargraph(X,Y):
 	print("Y:",Y)
 	Xticks=np.arange(len(X))
 	plt.bar(X, Y, 0.8, color="blue")  
-	#plt.bar(XX,YY,1,color="yellow")  #使用不同颜色  
-	plt.xlabel("Layers")  #设置X轴Y轴名称  
+	#plt.bar(XX,YY,1,color="yellow")
+	plt.xlabel("Layers")  
 	plt.ylabel("Overhead(%)")  
 	plt.title("Overhead")
-	#使用text显示数值  
+	#use text to show the value
 	for a,b in zip(Xticks,Y):
 		plt.text(x=a-0.25 , y=b+0.05 , s=f"{b}" , fontdict=dict(fontsize=10))
 		#plt.text(x=a , y = b , s=f"{b}" , fontdict=dict(fontsize=10))
 	
-	plt.ylim(0,100)    #设置Y轴上下限  
+	plt.ylim(0,100)    #set y-axis range
 	plt.show()
 
 
