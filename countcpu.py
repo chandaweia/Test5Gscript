@@ -56,8 +56,8 @@ print('len(sys.argv):',len(sys.argv))
 print(str(sys.argv[1]))
 layers=['RRC','SDAP','PDCP','RLC','MAC','PHY','NG']
 sums=[0]*7
-layers2=['HIGH PHY','LOW PHY','PDCP']
-sums2=[0]*3
+layers2=['HIGH PHY','LOW PHY']
+sums2=[0]*2
 layers3=['LDPC']
 sums3=[0]
 
@@ -75,6 +75,6 @@ print("'RRC','SDAP','PDCP','RLC','MAC','PHY','NG'",sums)
 print("HIGH PHY, LOW PHY,PDCP:",sums2)
 print("LDPC:",sums3)
 bargraph(layers,sums)
-
+bargraph(layers2,sums2)
 
 
