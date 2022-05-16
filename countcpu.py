@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 from collections import namedtuple
 import sys
 import csv
@@ -40,8 +40,8 @@ def bargraph(X,Y):
 	plt.bar(X, Y, 0.8, color="blue")  
 	#plt.bar(XX,YY,1,color="yellow")
 	plt.xlabel("Layers")  
-	plt.ylabel("Overhead(%)")  
-	plt.title("Overhead")
+	plt.ylabel("Function Usage Percentage(%)")  
+	plt.title("Perf Sample Functions Usage Percentage(%)")
 	#use text to show the value
 	for a,b in zip(Xticks,Y):
 		plt.text(x=a-0.25 , y=b+0.05 , s=f"{b}" , fontdict=dict(fontsize=10))

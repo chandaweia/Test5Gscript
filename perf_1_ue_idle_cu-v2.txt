@@ -1,0 +1,57 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 10  of event 'cycles'
+# Event count (approx.): 125039001
+#
+# Overhead  Command        Shared Object      Symbol
+# ........  .............  .................  ...............................
+#
+    60.74%  PDCP data ind  [kernel.kallsyms]  [k] _raw_read_unlock_irqrestore
+            |
+            ---_raw_read_unlock_irqrestore
+               ep_poll_callback
+               __wake_up_common
+               __wake_up_locked_key
+               eventfd_write
+               __vfs_write
+               vfs_write
+               ksys_write
+               __x64_sys_write
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __libc_write
+               0x90
+
+    39.06%  TASK_GTPV1_U   [kernel.kallsyms]  [k] igb_xmit_frame
+            |
+            ---igb_xmit_frame
+               sch_direct_xmit
+               __dev_queue_xmit
+               dev_queue_xmit
+               ip_finish_output2
+               __ip_finish_output
+               ip_finish_output
+               ip_output
+               ip_local_out
+               ip_send_skb
+               udp_send_skb.isra.47
+               udp_sendmsg
+               inet_sendmsg
+               sock_sendmsg
+               __sys_sendto
+               __x64_sys_sendto
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __libc_sendto
+
+     0.12%  PDCP data ind  [kernel.kallsyms]  [k] native_sched_clock
+     0.08%  TASK_GTPV1_U   [kernel.kallsyms]  [k] native_write_msr
+     0.00%  PDCP data ind  [kernel.kallsyms]  [k] native_write_msr
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
