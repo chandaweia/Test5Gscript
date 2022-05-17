@@ -66,17 +66,15 @@ def layerclassify(str):
         
     return ""
 
-def doclassify(path,filename,resdir):
-    
-    filename_left=resdir+"/"+filename+"_left.txt"
-    filename_classified=resdir+"/"+filename+"_classified.csv"
-    readfilenm=path+"/"+filename
+def doclassify(filename):
+    filename_left=filename+"_left.txt"
+    filename_classified=filename+"_classified.csv"
 
-    f = open(readfilenm)
+    f = open(filename)
     fw_left = open(filename_left,"w")
     fw_classified = open(filename_classified,"w")
     fw_classified.write("Overhead,Command,Object,Symbol,Layer,Layer2,Layer3\n")
-    
+
     line = f.readline()
     while line:
         #print(line)
@@ -107,27 +105,7 @@ def doclassify(path,filename,resdir):
     fw_left.close()
     fw_classified.close()
 
-def makefolder(foldername):
-    folder = os.path.exists(foldername)
-    if not folder:
-        #print("Create folder")
-        os.makedirs(foldername)
-    #else:
-    #    print("folder exists")
-
-def doclassify_dir(filePath):
-    for i,j,k in os.walk(filePath):
-        for ki in range(len(k)):
-            if k[ki].endswith(('txt')) and k[ki].endswith(('left.txt'))==False:
-                resdir=i+"/perf_classify_res"
-                makefolder(resdir)
-                #print(k[ki])
-                file=i+"/"+k[ki]
-                print("classfy file:",file)
-                doclassify(i,k[ki],resdir)
-                print("Path:",i,"file:",k[ki],"resdir:",resdir)
-
-#----------------main function-----------
+#main function
 commandlist=[]
 symbollist=[]
 objectlist=[]
@@ -139,13 +117,7 @@ layer2list=[]
 #print(str(sys.argv[1]))
 readlayersmap('LayersMap.csv')
 
-for i in range(len(sys.argv)-1):
-    if os.path.isdir(sys.argv[i+1]):
-        doclassify_dir(sys.argv[i+1])
-    elif os.path.isfile(sys.argv[i+1]):
-        doclassify(".",str(sys.argv[i+1]),".")
-        
-
+doclassify(str(sys.argv[1]))
 #doclassify("perf_99hz_v3.data_nochildren.txt")
 """print("Command:++++++++",len(commandlist))
 print(commandlist)
