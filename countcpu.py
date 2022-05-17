@@ -82,7 +82,7 @@ def drawdir(dirPath):
 			if k[ki].endswith(('_classified.csv')):
 				filenm=i+"/"+k[ki].lstrip()
 				print("file name:",filenm)
-				draw1file(filenm)
+				draw1file(filenm,1)
 
 #if __name__=="__main__":
 layers=['RRC','SDAP','PDCP','RLC','MAC','PHY','NG']
@@ -93,11 +93,11 @@ layers3=['LDPC']
 sums3=[0]
 print('len(sys.argv):',len(sys.argv))
 print(str(sys.argv[1]))
-for i in range(len(sys.argv)-1):
+for i in range(len(sys.argv)-2):
 	if os.path.isdir(sys.argv[i+1]):
 		print("Is DIr")
 		drawdir(sys.argv[i+1])
 	elif os.path.isfile(sys.argv[i+1]):
 		print("Is file")
-		draw1file(sys.argv[i+1])
+		draw1file(sys.argv[i+1],float(sys.argv[2])/100)
         #doclassify(".",str(sys.argv[i+1]),".")

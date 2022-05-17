@@ -50,6 +50,23 @@ def bargraph(X,Y):
 	plt.ylim(0,100)    #set y-axis range
 	plt.show()
 
+def bargraph_cpuusage(X,Y):
+	print("bar graph")
+	print("X:",X)
+	print("Y:",Y)
+	Xticks=np.arange(len(X))
+	plt.bar(X, Y, 0.8, color="blue")  
+	#plt.bar(XX,YY,1,color="yellow")
+	plt.xlabel("Layers")  
+	plt.ylabel("Function CPU Usage(%)")  
+	plt.title("CPU Usage")
+	#use text to show the value
+	for a,b in zip(Xticks,Y):
+		plt.text(x=a-0.25 , y=b+0.05 , s=f"{b}%" , fontdict=dict(fontsize=10))
+		#plt.text(x=a , y = b , s=f"{b}" , fontdict=dict(fontsize=10))
+	
+	plt.ylim(0,100)    #set y-axis range
+	plt.show()
 
 #if __name__=="__main__":
 
@@ -67,16 +84,22 @@ layersum=round(countoverhead(str(sys.argv[1])),2)
 print("HIGH PHY, LOW PHY:",sums2)
 print("LDPC:",sums3)"""
 
+sums=[(round(i,2)) for i in sums]
+sums2=[(round(i,2)) for i in sums2]
+sums3=[(round(i,2)) for i in sums3]
+bargraph(layers,sums)
+bargraph(layers2,sums2)
+
 totalcpu=float(sys.argv[2])
-sums=[(round(i,2)*totalcpu) for i in sums]
-sums2=[(round(i,2)*totalcpu) for i in sums2]
-sums3=[(round(i,2)*totalcpu) for i in sums3]
+sums=[(round(i*totalcpu,2)) for i in sums]
+sums2=[(round(i*totalcpu,2)) for i in sums2]
+sums3=[(round(i*totalcpu,2)) for i in sums3]
 print("layersum:",layersum)
 print("Layers:",layers)
 print("'RRC','SDAP','PDCP','RLC','MAC','PHY','NG'",sums)
 print("HIGH PHY, LOW PHY,PDCP:",sums2)
 print("LDPC:",sums3)
-bargraph(layers,sums)
-bargraph(layers2,sums2)
+bargraph_cpuusage(layers,sums)
+bargraph_cpuusage(layers2,sums2)
 
 
