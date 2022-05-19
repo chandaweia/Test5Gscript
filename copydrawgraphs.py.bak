@@ -36,7 +36,6 @@ def bargraph_layer():
     
     plt.legend([weight],["Weight"])
 
-#Need Xticks to label x axis
 def bargraph(X,Y,savefig):
 	Xticks=np.arange(len(X))
 	plt.bar(X, Y, 0.8, color="blue")  
@@ -48,44 +47,6 @@ def bargraph(X,Y,savefig):
 	#use text to show the value
 	for a,b in zip(Xticks,Y):
 		plt.text(x=a-0.25 , y=b+0.05 , s=f"{b}" , fontdict=dict(fontsize=10))
-		#plt.text(x=a-0.25 , y=b+0.05, fontdict=dict(fontsize=10))
-		#plt.text(x=a , y = b , s=f"{b}" , fontdict=dict(fontsize=10))
-	
-	plt.ylim(0,170)    #set y-axis range
-	plt.savefig(savefig)
-	plt.show()
-
-#X is the ticks for x axis
-def bargraph_value(X,Y,savefig):
-    #Xticks=np.arange(len(X))
-	plt.bar(X, Y, 5, color="blue")  
-	#plt.bar(XX,YY,1,color="yellow")
-	plt.xlabel("Sending Rate(Mbps)")  
-	plt.ylabel("CPU Usage(%)")  
-	plt.title("gNB-1UE CPU Usage(%)")
-	print("will save to->:",savefig)
-
-	for a,b in zip(X,Y):
-		plt.text(x=a-1.5 , y=b+0.05 , s=f"{b}" , fontdict=dict(fontsize=10))
-		#plt.text(x=a-0.25 , y=b+0.05, fontdict=dict(fontsize=10))
-		#plt.text(x=a , y = b , s=f"{b}" , fontdict=dict(fontsize=10))
-	
-	plt.ylim(0,170)    #set y-axis range
-	plt.savefig(savefig)
-	plt.show()
-
-#累积到一个bar上
-def bargraph_value(X,Y,savefig):
-    #Xticks=np.arange(len(X))
-	plt.bar(X, Y, 5, color="blue")  
-	#plt.bar(XX,YY,1,color="yellow")
-	plt.xlabel("Sending Rate(Mbps)")  
-	plt.ylabel("CPU Usage(%)")  
-	plt.title("gNB-1UE CPU Usage(%)")
-	print("will save to->:",savefig)
-
-	for a,b in zip(X,Y):
-		plt.text(x=a-1.5 , y=b+0.05 , s=f"{b}" , fontdict=dict(fontsize=10))
 		#plt.text(x=a-0.25 , y=b+0.05, fontdict=dict(fontsize=10))
 		#plt.text(x=a , y = b , s=f"{b}" , fontdict=dict(fontsize=10))
 	

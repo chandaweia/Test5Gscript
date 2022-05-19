@@ -9,7 +9,7 @@ plt.rcdefaults()
 
 def countoverhead(filename):
 	#print(layers)
-	sums=[0]*8
+	sums=[0]*7
 	sums2=[0]*2
 	sums3=[0]
 	layersum=0
@@ -33,8 +33,7 @@ def countoverhead(filename):
 				if row['Layer3'] != "" and row['Layer3'] == layers3[k]:
 					sums3[k] += float(overhead)
 					break
-		sum_r=sum(sums)
-		sums[7]=100-sum_r
+		
 		return layersum,sums,sums2,sums3
 
 def bargraph(X,Y,savefig):
@@ -72,7 +71,7 @@ def draw1file(filename,totalcpu):
 	sums3=[(round(i,2)*totalcpu) for i in sums3]
 	print("layersum:",layersum)
 	print("Layers:",layers)
-	print("'RRC','SDAP','PDCP','RLC','MAC','PHY','NG','OTHERS'",sums)
+	print("'RRC','SDAP','PDCP','RLC','MAC','PHY','NG'",sums)
 	print("HIGH PHY, LOW PHY,PDCP:",sums2)
 	print("LDPC:",sums3)
 	savefig=savetopic+".jpg"
@@ -89,8 +88,8 @@ def drawdir(dirPath):
 				draw1file(filenm,1)
 
 #if __name__=="__main__":
-layers=['RRC','SDAP','PDCP','RLC','MAC','PHY','NG','OTHERS']
-sums=[0]*8
+layers=['RRC','SDAP','PDCP','RLC','MAC','PHY','NG']
+sums=[0]*7
 layers2=['HIGH PHY','LOW PHY']
 sums2=[0]*2
 sums2list=[]

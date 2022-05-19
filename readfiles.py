@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+#This file is a test for the code and has been copied to classify.py
 import os
 filePath = '/Users/cuidi/iCloud/Research/5G/csvAnalysis/filecodtest'
 

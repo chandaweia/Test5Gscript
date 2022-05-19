@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+#https://matplotlib.org/stable/gallery/lines_bars_and_markers/bar_stacked.html
 from collections import namedtuple
 import sys
 import csv
@@ -30,9 +31,12 @@ def countoverhead(filename):
 					sums3[k] += float(overhead)
 					break
 		#print("sums:",sums)
+		sum_r=sum(sums)
+		sums[7]=100-sum_r
+		print("sums:",sums)
 		return layersum
 
-def bargraph(X,Y):
+def bargraph(X,Y,savefig):
 	print("bar graph")
 	print("X:",X)
 	print("Y:",Y)
@@ -48,9 +52,28 @@ def bargraph(X,Y):
 		#plt.text(x=a , y = b , s=f"{b}" , fontdict=dict(fontsize=10))
 	
 	plt.ylim(0,100)    #set y-axis range
+	plt.savefig(savefig)
 	plt.show()
 
 def bargraph_cpuusage(X,Y):
+	print("bar graph")
+	print("X:",X)
+	print("Y:",Y)
+	Xticks=np.arange(len(X))
+	plt.bar(X, Y, 0.8, color="blue")  
+	#plt.bar(XX,YY,1,color="yellow")
+	plt.xlabel("Layers")  
+	plt.ylabel("Function CPU Usage(%)")  
+	plt.title("CPU Usage")
+	#use text to show the value
+	for a,b in zip(Xticks,Y):
+		plt.text(x=a-0.25 , y=b+0.05 , s=f"{b}%" , fontdict=dict(fontsize=10))
+		#plt.text(x=a , y = b , s=f"{b}" , fontdict=dict(fontsize=10))
+	
+	plt.ylim(0,100)    #set y-axis range
+	plt.show()
+
+def stackedbar_cpuusage(X,Y):
 	print("bar graph")
 	print("X:",X)
 	print("Y:",Y)
@@ -72,8 +95,8 @@ def bargraph_cpuusage(X,Y):
 
 print('len(sys.argv):',len(sys.argv))
 print(str(sys.argv[1]))
-layers=['RRC','SDAP','PDCP','RLC','MAC','PHY','NG']
-sums=[0]*7
+layers=['RRC','SDAP','PDCP','RLC','MAC','PHY','NG','OTHERS']
+sums=[0]*8
 layers2=['HIGH PHY','LOW PHY']
 sums2=[0]*2
 layers3=['LDPC']
@@ -83,12 +106,13 @@ layersum=round(countoverhead(str(sys.argv[1])),2)
 """print("'RRC','SDAP','PDCP','RLC','MAC','PHY','NG','Sum':",sums)
 print("HIGH PHY, LOW PHY:",sums2)
 print("LDPC:",sums3)"""
-
+savepic=str(sys.argv[1]).rstrip(".csv")+".jpg"
 sums=[(round(i,2)) for i in sums]
 sums2=[(round(i,2)) for i in sums2]
 sums3=[(round(i,2)) for i in sums3]
-bargraph(layers,sums)
-bargraph(layers2,sums2)
+bargraph(layers,sums,savepic)
+savepic=str(sys.argv[1]).rstrip(".csv")+"_PHY.jpg"
+bargraph(layers2,sums2,savepic)
 
 totalcpu=float(sys.argv[2])
 sums=[(round(i*totalcpu,2)) for i in sums]
