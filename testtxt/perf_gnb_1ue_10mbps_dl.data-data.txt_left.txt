@@ -1,0 +1,44 @@
+            |
+            ---idft1536
+               idft
+               PHY_ofdm_mod.part.0
+               nr_feptx0
+
+            |
+            ---do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               |          
+               |--1.99%--__GI___ioctl
+               |          
+               |--0.74%--pthread_cond_signal@@GLIBC_2.3.2
+               |          
+               |--0.74%--__poll
+               |          
+                --0.61%--pthread_cond_timedwait@@GLIBC_2.3.2
+
+            |
+            ---idft64
+               idft512
+               idft1536
+               idft
+               PHY_ofdm_mod.part.0
+               nr_feptx0
+
+            |          
+             --3.10%--copy_user_enhanced_fast_string
+                       |          
+                        --3.09%--copy_urb_data_to_user
+                                  processcompl
+                                  usbdev_do_ioctl
+                                  usbdev_ioctl
+                                  do_vfs_ioctl
+                                  ksys_ioctl
+                                  __x64_sys_ioctl
+                                  do_syscall_64
+                                  entry_SYSCALL_64_after_hwframe
+                                  __GI___ioctl
+
+            |
+            ---rotate_cpx_vector
+               |          
+                --2.25%--0

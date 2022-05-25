@@ -1,0 +1,56 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 2K of event 'cycles'
+# Event count (approx.): 240797363142
+#
+# Overhead  Command        Shared Object        Symbol                                    
+# ........  .............  ...................  ..........................................
+#
+            |
+            ---idft1536
+               idft
+               PHY_ofdm_mod.part.0
+               nr_feptx0
+
+            |          
+             --3.28%--do_syscall_64
+                       entry_SYSCALL_64_after_hwframe
+                       |          
+                       |--1.65%--__GI___ioctl
+                       |          
+                        --0.53%--__poll
+
+            |
+            ---idft64
+               idft512
+               idft1536
+               idft
+               PHY_ofdm_mod.part.0
+               nr_feptx0
+
+            |
+            ---copy_user_enhanced_fast_string
+               |          
+                --3.06%--copy_urb_data_to_user
+                          processcompl
+                          usbdev_do_ioctl
+                          usbdev_ioctl
+                          do_vfs_ioctl
+                          ksys_ioctl
+                          __x64_sys_ioctl
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          __GI___ioctl
+
+            |
+            ---idft256
+               idft512
+               idft1536
+               idft
+               PHY_ofdm_mod.part.0
+               nr_feptx0
+     0.48%  Tpool3_-1      [kernel.kallsyms]    [k] native_write_msr
+     0.41%  nr-softmodem   libpthread-2.27.so   [.] __pthread_mutex_unlock

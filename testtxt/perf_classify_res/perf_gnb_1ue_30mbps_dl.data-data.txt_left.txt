@@ -1,0 +1,416 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 2K of event 'cycles'
+# Event count (approx.): 240797363142
+#
+# Overhead  Command        Shared Object        Symbol                                    
+# ........  .............  ...................  ..........................................
+#
+            |
+            ---idft1536
+               idft
+               PHY_ofdm_mod.part.0
+               nr_feptx0
+
+            |          
+             --3.28%--do_syscall_64
+                       entry_SYSCALL_64_after_hwframe
+                       |          
+                       |--1.65%--__GI___ioctl
+                       |          
+                        --0.53%--__poll
+
+            |
+            ---idft64
+               idft512
+               idft1536
+               idft
+               PHY_ofdm_mod.part.0
+               nr_feptx0
+
+            |
+            ---copy_user_enhanced_fast_string
+               |          
+                --3.06%--copy_urb_data_to_user
+                          processcompl
+                          usbdev_do_ioctl
+                          usbdev_ioctl
+                          do_vfs_ioctl
+                          ksys_ioctl
+                          __x64_sys_ioctl
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          __GI___ioctl
+
+            |
+            ---idft256
+               idft512
+               idft1536
+               idft
+               PHY_ofdm_mod.part.0
+               nr_feptx0
+
+            |
+            ---trx_usrp_read
+               rx_rf
+               ru_thread
+               0x3000000000006a
+
+            |
+            ---entry_SYSCALL_64
+               |          
+               |--0.81%--__GI___ioctl
+               |          
+                --0.75%--pthread_cond_signal@@GLIBC_2.3.2
+
+            |
+            ---rotate_cpx_vector
+               |          
+               |--1.12%--0
+               |          
+                --0.75%--0x3000000000006a
+
+            |          
+             --1.39%--syscall_return_via_sysret
+                       |          
+                        --0.59%--__GI___ioctl
+
+            |
+            ---trx_usrp_write
+               tx_rf
+               ru_tx_func
+               0
+
+            |
+            ---multadd_cpx_vector
+               0x3000000000006a
+
+            |
+            ---__memmove_avx_unaligned_erms
+               ldpc8blocks
+               one_thread
+               |          
+                --1.34%--0x200000000
+
+            |          
+             --1.49%--__memmove_avx_unaligned_erms
+                       |          
+                        --0.85%--nr_feptx0
+
+            |
+            ---0x7f6d7c6aa9b5
+
+            |
+            ---__memmove_avx_unaligned_erms
+               |          
+                --1.03%--ldpc8blocks
+                          one_thread
+                          0x200000000
+
+            |
+            ---__memmove_avx_unaligned_erms
+               ldpc8blocks
+               one_thread
+               |          
+                --1.29%--0x200000000
+
+            |
+            ---nr_segmentation
+               |          
+                --1.16%--0x101010100000000
+
+            |
+            ---__pthread_mutex_lock
+               |          
+                --0.70%--0
+
+            |
+            ---dft512
+               dft1536
+               dft
+               nr_slot_fep_ul
+               nr_fep0
+
+     1.06%  nr-softmodem   libuhd.so.4.1.0      [.] 0x00000000001f5820
+            |
+            ---0x7f6d7c6aa826
+
+            |
+            ---rotate_cpx_vector
+               |          
+                --0.58%--0x3000000000006a
+
+            |
+            ---dft1536
+               dft
+               nr_slot_fep_ul
+               nr_fep0
+
+            |
+            ---__memmove_avx_unaligned_erms
+               nr_fep0
+
+     0.96%  Tpool3_-1      [kernel.kallsyms]    [k] __perf_event_task_sched_in
+            |
+            ---_raw_spin_lock
+               finish_task_switch
+               __sched_text_start
+               schedule
+               futex_wait_queue_me
+               futex_wait
+               do_futex
+               __x64_sys_futex
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               pthread_cond_wait@@GLIBC_2.3.2
+               0x57f3e33000000000
+
+            |
+            ---psi_task_change
+               |          
+                --0.63%--deactivate_task
+                          |          
+                           --0.60%--__sched_text_start
+                                     schedule
+
+            |
+            ---memcpy@plt
+               ldpc8blocks
+               one_thread
+               0x200000000
+
+            |
+            ---rotate_cpx_vector
+               0x3000000000006a
+
+            |
+            ---nr_interleaving_ldpc
+
+            |
+            ---psi_task_change
+               deactivate_task
+               __sched_text_start
+               schedule
+               futex_wait_queue_me
+               futex_wait
+               do_futex
+               __x64_sys_futex
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               pthread_cond_wait@@GLIBC_2.3.2
+               0
+
+     0.87%  Tpool3_-1      libc-2.27.so         [.] __memset_avx2_erms
+            |
+            ---__memset_avx2_erms
+
+     0.84%  Tpool1_-1      [kernel.kallsyms]    [k] futex_wait
+            |
+            ---futex_wait
+               do_futex
+               __x64_sys_futex
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               pthread_cond_wait@@GLIBC_2.3.2
+               0x101000000000000
+
+            |
+            ---__memset_avx2_erms
+               nrLDPC_decod
+               one_thread
+               0x200000000
+
+     0.84%  Tpool3_-1      [kernel.kallsyms]    [k] switch_fpu_return
+            |
+            ---switch_fpu_return
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               pthread_cond_signal@@GLIBC_2.3.2
+
+            |
+            ---memset_erms
+               |          
+                --0.77%--proc_do_submiturb
+                          usbdev_do_ioctl
+                          usbdev_ioctl
+                          do_vfs_ioctl
+                          ksys_ioctl
+                          __x64_sys_ioctl
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          __GI___ioctl
+
+            |
+            ---multadd_cpx_vector
+               0x3000000000006a
+
+            |
+            ---nr_codeword_scrambling
+               nr_generate_pdsch
+               phy_procedures_gNB_TX
+               |          
+                --0.72%--0x77a9c000
+
+            |
+            ---rotate_cpx_vector
+               0
+
+            |
+            ---nr_generate_pdsch
+               phy_procedures_gNB_TX
+               |          
+                --0.73%--0x9cf14400
+
+            |
+            ---idft512
+               idft1536
+               idft
+               PHY_ofdm_mod.part.0
+               nr_feptx0
+
+            |
+            ---ldpc288_byte
+               ldpc8blocks
+               one_thread
+               0x200000000
+
+            |
+            ---_raw_spin_lock_irqsave
+
+            |
+            ---pf_ul
+
+     0.61%  Tpool0_-1      [kernel.kallsyms]    [k] entry_SYSCALL_64
+            |
+            ---entry_SYSCALL_64
+               pthread_cond_signal@@GLIBC_2.3.2
+
+     0.60%  nr-softmodem   libc-2.27.so         [.] _int_malloc
+            |
+            ---_int_malloc
+
+            |
+            ---cpupri_set
+
+            |
+            ---nr_interleaving_ldpc
+
+            |
+            ---__pthread_mutex_unlock
+
+            |
+            ---nrLDPC_encod
+               ldpc8blocks
+               one_thread
+
+     0.55%  nr-softmodem   [kernel.kallsyms]    [k] copy_user_enhanced_fast_string
+            |
+            ---copy_user_enhanced_fast_string
+               proc_do_submiturb
+               usbdev_do_ioctl
+               usbdev_ioctl
+               do_vfs_ioctl
+               ksys_ioctl
+               __x64_sys_ioctl
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __GI___ioctl
+
+            |
+            ---_raw_spin_lock
+
+     0.53%  Tpool1_-1      libc-2.27.so         [.] __memset_avx2_erms
+            |
+            ---__memset_avx2_erms
+
+            |
+            ---nrLDPC_encod
+               ldpc8blocks
+               one_thread
+               0x200000000
+
+            |
+            ---polar_encoder_fast
+               nr_generate_dci
+               0x2ca8730b2f0226fb
+
+            |
+            ---dft1536
+               dft
+
+            |
+            ---__fget
+               __fget_light
+               __fdget
+
+     0.48%  Tpool3_-1      [kernel.kallsyms]    [k] native_write_msr
+     0.41%  nr-softmodem   libpthread-2.27.so   [.] __pthread_mutex_unlock
+     0.40%  nr-softmodem   [kernel.kallsyms]    [k] _raw_spin_lock
+     0.40%  nr-softmodem   [kernel.kallsyms]    [k] __virt_addr_valid
+     0.39%  nr-softmodem   [kernel.kallsyms]    [k] proc_do_submiturb
+     0.36%  nr-softmodem   [kernel.kallsyms]    [k] clear_page_erms
+     0.33%  nr-softmodem   [kernel.kallsyms]    [k] memset_erms
+     0.31%  Tpool0_-1      libc-2.27.so         [.] __memset_avx2_erms
+     0.31%  nr-softmodem   [kernel.kallsyms]    [k] get_partial_node.isra.85
+     0.30%  nr-softmodem   [kernel.kallsyms]    [k] copy_user_generic_unrolled
+     0.29%  nr-softmodem   [kernel.kallsyms]    [k] usb_submit_urb
+     0.29%  nr-softmodem   [kernel.kallsyms]    [k] __slab_alloc.isra.86
+     0.27%  nr-softmodem   [kernel.kallsyms]    [k] entry_SYSCALL_64
+     0.26%  Tpool2_-1      [kernel.kallsyms]    [k] pick_next_task_rt
+     0.25%  Tpool1_-1      libm-2.27.so         [.] __log2_finite
+     0.24%  nr-softmodem   libuhd.so.4.1.0      [.] 0x00000000001f582b
+     0.24%  nr-softmodem   libuhd.so.4.1.0      [.] uhd::transport::vrt::if_hdr_pack_le
+     0.22%  nr-softmodem   [kernel.kallsyms]    [k] __check_heap_object
+     0.22%  nr-softmodem   [kernel.kallsyms]    [k] native_queued_spin_lock_slowpath
+     0.22%  nr-softmodem   [kernel.kallsyms]    [k] do_syscall_64
+     0.20%  nr-softmodem   [kernel.kallsyms]    [k] xhci_queue_bulk_tx
+     0.18%  Tpool3_-1      [kernel.kallsyms]    [k] wake_q_add_safe
+     0.16%  nr-softmodem   [kernel.kallsyms]    [k] cpupri_set
+     0.14%  Tpool1_-1      nr-softmodem         [.] schedule_nr_sib1
+     0.14%  nr-softmodem   [kernel.kallsyms]    [k] balance_runtime
+     0.08%  nr-softmodem   [kernel.kallsyms]    [k] usb_hcd_submit_urb
+     0.05%  Tpool2_-1      [kernel.kallsyms]    [k] futex_wait_queue_me
+     0.05%  Tpool1_-1      libc-2.27.so         [.] __libc_memalign
+     0.05%  Tpool3_-1      [kernel.kallsyms]    [k] ctx_sched_in
+     0.04%  Tpool3_-1      [kernel.kallsyms]    [k] do_syscall_64
+     0.04%  Tpool3_-1      libc-2.27.so         [.] __memmove_avx_unaligned_erms
+     0.04%  nr-softmodem   libpthread-2.27.so   [.] __pthread_mutex_lock
+     0.04%  Tpool2_-1      [kernel.kallsyms]    [k] perf_event_set_state.part.46
+     0.03%  Tpool0_-1      [kernel.kallsyms]    [k] do_syscall_64
+     0.03%  L1_stats       [kernel.kallsyms]    [k] jbd2_journal_stop
+     0.03%  Tpool3_-1      [kernel.kallsyms]    [k] syscall_return_via_sysret
+     0.03%  Tpool1_-1      libpthread-2.27.so   [.] __pthread_mutex_lock
+     0.02%  Tpool2_-1      [kernel.kallsyms]    [k] __x64_sys_futex
+     0.02%  L1_stats       libc-2.27.so         [.] __GI___printf_fp_l
+     0.01%  L1_stats       [kernel.kallsyms]    [k] map_id_up
+     0.01%  nr-softmodem   libuhd.so.4.1.0      [.] 0x0000000000715e9b
+     0.01%  L1_stats       [kernel.kallsyms]    [k] switch_fpu_return
+     0.01%  L1_stats       libc-2.27.so         [.] vfprintf
+     0.00%  Tpool2_-1      [kernel.kallsyms]    [k] nmi_cpu_backtrace
+     0.00%  Tpool0_-1      [kernel.kallsyms]    [k] nmi_cpu_backtrace
+     0.00%  Tpool3_-1      [kernel.kallsyms]    [k] nmi_cpu_backtrace_handler
+     0.00%  Tpool1_-1      [kernel.kallsyms]    [k] nmi_cpu_backtrace_handler
+     0.00%  Tpool2_-1      [kernel.kallsyms]    [k] native_sched_clock
+     0.00%  Tpool3_-1      [kernel.kallsyms]    [k] native_sched_clock
+     0.00%  Tpool0_-1      [kernel.kallsyms]    [k] native_sched_clock
+     0.00%  L1_stats       [kernel.kallsyms]    [k] native_write_msr
+     0.00%  nr-softmodem   [kernel.kallsyms]    [k] native_sched_clock
+     0.00%  nr-softmodem   [kernel.kallsyms]    [k] native_write_msr
+     0.00%  Tpool1_-1      [kernel.kallsyms]    [k] nmi_handle
+     0.00%  Tpool3_-1      [kernel.kallsyms]    [k] nmi_handle
+     0.00%  Tpool1_-1      [kernel.kallsyms]    [k] __x86_indirect_thunk_rax
+     0.00%  L1_stats       [kernel.kallsyms]    [k] sched_clock
+     0.00%  Tpool0_-1      [kernel.kallsyms]    [k] nmi_cpu_backtrace_handler
+     0.00%  Tpool1_-1      [kernel.kallsyms]    [k] native_sched_clock
+     0.00%  Tpool2_-1      [kernel.kallsyms]    [k] nmi_handle
+     0.00%  Tpool1_-1      [kernel.kallsyms]    [k] native_write_msr
+     0.00%  Tpool0_-1      [kernel.kallsyms]    [k] native_write_msr
+     0.00%  Tpool2_-1      [kernel.kallsyms]    [k] native_write_msr
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

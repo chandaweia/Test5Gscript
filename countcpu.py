@@ -5,13 +5,15 @@ import sys
 import csv
 import numpy as np
 import matplotlib.pyplot as plt
-plt.rcdefaults()
-
+#plt.rcdefaults()
+graphsdir="/Users/cuidi/iCloud/Research/5G/Sigcomm_Test/UsefulData/Graphs"
+plt.rcParams['figure.figsize'] = (9,6)
+plt.rc('font', size=20)
 def countoverhead(filename):
 	#print(layers)
-	sums=[0]*8
+	sums=[0]*LEN_sum
 	sums2=[0]*2
-	sums3=[0]
+	sums3=[0]*2
 	layersum=0
 	with open(filename) as f:
 		f_csv = csv.DictReader(f)
@@ -37,6 +39,24 @@ def countoverhead(filename):
 		sums[7]=100-sum_r
 		return layersum,sums,sums2,sums3
 
+def bargraph_cpuusage(X,Y,savefig):
+	#print("X:",X)
+	#print("Y:",Y)
+	Xticks=np.arange(len(X))
+	plt.bar(X, Y, 0.8, color="blue")  
+	#plt.bar(XX,YY,1,color="yellow")
+	plt.xlabel("Layers",fontweight='bold')  
+	plt.ylabel("CPU Usage(%)",fontweight='bold')  
+	#plt.title("CPU Usage")
+	#use text to show the value
+	for a,b in zip(Xticks,Y):
+		plt.text(x=a-0.4 , y=b+0.05 , s=f"{b}%" , fontdict=dict(fontsize=16))
+		#plt.text(x=a , y = b , s=f"{b}" , fontdict=dict(fontsize=10))
+	
+	plt.ylim(0,100)    #set y-axis range
+	plt.savefig(savefig)
+	plt.show()
+
 def bargraph(X,Y,savefig):
 	Xticks=np.arange(len(X))
 	plt.bar(X, Y, 0.8, color="blue")  
@@ -52,9 +72,7 @@ def bargraph(X,Y,savefig):
 		#plt.text(x=a , y = b , s=f"{b}" , fontdict=dict(fontsize=10))
 	
 	plt.ylim(0,100)    #set y-axis range
-	#plt.savefig(savefig)
 	plt.show()
-
 
 def draw1file(filename,totalcpu):
 	savetopic=filename.rstrip(".csv")
@@ -66,15 +84,49 @@ def draw1file(filename,totalcpu):
 	print("HIGH PHY, LOW PHY:",sums2)
 	print("LDPC:",sums3)"""
 	#print("sums in drawgraph:",sums)
-	sums=[(round(i,2)*totalcpu) for i in sums]
-	sums2=[(round(i,2)*totalcpu) for i in sums2]
-	
-	sums3=[(round(i,2)*totalcpu) for i in sums3]
+	sums=[(round(i,2)) for i in sums]
+	sums2=[(round(i,2)) for i in sums2]
+	sums3=[(round(i,2)) for i in sums3]
 	print("layersum:",layersum)
-	print("Layers:",layers)
-	print("'RRC','SDAP','PDCP','RLC','MAC','PHY','NG','OTHERS'",sums)
-	print("HIGH PHY, LOW PHY,PDCP:",sums2)
-	print("LDPC:",sums3)
+	#print("Layers:",layers)
+	print("+++Perf Sample:",layers,":",sums)
+	print("+++Perf Sample:",layers2,sums2)
+	print("+++Perf Sample:",layers3,sums3)
+	
+	bargraph(layers,sums,"")
+	#savefig=savetopic+"/4MbpsUL_highlow.jpg"
+	
+	bargraph(layers2,sums2,"")
+
+	if(totalcpu==0):
+		return
+	sums=[(round(i*totalcpu,2)) for i in sums]
+	sums2=[(round(i*totalcpu,2)) for i in sums2]
+	sums3=[(round(i*totalcpu,2)) for i in sums3]
+	print("+++CPU Usage:",layers,":",sums)
+	print("+++CPU Usage:",layers2,sums2)
+	print("+++CPU Usage:",layers3,sums3)
+	savefig=graphsdir+"/4MbpsUL_overall_dis_new.pdf"
+	bargraph_cpuusage(layers,sums,savefig)
+	savefig=graphsdir+"/4MbpsUL_highlow_new.pdf"
+	bargraph_cpuusage(layers2,sums2,savefig)
+def draw1file_perfsample(filename):
+	savetopic=filename.rstrip(".csv")
+	layersum,sums,sums2,sums3=countoverhead(filename)
+	
+	"""print("'RRC','SDAP','PDCP','RLC','MAC','PHY','NG','Sum':",sums)
+	print("HIGH PHY, LOW PHY:",sums2)
+	print("LDPC:",sums3)"""
+	#print("sums in drawgraph:",sums)
+	sums=[(round(i,2)) for i in sums]
+	sums2=[(round(i,2)) for i in sums2]
+	sums3=[(round(i,2)) for i in sums3]
+	layersum=round(layersum,2)
+	print("layersum without OTHERS:",layersum)
+	#print("Layers:",layers)
+	print("+++",layers,":",sums)
+	print("+++",layers2,sums2)
+	print("+++",layers3,sums3)
 	savefig=savetopic+".jpg"
 	bargraph(layers,sums,savefig)
 	savefig=savetopic+"_PHY.jpg"
@@ -85,17 +137,22 @@ def drawdir(dirPath):
 		for ki in range(len(k)):
 			if k[ki].endswith(('_classified.csv')):
 				filenm=i+"/"+k[ki].lstrip()
-				print("file name:",filenm)
-				draw1file(filenm,1)
+				print("")
+				print("+++file name:",filenm)
+				draw1file(filenm,0)
+				
 
 #if __name__=="__main__":
-layers=['RRC','SDAP','PDCP','RLC','MAC','PHY','NG','OTHERS']
-sums=[0]*8
+#layers=['RRC','SDAP','PDCP','RLC','MAC','PHY','NG','OTHERS']
+layers=['PHY','MAC','RLC','PDCP','RRC','SDAP','NG','OTHERS']
+LEN_sum=8
+sums=[0]*LEN_sum
 layers2=['HIGH PHY','LOW PHY']
+
 sums2=[0]*2
-sums2list=[]
-layers3=['LDPC']
-sums3=[0]
+#sums2list=[]
+layers3=['LDPC','DFT']
+sums3=[0]*2
 print('len(sys.argv):',len(sys.argv))
 print(str(sys.argv[1]))
 for i in range(len(sys.argv)-2):

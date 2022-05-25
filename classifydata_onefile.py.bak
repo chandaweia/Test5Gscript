@@ -31,20 +31,7 @@ def readlayersmap(mapfile):
             return layerlist[i]
     return -1
 """
-def symbolclassify(str,lastlinestr):
-    print(lastlinestr)
-    for i in range(1, len(symbollist)):
-        #print("symbollist str_list[0]",str_list[0])
-        #if symbollist[i][2].find(str_list[4]) != -1: #-1 not found, 0 found
-        if str.find(symbollist[i][2]) != -1:
-            res=lastlinestr+","+symbollist[i][3]+","+symbollist[i][4]+","+symbollist[i][5]+"\n"
-            #print("symbollist str_list[0]",str_list[0])
-            str_list=lastlinestr.split()
-            res = str_list[0]+","+str_list[1]+","+str_list[2]+","+str.replace('\n', '').replace('\r', '')+","\
-                +symbollist[i][3]+","+symbollist[i][4]+","+symbollist[i][5]+"\n"
-            print(res)
-            return res
-    return ""
+
 def layerclassify(str):
     #print("\nlayerclassify:+++++",str,end='')
     str_list=str.split()
@@ -89,40 +76,24 @@ def doclassify(filename):
     fw_classified.write("Overhead,Command,Object,Symbol,Layer,Layer2,Layer3\n")
 
     line = f.readline()
-    lastline=""
-    lastlines=[]
     while line:
         #print(line)
         linestr = line.lstrip(" ")
-        if linestr.startswith('#'):
+        if linestr.startswith('#') or linestr.startswith('|') or linestr.startswith('-'):
+            #print("Start with++",linestr)
             #Write to another file
+            #print(linestr)
             fw_left.write(line)
-        elif linestr.find("%") != -1 and linestr.startswith('#')==False and linestr.startswith('|')==False and linestr.startswith('-')==False:
+        elif linestr.find("%") != -1:
             #do classify
             #print("Contain++",linestr)
-            if(lastline!=""):
-                fw_left.write(lastline)
-                fw_left.writelines(lastlines)
-                lastline=""
-                lastlines=[]
             res_layer = layerclassify(linestr)
             #print(res_layer)
             if res_layer == "":
-                lastline=line
+                fw_left.write(line)
             else:
                 fw_classified.write(res_layer) 
-            line = f.readline()
-            continue
-        elif lastline!="" and ( linestr.startswith('|') or linestr.startswith('-') or linestr.find("%") == -1):
-            res_layer=symbolclassify(linestr,lastline)
-            lastlines.append(line)
-            if res_layer != "":
-                fw_classified.write(res_layer) 
-                fw_left.writelines(lastlines)
-                lastline=""   
-                lastlines=[]
-            line = f.readline()
-            continue
+            
         else:
             #print("classify++",linestr)
             #print(line)

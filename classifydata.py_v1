@@ -32,19 +32,6 @@ def readlayersmap(mapfile):
     return -1
 """
 
-def symbolclassify(str,lastlinestr):
-    for i in range(1, len(symbollist)):
-        #print("symbollist str_list[0]",str_list[0])
-        #if symbollist[i][2].find(str_list[4]) != -1: #-1 not found, 0 found
-        if str.find(symbollist[i][2]) != -1:
-            res=lastlinestr+","+symbollist[i][3]+","+symbollist[i][4]+","+symbollist[i][5]+"\n"
-            #print("symbollist str_list[0]",str_list[0])
-            str_list=lastlinestr.split()
-            res = str_list[0]+","+str_list[1]+","+str_list[2]+","+str.replace('\n', '').replace('\r', '')+","\
-                +symbollist[i][3]+","+symbollist[i][4]+","+symbollist[i][5]+"\n"
-            return res
-    return ""
-
 def layerclassify(str):
     #print("\nlayerclassify:+++++",str,end='')
     str_list=str.split()
@@ -57,15 +44,8 @@ def layerclassify(str):
         if str_list[1].find(commandlist[i][0]) != -1:
             #print("commandlist[i][0]:{0},str_list[1]:{1},len(str_list):{2}".format(commandlist[i][0],str_list[1],len(str_list)))
             #print("commandlist str_list[0]",str_list[0])
-            
-            if(str.find('dft')!=-1 and commandlist[i][5].strip()==""):
-                #print("find dft:",str)
-                res = str_list[0]+","+str_list[1]+","+str_list[2]+","+str_list[4]+","\
-                +commandlist[i][3]+","+commandlist[i][4]+",DFT"+"\n"
-            else:
-                res = str_list[0]+","+str_list[1]+","+str_list[2]+","+str_list[4]+","\
-                    +commandlist[i][3]+","+commandlist[i][4]+","+commandlist[i][5]+"\n"
-            #print("匹配：commandlist[i][0]",commandlist[i][0])
+            res = str_list[0]+","+str_list[1]+","+str_list[2]+","+str_list[4]+","\
+                +commandlist[i][3]+","+commandlist[i][4]+","+commandlist[i][5]+"\n"
             return res
     for i in range(1, len(symbollist)):
         #print("symbollist str_list[0]",str_list[0])
@@ -74,69 +54,48 @@ def layerclassify(str):
             #print("symbollist str_list[0]",str_list[0])
             res = str_list[0]+","+str_list[1]+","+str_list[2]+","+str_list[4]+","\
                 +symbollist[i][3]+","+symbollist[i][4]+","+symbollist[i][5]+"\n"
-            #print("匹配：symbollist[i][2]",symbollist[i][2])
             return res
     for i in range(1, len(objectlist)):
         #print("objectlist str_list[0]",str_list[0])
         #if objectlist[i][1].find(str_list[2]) != -1: #-1 not found, 0 found
-        if str_list[2].find(objectlist[i][1]) != -1:
+        if str_list[2].find(symbollist[i][1]) != -1:
             #print("objectlist str_list[0]",str_list[0])
             res = str_list[0]+","+str_list[1]+","+str_list[2]+","+str_list[3]+","+str_list[4]+","\
                 +objectlist[i][3]+","+objectlist[i][4]+","+objectlist[i][5]+"\n"
-            #print("匹配：objectlist[i][1]",objectlist[i][1])
             return res
         
     return ""
 
 def doclassify(path,filename,resdir):
+    
     filename_left=resdir+"/"+filename+"_left.txt"
     filename_classified=resdir+"/"+filename+"_classified.csv"
     readfilenm=path+"/"+filename
-    print("Report is save to:",filename_classified)
+
     f = open(readfilenm)
     fw_left = open(filename_left,"w")
     fw_classified = open(filename_classified,"w")
     fw_classified.write("Overhead,Command,Object,Symbol,Layer,Layer2,Layer3\n")
-
+    
     line = f.readline()
-    lastline=""
-    lastlines=[]
     while line:
-        #print("line:",line)
-        #print("Last line:",lastline)
         #print(line)
         linestr = line.lstrip(" ")
-        if linestr.startswith('#'):
+        if linestr.startswith('#') or linestr.startswith('|') or linestr.startswith('-'):
+            #print("Start with++",linestr)
             #Write to another file
+            #print(linestr)
             fw_left.write(line)
-        elif linestr.find("%") != -1 and linestr.startswith('#')==False and linestr.startswith('|')==False and linestr.startswith('-')==False:
+        elif linestr.find("%") != -1:
             #do classify
-            #print("Do classify:",linestr)
-            if(lastline!=""):
-                fw_left.write(lastline)
-                fw_left.writelines(lastlines)
-                lastline=""
-                lastlines=[]
+            #print("Contain++",linestr)
             res_layer = layerclassify(linestr)
-            #print("分类结果：",res_layer)
+            #print(res_layer)
             if res_layer == "":
-                #print("第一行line识别不出来，写入lastline")
-                lastline=line
+                fw_left.write(line)
             else:
                 fw_classified.write(res_layer) 
-            line = f.readline()
-            continue
-        elif lastline!="" and ( linestr.startswith('|') or linestr.startswith('-') or linestr.find("%") == -1):
-            #print('该行是未识别信息的下一行，lastline:',lastline)
-            res_layer=symbolclassify(linestr,lastline)
-            lastlines.append(line)
-            if res_layer != "":
-                fw_classified.write(res_layer) 
-                fw_left.writelines(lastlines)
-                lastline=""   
-                lastlines=[]
-            line = f.readline()
-            continue
+            
         else:
             #print("classify++",linestr)
             #print(line)
@@ -164,10 +123,9 @@ def doclassify_dir(filePath):
                 makefolder(resdir)
                 #print(k[ki])
                 file=i+"/"+k[ki]
-                print("")
                 print("classfy file:",file)
                 doclassify(i,k[ki],resdir)
-                #print("Path:",i,"file:",k[ki],"resdir:",resdir)
+                print("Path:",i,"file:",k[ki],"resdir:",resdir)
 
 #----------------main function-----------
 commandlist=[]
@@ -181,9 +139,6 @@ layer2list=[]
 #print(str(sys.argv[1]))
 readlayersmap('LayersMap.csv')
 
-
-#if it is a dir, then create a directory called perf_classify_res
-#if it is a file, save report to the current 
 for i in range(len(sys.argv)-1):
     if os.path.isdir(sys.argv[i+1]):
         doclassify_dir(sys.argv[i+1])

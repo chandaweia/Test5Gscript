@@ -1,0 +1,49 @@
+    6.36%  feptx          libdfts.so                 [.] idft1536
+            |
+            ---idft1536
+               idft
+               PHY_ofdm_mod.part.0
+               nr_feptx0
+
+     4.55%  thread_FH      [kernel.kallsyms]          [k] do_syscall_64
+            |
+            ---do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               |          
+               |--1.99%--__GI___ioctl
+               |          
+               |--0.74%--pthread_cond_signal@@GLIBC_2.3.2
+               |          
+               |--0.74%--__poll
+               |          
+                --0.61%--pthread_cond_timedwait@@GLIBC_2.3.2
+
+     4.26%  feptx          libdfts.so                 [.] idft64
+            |
+            ---idft64
+               idft512
+               idft1536
+               idft
+               PHY_ofdm_mod.part.0
+               nr_feptx0
+
+     3.12%  thread_FH      [kernel.kallsyms]          [k] copy_user_enhanced_fast_string
+            |          
+             --3.10%--copy_user_enhanced_fast_string
+                       |          
+                        --3.09%--copy_urb_data_to_user
+                                  processcompl
+                                  usbdev_do_ioctl
+                                  usbdev_ioctl
+                                  do_vfs_ioctl
+                                  ksys_ioctl
+                                  __x64_sys_ioctl
+                                  do_syscall_64
+                                  entry_SYSCALL_64_after_hwframe
+                                  __GI___ioctl
+
+     2.30%  Tpool2_-1      nr-softmodem               [.] rotate_cpx_vector
+            |
+            ---rotate_cpx_vector
+               |          
+                --2.25%--0

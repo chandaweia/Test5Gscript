@@ -1,0 +1,15 @@
+Overhead,Command,Object,Symbol,Layer,Layer2,Layer3
+5.98%,thread_FH,[kernel.kallsyms],do_syscall_64,PHY,LOW PHY,
+3.92%,feptx,libdfts.so,idft1536,PHY,LOW PHY,
+3.78%,thread_FH,[kernel.kallsyms],copy_user_enhanced_fast_string,PHY,LOW PHY,
+3.49%,thread_FH,[kernel.kallsyms],entry_SYSCALL_64,PHY,LOW PHY,
+2.42%,feptx,libdfts.so,idft64,PHY,LOW PHY,
+2.10%,thread_FH,[kernel.kallsyms],syscall_return_via_sysret,PHY,LOW PHY,
+1.93%,feptx,libdfts.so,idft256,PHY,LOW PHY,
+1.92%,nr-softmodem,libuhd.so.4.1.0,ru_thread,PHY,LOW PHY
+1.84%,thread_FH,liboai_usrpdevif.so,trx_usrp_read,PHY,LOW PHY,
+1.79%,thread_FH,[kernel.kallsyms],psi_task_change,PHY,LOW PHY,
+1.73%,feprx,libdfts.so,dft1536,PHY,LOW PHY,
+1.713%,fepr1x,libdfts.so,dft1536,PHY,LOW PHY,
+1.723%,fepr2x,libdfts.so,dft1536,PHY,LOW PHY,
+1.733%,fepr3x,libdfts.so,dft1536,PHY,LOW PHY,,
