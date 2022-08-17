@@ -11,13 +11,14 @@ def readcsv(file1,file2,file3):
     tmpfile3=file3+"_tmp.csv"
     fw=open(tmpfile3,"w")
     fw_final=open(file3,"w")
-    titlehead="Overhead1,Overhead2,Command,Object,Symbol,Layer,Layer2,Layer3,PSCP of 4Mbps -PSCP of 0Mbps,PSCP of 4Mbps - PSCP of 0Mbps,,CPU of 4Mbps:(all)72.26%,CPU with 4Mbps,CPU with 0Mbps (all)176.21%,CPU of 0Mbps,CPU1-CPU2\n"
+    titlehead="Overhead1,Overhead2,Command,Object,Symbol,Layer,Layer2,Layer3,Overhead1-Overhead2,Overhead1-Overhead2,,CPU1(all):72.26%,CPU1,CPU2(all)176.21%,CPU2,CPU1-CPU2\n"
     fw.write(titlehead)
     fw_final.write(titlehead)
     with open(file1) as f1:
         f_csv1 = csv.DictReader(f1)
         for row1 in f_csv1:
             flag=-1
+            diffval=-1000
             with open(file2) as f2:
                 f_csv2 = csv.DictReader(f2)
                 strline=""
@@ -36,8 +37,9 @@ def readcsv(file1,file2,file3):
                         fw_final.write(strline)
                         break
 
+                # When a function exists in f1 but not in f2.
                 if flag==-1:
-                    strline=row1['Overhead']+","+"0%,"+row1['Command']+","+row1['Object']+","+row1['Symbol']+","+row1['Layer']+","+row1['Layer2']+","+row1['Layer3']+","+str(diffval)+"%\n"
+                    strline=row1['Overhead']+","+"0%,"+row1['Command']+","+row1['Object']+","+row1['Symbol']+","+row1['Layer']+","+row1['Layer2']+","+row1['Layer3']+","+row1['Overhead']+"\n"
                     fw.write(strline)
                     fw_final.write(strline)
     fw.close()

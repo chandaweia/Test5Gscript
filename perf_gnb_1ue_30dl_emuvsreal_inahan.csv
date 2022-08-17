@@ -1,0 +1,786 @@
+Overhead1,Overhead2,Command,Object,Symbol,Layer,Layer2,Layer3,Overhead1-Overhead2,Overhead1-Overhead2,,CPU1(all):72.26%,CPU1,CPU2(all)176.21%,CPU2,CPU1-CPU2
+26.12%,0%,thread_FH,librfsimulator.so,rfsimulator_read,PHY,LOW PHY,,26.12%,,,44.08%,11.51%,82.40%,0.00%,11.51%
+3.58%,3.07%,thread_FH,[kernel.kallsyms],copy_user_enhanced_fast_string,PHY,LOW PHY,,0.51%,,,44.08%,1.58%,82.40%,2.53%,-0.95%
+2.46%,3.11%,feptx,libdfts.so,idft64,PHY,LOW PHY,DFT,,-0.65%,,44.08%,1.08%,82.40%,2.56%,-1.48%
+2.36%,0%,nr-softmodem,librfsimulator.so,tx_rf,PHY,LOW PHY,,2.36%,,,44.08%,1.04%,82.40%,0.00%,1.04%
+2.35%,1.51%,feptx,libc-2.27.so,__memmove_avx_unaligned_erms,PHY,LOW PHY,,0.84%,,,44.08%,1.04%,82.40%,1.24%,-0.21%
+1.88%,2.78%,feptx,libdfts.so,idft256,PHY,LOW PHY,DFT,,-0.90%,,44.08%,0.83%,82.40%,2.29%,-1.46%
+1.83%,0%,feptx,libdfts.so,idft1024,PHY,LOW PHY,DFT,1.83%,,,44.08%,0.81%,82.40%,0.00%,0.81%
+1.79%,0.76%,Tpool1_-1,nr-softmodem,rotate_cpx_vector,PHY,HIGH PHY,,1.03%,,,44.08%,0.79%,82.40%,0.63%,0.16%
+1.48%,0%,feptx,libdfts.so,idft2048,PHY,LOW PHY,DFT,1.48%,,,44.08%,0.65%,82.40%,0.00%,0.65%
+1.27%,1.87%,Tpool2_-1,nr-softmodem,rotate_cpx_vector,PHY,HIGH PHY,,,-0.60%,,44.08%,0.56%,82.40%,1.54%,-0.98%
+1.27%,0%,Tpool1_-1,libc-2.27.so,#NAME?,PHY,HIGH PHY,LDPC,1.27%,,,44.08%,0.56%,82.40%,0.00%,0.56%
+1.21%,0%,Tpool0_-1,libc-2.27.so,#NAME?,PHY,HIGH PHY,LDPC,1.21%,,,44.08%,0.53%,82.40%,0.00%,0.53%
+1.20%,0%,Tpool1_-1,nr-softmodem,nr_generate_pdsch,PHY,,,1.20%,,,44.08%,0.53%,82.40%,0.00%,0.53%
+1.11%,0%,Tpool2_-1,libc-2.27.so,#NAME?,PHY,HIGH PHY,LDPC,1.11%,,,44.08%,0.49%,82.40%,0.00%,0.49%
+1.09%,0%,Tpool3_-1,libc-2.27.so,#NAME?,PHY,HIGH PHY,LDPC,1.09%,,,44.08%,0.48%,82.40%,0.00%,0.48%
+1.08%,0.94%,Tpool0_-1,nr-softmodem,rotate_cpx_vector,PHY,HIGH PHY,,0.14%,,,44.08%,0.48%,82.40%,0.77%,-0.30%
+0.99%,0%,pdcp_timer,[kernel.kallsyms],arch_perf_update_userpage,PDCP,,,0.99%,,,44.08%,0.44%,82.40%,0.00%,0.44%
+0.98%,0%,thread_FH,libc-2.27.so,__memset_avx2_erms,PHY,LOW PHY,,0.98%,,,44.08%,0.43%,82.40%,0.00%,0.43%
+0.86%,1.06%,Tpool3_-1,nr-softmodem,rotate_cpx_vector,PHY,HIGH PHY,,,-0.20%,,44.08%,0.38%,82.40%,0.87%,-0.49%
+0.70%,3.29%,thread_FH,[kernel.kallsyms],do_syscall_64,PHY,LOW PHY,,,-2.59%,,44.08%,0.31%,82.40%,2.71%,-2.40%
+0.66%,0.35%,feprx,libdfts.so,dft256,PHY,LOW PHY,DFT,0.31%,,,44.08%,0.29%,82.40%,0.29%,0.00%
+0.64%,0.03%,Tpool0_-1,nr-softmodem,nr_interleaving_ldpc,PHY,HIGH PHY,LDPC,0.61%,,,44.08%,0.28%,82.40%,0.02%,0.26%
+0.63%,0.06%,thread_FH,[kernel.kallsyms],__check_object_size,PHY,LOW PHY,,0.57%,,,44.08%,0.28%,82.40%,0.05%,0.23%
+0.61%,0.76%,Tpool0_-1,nr-softmodem,nr_generate_pdsch,PHY,,,,-0.15%,,44.08%,0.27%,82.40%,0.63%,-0.36%
+0.61%,0%,Tpool2_-1,nr-softmodem,nr_generate_pdsch,PHY,,,0.61%,,,44.08%,0.27%,82.40%,0.00%,0.27%
+0.57%,0%,Tpool1_-1,libldpc.so,ldpc384_byte,PHY,HIGH PHY,LDPC,0.57%,,,44.08%,0.25%,82.40%,0.00%,0.25%
+0.53%,0.30%,feprx,libdfts.so,dft64,PHY,LOW PHY,DFT,0.23%,,,44.08%,0.23%,82.40%,0.25%,-0.01%
+0.51%,0%,Tpool3_-1,nr-softmodem,nr_codeword_scrambling,PHY,HIGH PHY,,0.51%,,,44.08%,0.22%,82.40%,0.00%,0.22%
+0.50%,0.08%,Tpool2_-1,libldpc.so,nrLDPC_encod,PHY,HIGH PHY,LDPC,0.42%,,,44.08%,0.22%,82.40%,0.07%,0.15%
+0.50%,0.51%,Tpool3_-1,libldpc.so,nrLDPC_encod,PHY,HIGH PHY,LDPC,,-0.01%,,44.08%,0.22%,82.40%,0.42%,-0.20%
+0.46%,0.30%,Tpool3_-1,libldpc.so,ldpc384_byte,PHY,HIGH PHY,LDPC,0.16%,,,44.08%,0.20%,82.40%,0.25%,-0.04%
+0.45%,0.23%,TASK_GTPV1_U,[kernel.kallsyms],do_syscall_64,NG,,,0.22%,,,44.08%,0.20%,82.40%,0.19%,0.01%
+0.45%,0.05%,Tpool2_-1,nr-softmodem,nr_interleaving_ldpc,PHY,HIGH PHY,LDPC,0.40%,,,44.08%,0.20%,82.40%,0.04%,0.16%
+0.40%,0%,thread_FH,libdfts.so,dft1024,PHY,LOW PHY,DFT,0.40%,,,44.08%,0.18%,82.40%,0.00%,0.18%
+0.38%,0.33%,thread_FH,libdfts.so,dft64,PHY,LOW PHY,DFT,0.05%,,,44.08%,0.17%,82.40%,0.27%,-0.10%
+0.38%,0.08%,Tpool3_-1,nr-softmodem,nr_generate_pdsch,PHY,,,0.30%,,,44.08%,0.17%,82.40%,0.07%,0.10%
+0.37%,0.95%,Tpool1_-1,libldpc.so,nrLDPC_encod,PHY,HIGH PHY,LDPC,,-0.58%,,44.08%,0.16%,82.40%,0.78%,-0.62%
+0.37%,0.91%,Tpool3_-1,nr-softmodem,nr_interleaving_ldpc,PHY,HIGH PHY,LDPC,,-0.54%,,44.08%,0.16%,82.40%,0.75%,-0.59%
+0.35%,0.11%,Tpool0_-1,libldpc.so,ldpc384_byte,PHY,HIGH PHY,LDPC,0.24%,,,44.08%,0.15%,82.40%,0.09%,0.06%
+0.34%,0.81%,Tpool1_-1,nr-softmodem,nr_codeword_scrambling,PHY,HIGH PHY,,,-0.47%,,44.08%,0.15%,82.40%,0.67%,-0.52%
+0.32%,0.95%,thread_FH,[kernel.kallsyms],psi_task_change,PHY,LOW PHY,,,-0.63%,,44.08%,0.14%,82.40%,0.78%,-0.64%
+0.32%,1.67%,thread_FH,[kernel.kallsyms],syscall_return_via_sysret,PHY,LOW PHY,,,-1.35%,,44.08%,0.14%,82.40%,1.38%,-1.24%
+0.31%,0%,feprx,libdfts.so,dft2048,PHY,LOW PHY,DFT,0.31%,,,44.08%,0.14%,82.40%,0.00%,0.14%
+0.30%,0%,thread_FH,libdfts.so,dft2048,PHY,LOW PHY,DFT,0.30%,,,44.08%,0.13%,82.40%,0.00%,0.13%
+0.29%,0.07%,Tpool2_-1,libldpc.so,ldpc384_byte,PHY,HIGH PHY,LDPC,0.22%,,,44.08%,0.13%,82.40%,0.06%,0.07%
+0.28%,0%,Tpool3_-1,nr-softmodem,gNB_I0_measurements,PHY,HIGH PHY,,0.28%,,,44.08%,0.12%,82.40%,0.00%,0.12%
+0.25%,0.56%,Tpool0_-1,libldpc.so,nrLDPC_encod,PHY,HIGH PHY,LDPC,,-0.31%,,44.08%,0.11%,82.40%,0.46%,-0.35%
+0.24%,0.04%,TASK_GTPV1_U,[kernel.kallsyms],entry_SYSCALL_64,NG,,,0.20%,,,44.08%,0.11%,82.40%,0.03%,0.07%
+0.24%,0.46%,Tpool0_-1,nr-softmodem,gNB_I0_measurements,PHY,HIGH PHY,,,-0.22%,,44.08%,0.11%,82.40%,0.38%,-0.27%
+0.22%,0.57%,Tpool1_-1,nr-softmodem,nr_interleaving_ldpc,PHY,HIGH PHY,LDPC,,-0.35%,,44.08%,0.10%,82.40%,0.47%,-0.37%
+0.21%,0.08%,Tpool0_-1,nr-softmodem,nr_codeword_scrambling,PHY,HIGH PHY,,0.13%,,,44.08%,0.09%,82.40%,0.07%,0.03%
+0.21%,0%,thread_FH,[kernel.kallsyms],tcp_recvmsg,PHY,LOW PHY,,0.21%,,,44.08%,0.09%,82.40%,0.00%,0.09%
+0.21%,0%,thread_FH,[kernel.kallsyms],__tcp_transmit_skb,PHY,LOW PHY,,0.21%,,,44.08%,0.09%,82.40%,0.00%,0.09%
+0.21%,1.63%,Tpool3_-1,nr-softmodem,multadd_cpx_vector,PHY,LOW PHY,,,-1.42%,,44.08%,0.09%,82.40%,1.34%,-1.25%
+0.21%,0%,thread_FH,[kernel.kallsyms],skb_release_data,PHY,LOW PHY,,0.21%,,,44.08%,0.09%,82.40%,0.00%,0.09%
+0.19%,2.03%,thread_FH,[kernel.kallsyms],entry_SYSCALL_64,PHY,LOW PHY,,,-1.84%,,44.08%,0.08%,82.40%,1.67%,-1.59%
+0.19%,0%,Tpool2_-1,nr-softmodem,nr_codeword_scrambling,PHY,HIGH PHY,,0.19%,,,44.08%,0.08%,82.40%,0.00%,0.08%
+0.18%,0.04%,TASK_GTPV1_U,[kernel.kallsyms],psi_task_change,NG,,,0.14%,,,44.08%,0.08%,82.40%,0.03%,0.05%
+0.17%,0.02%,thread_FH,[kernel.kallsyms],native_queued_spin_lock_slowpath,PHY,LOW PHY,,0.15%,,,44.08%,0.07%,82.40%,0.02%,0.06%
+0.17%,0.06%,thread_FH,[kernel.kallsyms],__virt_addr_valid,PHY,LOW PHY,,0.11%,,,44.08%,0.07%,82.40%,0.05%,0.03%
+0.17%,0%,feprx,libdfts.so,dft1024,PHY,LOW PHY,DFT,0.17%,,,44.08%,0.07%,82.40%,0.00%,0.07%
+0.16%,0%,thread_FH,[kernel.kallsyms],_copy_to_iter,PHY,LOW PHY,,0.16%,,,44.08%,0.07%,82.40%,0.00%,0.07%
+0.16%,0.11%,RLC,queue,[k],RLC,,,0.05%,,,44.08%,0.07%,82.40%,0.09%,-0.02%
+0.16%,0.31%,Tpool0_-1,nr-softmodem,signal_energy_nodc,PHY,HIGH PHY,,,-0.15%,,44.08%,0.07%,82.40%,0.26%,-0.18%
+0.16%,0%,Tpool1_-1,nr-softmodem,signal_energy_nodc,PHY,HIGH PHY,,0.16%,,,44.08%,0.07%,82.40%,0.00%,0.07%
+0.16%,0.81%,Tpool0_-1,nr-softmodem,multadd_cpx_vector,PHY,LOW PHY,,,-0.65%,,44.08%,0.07%,82.40%,0.67%,-0.60%
+0.15%,0%,Tpool2_-1,nr-softmodem,signal_energy_nodc,PHY,HIGH PHY,,0.15%,,,44.08%,0.07%,82.40%,0.00%,0.07%
+0.15%,0.01%,TASK_GTPV1_U,libpthread-2.27.so,__pthread_mutex_lock,NG,,,0.14%,,,44.08%,0.07%,82.40%,0.01%,0.06%
+0.14%,0.53%,thread_FH,[kernel.kallsyms],_raw_spin_lock,PHY,LOW PHY,,,-0.39%,,44.08%,0.06%,82.40%,0.44%,-0.38%
+0.14%,0.19%,thread_FH,libdfts.so,dft256,PHY,LOW PHY,DFT,,-0.05%,,44.08%,0.06%,82.40%,0.16%,-0.09%
+0.14%,0%,Tpool1_-1,nr-softmodem,rx_nr_prach,PHY,LOW PHY,,0.14%,,,44.08%,0.06%,82.40%,0.00%,0.06%
+0.13%,0%,Tpool1_-1,nr-softmodem,nr_modulation,PHY,HIGH PHY,,0.13%,,,44.08%,0.06%,82.40%,0.00%,0.06%
+0.13%,0%,Tpool0_-1,nr-softmodem,allowed_xlsch_re_in_dmrs_symbol,PHY,HIGH PHY,,0.13%,,,44.08%,0.06%,82.40%,0.00%,0.06%
+0.13%,1.25%,Tpool2_-1,nr-softmodem,nr_segmentation,PHY,HIGH PHY,,,-1.12%,,44.08%,0.06%,82.40%,1.03%,-0.97%
+0.13%,0%,Tpool3_-1,nr-softmodem,signal_energy_nodc,PHY,HIGH PHY,,0.13%,,,44.08%,0.06%,82.40%,0.00%,0.06%
+0.12%,0.06%,TASK_GTPV1_U,[kernel.kallsyms],visit_groups_merge,NG,,,0.06%,,,44.08%,0.05%,82.40%,0.05%,0.00%
+0.12%,0%,thread_FH,[kernel.kallsyms],tcp_poll,PHY,LOW PHY,,0.12%,,,44.08%,0.05%,82.40%,0.00%,0.05%
+0.12%,0%,Tpool2_-1,nr-softmodem,gNB_I0_measurements,PHY,HIGH PHY,,0.12%,,,44.08%,0.05%,82.40%,0.00%,0.05%
+0.12%,0%,Tpool1_-1,nr-softmodem,allowed_xlsch_re_in_dmrs_symbol,PHY,HIGH PHY,,0.12%,,,44.08%,0.05%,82.40%,0.00%,0.05%
+0.12%,0%,feptx,[kernel.kallsyms],cpupri_set,PHY,LOW PHY,,0.12%,,,44.08%,0.05%,82.40%,0.00%,0.05%
+0.11%,0.01%,TASK_GTPV1_U,[kernel.kallsyms],_raw_spin_lock,NG,,,0.10%,,,44.08%,0.05%,82.40%,0.01%,0.04%
+0.11%,0%,thread_FH,[kernel.kallsyms],sock_rfree,PHY,LOW PHY,,0.11%,,,44.08%,0.05%,82.40%,0.00%,0.05%
+0.10%,0%,TASK_GTPV1_U,[kernel.kallsyms],ep_item_poll.isra.16,NG,,,0.10%,,,44.08%,0.04%,82.40%,0.00%,0.04%
+0.10%,0.07%,thread_FH,[kernel.kallsyms],read_tsc,PHY,LOW PHY,,0.03%,,,44.08%,0.04%,82.40%,0.06%,-0.01%
+0.10%,0%,thread_FH,libc-2.27.so,epoll_wait,PHY,LOW PHY,,0.10%,,,44.08%,0.04%,82.40%,0.00%,0.04%
+0.10%,0.08%,RLC,queue,[.],RLC,,,0.02%,,,44.08%,0.04%,82.40%,0.07%,-0.02%
+0.10%,0%,thread_FH,[kernel.kallsyms],ip_finish_output2,PHY,LOW PHY,,0.10%,,,44.08%,0.04%,82.40%,0.00%,0.04%
+0.10%,0.03%,Tpool1_-1,libldpc.so,ldpc352_byte,PHY,HIGH PHY,LDPC,0.07%,,,44.08%,0.04%,82.40%,0.02%,0.02%
+0.10%,0%,thread_FH,[kernel.kallsyms],__skb_datagram_iter,PHY,LOW PHY,,0.10%,,,44.08%,0.04%,82.40%,0.00%,0.04%
+0.10%,0.11%,RLC,queue,[k],RLC,,,,-0.01%,,44.08%,0.04%,82.40%,0.09%,-0.05%
+0.09%,0.02%,TASK_GTPV1_U,[kernel.kallsyms],datagram_poll,NG,,,0.07%,,,44.08%,0.04%,82.40%,0.02%,0.02%
+0.09%,0.09%,feptx,[kernel.kallsyms],do_syscall_64,PHY,LOW PHY,,0.00%,,,44.08%,0.04%,82.40%,0.07%,-0.03%
+0.09%,0.06%,Tpool2_-1,nr-softmodem,multadd_cpx_vector,PHY,LOW PHY,,0.03%,,,44.08%,0.04%,82.40%,0.05%,-0.01%
+0.09%,0.11%,RLC,queue,[k],RLC,,,,-0.02%,,44.08%,0.04%,82.40%,0.09%,-0.05%
+0.09%,0%,Tpool2_-1,libldpc.so,nrLDPC_cnProc_BG2_R13_AVX2,PHY,HIGH PHY,LDPC,0.09%,,,44.08%,0.04%,82.40%,0.00%,0.04%
+0.09%,0%,Tpool0_-1,nr-softmodem,nr_segmentation,PHY,HIGH PHY,,0.09%,,,44.08%,0.04%,82.40%,0.00%,0.04%
+0.09%,0%,Tpool2_-1,nr-softmodem,allowed_xlsch_re_in_dmrs_symbol,PHY,HIGH PHY,,0.09%,,,44.08%,0.04%,82.40%,0.00%,0.04%
+0.09%,0.11%,RLC,queue,[k],RLC,,,,-0.02%,,44.08%,0.04%,82.40%,0.09%,-0.05%
+0.09%,0%,feptx,[kernel.kallsyms],group_sched_in,PHY,LOW PHY,,0.09%,,,44.08%,0.04%,82.40%,0.00%,0.04%
+0.09%,0.01%,TASK_GTPV1_U,nr-softmodem,deliver_pdu_drb,NG,,,0.08%,,,44.08%,0.04%,82.40%,0.01%,0.03%
+0.09%,0.09%,thread_FH,[kernel.kallsyms],dequeue_rt_stack,PHY,LOW PHY,,0.00%,,,44.08%,0.04%,82.40%,0.07%,-0.03%
+0.08%,0.01%,TASK_GTPV1_U,[kernel.kallsyms],sock_poll,NG,,,0.07%,,,44.08%,0.04%,82.40%,0.01%,0.03%
+0.08%,0.98%,feprx,libc-2.27.so,__memmove_avx_unaligned_erms,PHY,LOW PHY,,,-0.90%,,44.08%,0.04%,82.40%,0.81%,-0.77%
+0.08%,0.02%,thread_FH,[kernel.kallsyms],calc_timer_values,PHY,LOW PHY,,0.06%,,,44.08%,0.04%,82.40%,0.02%,0.02%
+0.08%,0%,Tpool0_-1,nr-softmodem,rx_nr_prach,PHY,LOW PHY,,0.08%,,,44.08%,0.04%,82.40%,0.00%,0.04%
+0.08%,0.04%,Tpool2_-1,nr-softmodem,nr_modulation,PHY,HIGH PHY,,0.04%,,,44.08%,0.04%,82.40%,0.03%,0.00%
+0.08%,0.08%,RLC,queue,[.],RLC,,,0.00%,,,44.08%,0.04%,82.40%,0.07%,-0.03%
+0.08%,0%,TASK_RRC_GNB,[kernel.kallsyms],pick_next_task_fair,RRC,,,0.08%,,,44.08%,0.04%,82.40%,0.00%,0.04%
+0.08%,0%,Tpool0_-1,nr-softmodem,crc24a,PHY,HIGH PHY,,0.08%,,,44.08%,0.04%,82.40%,0.00%,0.04%
+0.08%,0.02%,TASK_GTPV1_U,libpthread-2.27.so,pthread_cond_signal@@GLIBC_2.3.2,NG,,,0.06%,,,44.08%,0.04%,82.40%,0.02%,0.02%
+0.08%,0%,thread_FH,[kernel.kallsyms],page_frag_free,PHY,LOW PHY,,0.08%,,,44.08%,0.04%,82.40%,0.00%,0.04%
+0.08%,0.06%,thread_FH,[kernel.kallsyms],ctx_sched_in,PHY,LOW PHY,,0.02%,,,44.08%,0.04%,82.40%,0.05%,-0.01%
+0.07%,0%,Tpool2_-1,nr-softmodem,rx_nr_prach,PHY,LOW PHY,,0.07%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.07%,0%,feprx,[kernel.kallsyms],prepare_exit_to_usermode,PHY,LOW PHY,,0.07%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.07%,0.08%,RLC,queue,[.],RLC,,,,-0.01%,,44.08%,0.03%,82.40%,0.07%,-0.04%
+0.07%,0.10%,TASK_GTPV1_U,[kernel.kallsyms],cpupri_set,NG,,,,-0.03%,,44.08%,0.03%,82.40%,0.08%,-0.05%
+0.07%,0%,Tpool1_-1,nr-softmodem,nr_est_timing_advance_pusch,PHY,HIGH PHY,,0.07%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.07%,0%,Tpool3_-1,nr-softmodem,nr_deinterleaving_ldpc,PHY,HIGH PHY,LDPC,0.07%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.07%,0.08%,RLC,queue,[.],RLC,,,,-0.01%,,44.08%,0.03%,82.40%,0.07%,-0.04%
+0.07%,0%,Tpool1_-1,nr-softmodem,crc24a,PHY,HIGH PHY,,0.07%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.07%,0%,Tpool3_-1,nr-softmodem,allowed_xlsch_re_in_dmrs_symbol,PHY,HIGH PHY,,0.07%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.07%,0%,TASK_GTPV1_U,[kernel.kallsyms],udp_rmem_release,NG,,,0.07%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.07%,0.11%,RLC,queue,[k],RLC,,,,-0.04%,,44.08%,0.03%,82.40%,0.09%,-0.06%
+0.07%,0.03%,TASK_GTPV1_U,[kernel.kallsyms],perf_event_update_userpage,NG,,,0.04%,,,44.08%,0.03%,82.40%,0.02%,0.01%
+0.07%,0%,Tpool2_-1,nr-softmodem,dB_fixed_times10,PHY,LOW PHY,,0.07%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.07%,0.04%,thread_FH,nr-softmodem,ru_thread,PHY,LOW PHY,,0.03%,,,44.08%,0.03%,82.40%,0.03%,0.00%
+0.07%,0.22%,thread_FH,[kernel.kallsyms],finish_task_switch,PHY,LOW PHY,,,-0.15%,,44.08%,0.03%,82.40%,0.18%,-0.15%
+0.07%,0%,thread_FH,[kernel.kallsyms],ep_send_events_proc,PHY,LOW PHY,,0.07%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.07%,0%,Tpool1_-1,nr-softmodem,polar_encoder_fast,PHY,HIGH PHY,,0.07%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.07%,0.59%,thread_FH,[kernel.kallsyms],cpupri_set,PHY,LOW PHY,,,-0.52%,,44.08%,0.03%,82.40%,0.49%,-0.46%
+0.07%,0%,Tpool0_-1,nr-softmodem,polar_encoder_fast,PHY,HIGH PHY,,0.07%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.07%,0%,TASK_RRC_GNB,[kernel.kallsyms],__fget,RRC,,,0.07%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.07%,0.24%,thread_FH,[kernel.kallsyms],fput_many,PHY,LOW PHY,,,-0.17%,,44.08%,0.03%,82.40%,0.20%,-0.17%
+0.07%,0.02%,thread_FH,[kernel.kallsyms],check_stack_object,PHY,LOW PHY,,0.05%,,,44.08%,0.03%,82.40%,0.02%,0.01%
+0.07%,0%,feptx,nr-softmodem,PHY_ofdm_mod.part.0,PHY,LOW PHY,,0.07%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.07%,0%,thread_FH,[kernel.kallsyms],tfm+0x80000009a692,PHY,LOW PHY,,0.07%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.07%,0.11%,RLC,queue,[k],RLC,,,,-0.04%,,44.08%,0.03%,82.40%,0.09%,-0.06%
+0.06%,0%,pdcp_timer,[kernel.kallsyms],syscall_return_via_sysret,PDCP,,,0.06%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.06%,0.15%,thread_FH,[kernel.kallsyms],native_write_msr,PHY,LOW PHY,,,-0.09%,,44.08%,0.03%,82.40%,0.12%,-0.10%
+0.06%,0%,feprx,[kernel.kallsyms],psi_task_change,PHY,LOW PHY,,0.06%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.06%,0.03%,TASK_RRC_GNB,[kernel.kallsyms],visit_groups_merge,RRC,,,0.03%,,,44.08%,0.03%,82.40%,0.02%,0.00%
+0.06%,0%,thread_FH,[kernel.kallsyms],__skb_clone,PHY,LOW PHY,,0.06%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.06%,0%,thread_FH,[kernel.kallsyms],igb_xmit_frame_ring,PHY,LOW PHY,,0.06%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.06%,0.02%,TASK_GTPV1_U,[kernel.kallsyms],aa_sk_perm,NG,,,0.04%,,,44.08%,0.03%,82.40%,0.02%,0.01%
+0.06%,0.91%,feptx,[kernel.kallsyms],psi_task_change,PHY,LOW PHY,,,-0.85%,,44.08%,0.03%,82.40%,0.75%,-0.72%
+0.06%,0.08%,RLC,queue,[.],RLC,,,,-0.02%,,44.08%,0.03%,82.40%,0.07%,-0.04%
+0.06%,0%,Tpool1_-1,nr-softmodem,NR_UL_indication,MAC,,,0.06%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.06%,0.03%,TASK_GTPV1_U,[kernel.kallsyms],pick_next_task_fair,NG,,,0.03%,,,44.08%,0.03%,82.40%,0.02%,0.00%
+0.06%,0%,Tpool3_-1,nr-softmodem,rx_nr_prach,PHY,LOW PHY,,0.06%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.06%,0%,pdcp_timer,libpthread-2.27.so,__pthread_disable_asynccancel,PDCP,,,0.06%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.06%,0.03%,Tpool0_-1,nr-softmodem,nr_modulation,PHY,HIGH PHY,,0.03%,,,44.08%,0.03%,82.40%,0.02%,0.00%
+0.06%,0.06%,TASK_RRC_GNB,[kernel.kallsyms],_raw_spin_lock,RRC,,,0.00%,,,44.08%,0.03%,82.40%,0.05%,-0.02%
+0.06%,0%,Tpool1_-1,libdfts.so,idft1024,PHY,LOW PHY,DFT,0.06%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.06%,0%,pdcp_timer,libpthread-2.27.so,pthread_cond_wait@@GLIBC_2.3.2,PDCP,,,0.06%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.06%,0%,TASK_GTPV1_U,[kernel.kallsyms],apparmor_socket_recvmsg,NG,,,0.06%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.06%,0%,Tpool3_-1,libldpc.so,ldpc352_byte,PHY,HIGH PHY,LDPC,0.06%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.06%,0.11%,RLC,queue,[k],RLC,,,,-0.05%,,44.08%,0.03%,82.40%,0.09%,-0.06%
+0.06%,0%,Tpool1_-1,nr-softmodem,multadd_cpx_vector,PHY,LOW PHY,,0.06%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.06%,0%,TASK_GTPV1_U,[kernel.kallsyms],udp_recvmsg,NG,,,0.06%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.06%,0.24%,thread_FH,[kernel.kallsyms],mutex_lock,PHY,LOW PHY,,,-0.18%,,44.08%,0.03%,82.40%,0.20%,-0.17%
+0.06%,0.04%,thread_FH,[kernel.kallsyms],record_times,PHY,LOW PHY,,0.02%,,,44.08%,0.03%,82.40%,0.03%,-0.01%
+0.06%,0%,Tpool3_-1,nr-softmodem,nr_schedule_ue_spec,MAC,,,0.06%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.06%,0%,Tpool3_-1,nr-softmodem,nr_codeword_unscrambling,PHY,HIGH PHY,,0.06%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.06%,0%,TASK_GTPV1_U,libpthread-2.27.so,__libc_recvfrom,NG,,,0.06%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.06%,0%,thread_FH,librfsimulator.so,flushInput,PHY,LOW PHY,,0.06%,,,44.08%,0.03%,82.40%,0.00%,0.03%
+0.06%,0.16%,thread_FH,[kernel.kallsyms],visit_groups_merge,PHY,LOW PHY,,,-0.10%,,44.08%,0.03%,82.40%,0.13%,-0.11%
+0.06%,0.02%,TASK_GTPV1_U,[kernel.kallsyms],__perf_event_task_sched_in,NG,,,0.04%,,,44.08%,0.03%,82.40%,0.02%,0.01%
+0.05%,0.09%,TASK_RRC_GNB,[kernel.kallsyms],entry_SYSCALL_64,RRC,,,,-0.04%,,44.08%,0.02%,82.40%,0.07%,-0.05%
+0.05%,0%,Tpool3_-1,nr-softmodem,crc24b,PHY,HIGH PHY,,0.05%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.05%,0%,feptx,[kernel.kallsyms],switch_fpu_return,PHY,LOW PHY,,0.05%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.05%,0.07%,thread_FH,libc-2.27.so,__memmove_avx_unaligned_erms,PHY,LOW PHY,,,-0.02%,,44.08%,0.02%,82.40%,0.06%,-0.04%
+0.05%,0%,feptx,[kernel.kallsyms],newidle_balance,PHY,LOW PHY,,0.05%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.05%,0.02%,feprx,[kernel.kallsyms],syscall_return_via_sysret,PHY,LOW PHY,,0.03%,,,44.08%,0.02%,82.40%,0.02%,0.01%
+0.05%,0.08%,RLC,queue,[.],RLC,,,,-0.03%,,44.08%,0.02%,82.40%,0.07%,-0.04%
+0.05%,0%,Tpool2_-1,libldpc.so,ldpc352_byte,PHY,HIGH PHY,LDPC,0.05%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.05%,0.08%,RLC,queue,[.],RLC,,,,-0.03%,,44.08%,0.02%,82.40%,0.07%,-0.04%
+0.05%,0%,Tpool0_-1,libldpc.so,nrLDPC_bnProc_BG2_R13_AVX2,PHY,HIGH PHY,LDPC,0.05%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.05%,0%,feptx,[kernel.kallsyms],irq_default_primary_handler,PHY,LOW PHY,,0.05%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.05%,0.17%,thread_FH,[kernel.kallsyms],schedule,PHY,LOW PHY,,,-0.12%,,44.08%,0.02%,82.40%,0.14%,-0.12%
+0.05%,0.02%,TASK_GTPV1_U,[kernel.kallsyms],finish_task_switch,NG,,,0.03%,,,44.08%,0.02%,82.40%,0.02%,0.01%
+0.05%,0.10%,TASK_GTPV1_U,[kernel.kallsyms],do_csum,NG,,,,-0.05%,,44.08%,0.02%,82.40%,0.08%,-0.06%
+0.05%,0.02%,TASK_GTPV1_U,[kernel.kallsyms],ep_poll,NG,,,0.03%,,,44.08%,0.02%,82.40%,0.02%,0.01%
+0.05%,0%,feptx,[kernel.kallsyms],__sched_text_start,PHY,LOW PHY,,0.05%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.05%,0%,Tpool2_-1,nr-softmodem,nr_schedule_response,PHY,HIGH PHY,,0.05%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.05%,0%,Tpool2_-1,nr-softmodem,remove_front_nr_list,MAC,,,0.05%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.05%,0.11%,RLC,queue,[k],RLC,,,,-0.06%,,44.08%,0.02%,82.40%,0.09%,-0.07%
+0.05%,0.21%,thread_FH,[kernel.kallsyms],mutex_unlock,PHY,LOW PHY,,,-0.16%,,44.08%,0.02%,82.40%,0.17%,-0.15%
+0.04%,0%,TASK_GTPV1_U,[kernel.kallsyms],dequeue_top_rt_rq,NG,,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,TASK_GTPV1_U,libc-2.27.so,__memmove_avx_unaligned_erms,NG,,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0.11%,RLC,queue,[k],RLC,,,,-0.07%,,44.08%,0.02%,82.40%,0.09%,-0.07%
+0.04%,0%,Tpool3_-1,nr-softmodem,nr_rlc_entity_am_recv_pdu,RLC,,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,pdcp_timer,[kernel.kallsyms],dequeue_rt_stack,PDCP,,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,feptx,[kernel.kallsyms],pick_next_task_dl,PHY,LOW PHY,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,Tpool0_-1,nr-softmodem,ldpc8blocks,PHY,HIGH PHY,LDPC,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,feptx,libpthread-2.27.so,__lll_unlock_wake,PHY,LOW PHY,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,Tpool2_-1,nr-softmodem,nr_rlc_entity_am_recv_pdu,RLC,,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,Tpool0_-1,nr-softmodem,phy_procedures_gNB_TX,PHY,,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,thread_FH,[kernel.kallsyms],tcp_v4_do_rcv,PHY,LOW PHY,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0.02%,thread_FH,[kernel.kallsyms],__intel_pmu_disable_all,PHY,LOW PHY,,0.02%,,,44.08%,0.02%,82.40%,0.02%,0.00%
+0.04%,0%,Tpool3_-1,nr-softmodem,crc24a,PHY,HIGH PHY,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0.00%,feptx,[kernel.kallsyms],native_write_msr,PHY,LOW PHY,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0.08%,RLC,queue,[.],RLC,,,,-0.04%,,44.08%,0.02%,82.40%,0.07%,-0.05%
+0.04%,0%,feptx,[kernel.kallsyms],ctx_sched_out,PHY,LOW PHY,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,TASK_GTPV1_U,[kernel.kallsyms],fput_many,NG,,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,thread_FH,[kernel.kallsyms],ksize,PHY,LOW PHY,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,Tpool1_-1,libldpc.so,nrLDPC_decoder_core.isra.1,PHY,HIGH PHY,LDPC,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,feptx,libpthread-2.27.so,__pthread_mutex_lock,PHY,LOW PHY,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0.01%,thread_FH,nr-softmodem,rx_nr_prach_ru,PHY,LOW PHY,,0.03%,,,44.08%,0.02%,82.40%,0.01%,0.01%
+0.04%,0.08%,thread_FH,[kernel.kallsyms],schedule_hrtimeout_range_clock,PHY,LOW PHY,,,-0.04%,,44.08%,0.02%,82.40%,0.07%,-0.05%
+0.04%,0%,feptx,[kernel.kallsyms],prepare_exit_to_usermode,PHY,LOW PHY,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0.05%,thread_FH,[kernel.kallsyms],dequeue_task_rt,PHY,LOW PHY,,,-0.01%,,44.08%,0.02%,82.40%,0.04%,-0.02%
+0.04%,0.44%,thread_FH,[kernel.kallsyms],__perf_event_task_sched_in,PHY,LOW PHY,,,-0.40%,,44.08%,0.02%,82.40%,0.36%,-0.34%
+0.04%,0%,Tpool1_-1,nr-softmodem,gNB_I0_measurements,PHY,HIGH PHY,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0.03%,thread_FH,[kernel.kallsyms],iommu_need_mapping,PHY,LOW PHY,,0.01%,,,44.08%,0.02%,82.40%,0.02%,-0.01%
+0.04%,0%,Tpool0_-1,nr-softmodem,mac_rlc_status_ind,RLC,,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,TASK_GTPV1_U,[kernel.kallsyms],prepare_exit_to_usermode,NG,,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,Tpool1_-1,nr-softmodem,nr_decode_pucch0,PHY,HIGH PHY,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,Tpool0_-1,libldpc.so,ldpc352_byte,PHY,HIGH PHY,LDPC,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,feptx,[kernel.kallsyms],syscall_return_via_sysret,PHY,LOW PHY,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0.03%,TASK_GTPV1_U,[kernel.kallsyms],put_prev_task_rt,NG,,,0.01%,,,44.08%,0.02%,82.40%,0.02%,-0.01%
+0.04%,0.06%,thread_FH,[kernel.kallsyms],perf_event_update_userpage,PHY,LOW PHY,,,-0.02%,,44.08%,0.02%,82.40%,0.05%,-0.03%
+0.04%,0%,Tpool0_-1,nr-softmodem,nr_generate_dci,PHY,HIGH PHY,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,thread_FH,[kernel.kallsyms],tcp_data_queue,PHY,LOW PHY,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,Tpool3_-1,libldpc.so,nrLDPC_bnProc_BG2_R13_AVX2,PHY,HIGH PHY,LDPC,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,thread_FH,[kernel.kallsyms],kmem_cache_free,PHY,LOW PHY,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,thread_FH,[kernel.kallsyms],tcp_chrono_stop,PHY,LOW PHY,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,thread_FH,[kernel.kallsyms],tcp_stream_memory_free,PHY,LOW PHY,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,thread_FH,[kernel.kallsyms],free_one_page,PHY,LOW PHY,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0.00%,feptx,[kernel.kallsyms],native_sched_clock,PHY,LOW PHY,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0.06%,thread_FH,[kernel.kallsyms],update_curr_rt,PHY,LOW PHY,,,-0.02%,,44.08%,0.02%,82.40%,0.05%,-0.03%
+0.04%,0%,thread_FH,[kernel.kallsyms],simple_copy_to_iter,PHY,LOW PHY,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,thread_FH,[kernel.kallsyms],igb_xmit_frame,PHY,LOW PHY,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,feptx,nr-softmodem,nr_feptx_thread,PHY,LOW PHY,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,thread_FH,[kernel.kallsyms],bictcp_acked,PHY,LOW PHY,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,TASK_GTPV1_U,[kernel.kallsyms],do_epoll_wait,NG,,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,feprx,[kernel.kallsyms],entry_SYSCALL_64,PHY,LOW PHY,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,Tpool0_-1,nr-softmodem,nr_deinterleaving_ldpc,PHY,HIGH PHY,LDPC,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,thread_FH,[kernel.kallsyms],_raw_spin_lock_bh,PHY,LOW PHY,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0.09%,thread_FH,[kernel.kallsyms],__x86_indirect_thunk_rax,PHY,LOW PHY,,,-0.05%,,44.08%,0.02%,82.40%,0.07%,-0.06%
+0.04%,0%,TASK_GTPV1_U,[kernel.kallsyms],_copy_to_iter,NG,,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,Tpool3_-1,nr-softmodem,get_pdsch_to_harq_feedback,MAC,,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,TASK_GTPV1_U,nr-softmodem,pdcp_data_req,NG,,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0%,thread_FH,[kernel.kallsyms],ip_output,PHY,LOW PHY,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0.02%,thread_FH,[kernel.kallsyms],rb_insert_color,PHY,LOW PHY,,0.02%,,,44.08%,0.02%,82.40%,0.02%,0.00%
+0.04%,0%,thread_FH,libc-2.27.so,__memset_avx2_unaligned_erms,PHY,LOW PHY,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0.02%,thread_FH,libdfts.so,dft,PHY,LOW PHY,DFT,0.02%,,,44.08%,0.02%,82.40%,0.02%,0.00%
+0.04%,0%,thread_FH,[kernel.kallsyms],idle_cpu,PHY,LOW PHY,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0.04%,TASK_GTPV1_U,[kernel.kallsyms],__sched_text_start,NG,,,0.00%,,,44.08%,0.02%,82.40%,0.03%,-0.02%
+0.04%,0.11%,RLC,queue,[k],RLC,,,,-0.07%,,44.08%,0.02%,82.40%,0.09%,-0.07%
+0.04%,0.11%,RLC,queue,[k],RLC,,,,-0.07%,,44.08%,0.02%,82.40%,0.09%,-0.07%
+0.04%,0.04%,feptx,[kernel.kallsyms],_raw_spin_lock,PHY,LOW PHY,,0.00%,,,44.08%,0.02%,82.40%,0.03%,-0.02%
+0.04%,0%,TASK_GTPV1_U,[kernel.kallsyms],futex_wake,NG,,,0.04%,,,44.08%,0.02%,82.40%,0.00%,0.02%
+0.04%,0.50%,thread_FH,[kernel.kallsyms],__fget,PHY,LOW PHY,,,-0.46%,,44.08%,0.02%,82.40%,0.41%,-0.39%
+0.03%,0.02%,TASK_GTPV1_U,[kernel.kallsyms],kmem_cache_free,NG,,,0.01%,,,44.08%,0.01%,82.40%,0.02%,0.00%
+0.03%,0%,thread_FH,[kernel.kallsyms],_raw_read_lock_irqsave,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0.05%,thread_FH,[kernel.kallsyms],cpuacct_charge,PHY,LOW PHY,,,-0.02%,,44.08%,0.01%,82.40%,0.04%,-0.03%
+0.03%,0.11%,RLC,queue,[k],RLC,,,,-0.08%,,44.08%,0.01%,82.40%,0.09%,-0.08%
+0.03%,0.04%,TASK_GTPV1_U,[kernel.kallsyms],__virt_addr_valid,NG,,,,-0.01%,,44.08%,0.01%,82.40%,0.03%,-0.02%
+0.03%,0%,Tpool1_-1,libdfts.so,idft256,PHY,LOW PHY,DFT,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0.01%,thread_FH,[kernel.kallsyms],perf_event_idx_default,PHY,LOW PHY,,0.02%,,,44.08%,0.01%,82.40%,0.01%,0.00%
+0.03%,0%,TASK_GNB_APP,libc-2.27.so,__strchrnul_avx2,SL,,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0.01%,thread_FH,[kernel.kallsyms],__free_pages_ok,PHY,LOW PHY,,0.02%,,,44.08%,0.01%,82.40%,0.01%,0.00%
+0.03%,0%,thread_FH,[kernel.kallsyms],__ip_finish_output,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,feptx,[kernel.kallsyms],native_apic_msr_eoi_write,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,Tpool0_-1,nr-softmodem,remove_front_nr_list,MAC,,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,Tpool0_-1,nr-softmodem,fill_ul_rb_mask,PHY,HIGH PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0.22%,thread_FH,[kernel.kallsyms],entry_SYSCALL_64_after_hwframe,PHY,LOW PHY,,,-0.19%,,44.08%,0.01%,82.40%,0.18%,-0.17%
+0.03%,0%,Tpool1_-1,nr-softmodem,nr_generate_dci,PHY,HIGH PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,thread_FH,[kernel.kallsyms],interrupt_entry,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,feptx,nr-softmodem,get_samples_per_slot,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,Tpool1_-1,nr-softmodem,ldpc8blocks,PHY,HIGH PHY,LDPC,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,Tpool3_-1,libldpc.so,nrLDPC_cnProc_BG2_R13_AVX2,PHY,HIGH PHY,LDPC,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0.24%,thread_FH,libpthread-2.27.so,pthread_cond_signal@@GLIBC_2.3.2,PHY,LOW PHY,,,-0.21%,,44.08%,0.01%,82.40%,0.20%,-0.18%
+0.03%,0.08%,RLC,queue,[.],RLC,,,,-0.05%,,44.08%,0.01%,82.40%,0.07%,-0.05%
+0.03%,0.02%,TASK_GTPV1_U,[kernel.kallsyms],__x64_sys_epoll_wait,NG,,,0.01%,,,44.08%,0.01%,82.40%,0.02%,0.00%
+0.03%,0.02%,TASK_GTPV1_U,[kernel.kallsyms],_raw_write_lock_irq,NG,,,0.01%,,,44.08%,0.01%,82.40%,0.02%,0.00%
+0.03%,0%,Tpool0_-1,nr-softmodem,apply_nr_rotation_ul,PHY,HIGH PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,thread_FH,[kernel.kallsyms],tcp_current_mss,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0.10%,thread_FH,[kernel.kallsyms],x86_pmu_disable,PHY,LOW PHY,,,-0.07%,,44.08%,0.01%,82.40%,0.08%,-0.07%
+0.03%,0.20%,thread_FH,[kernel.kallsyms],__slab_free,PHY,LOW PHY,,,-0.17%,,44.08%,0.01%,82.40%,0.16%,-0.15%
+0.03%,0%,thread_FH,[kernel.kallsyms],aa_sk_perm,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,Tpool3_-1,libldpc.so,nrLDPC_bn2cnProcBuf_BG2,PHY,HIGH PHY,LDPC,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,thread_FH,[kernel.kallsyms],ep_item_poll.isra.16,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0.05%,TASK_GTPV1_U,[kernel.kallsyms],mutex_lock,NG,,,,-0.02%,,44.08%,0.01%,82.40%,0.04%,-0.03%
+0.03%,0.11%,RLC,queue,[k],RLC,,,,-0.08%,,44.08%,0.01%,82.40%,0.09%,-0.08%
+0.03%,0%,thread_FH,nr-softmodem,get_samples_per_slot,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,TASK_GTPV1_U,nr-softmodem,itti_receive_msg,NG,,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,TASK_GTPV1_U,[kernel.kallsyms],security_socket_recvmsg,NG,,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0.16%,thread_FH,[kernel.kallsyms],enqueue_task_rt,PHY,LOW PHY,,,-0.13%,,44.08%,0.01%,82.40%,0.13%,-0.12%
+0.03%,0%,feptx,[kernel.kallsyms],__cgroup_account_cputime_field,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0.02%,TASK_GTPV1_U,[kernel.kallsyms],native_sched_clock,NG,,,0.01%,,,44.08%,0.01%,82.40%,0.02%,0.00%
+0.03%,0%,thread_FH,[kernel.kallsyms],__sk_dst_check,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,Tpool1_-1,nr-softmodem,nr_segmentation,PHY,HIGH PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,Tpool0_-1,nr-softmodem,dB_fixed,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,Tpool2_-1,nr-softmodem,fill_ul_rb_mask,PHY,HIGH PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,Tpool3_-1,nr-softmodem,nr_rate_matching_ldpc_rx,PHY,HIGH PHY,LDPC,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0.02%,TASK_GTPV1_U,[kernel.kallsyms],ep_send_events_proc,NG,,,0.01%,,,44.08%,0.01%,82.40%,0.02%,0.00%
+0.03%,0.02%,thread_FH,[kernel.kallsyms],scheduler_tick,PHY,LOW PHY,,0.01%,,,44.08%,0.01%,82.40%,0.02%,0.00%
+0.03%,0.11%,RLC,queue,[k],RLC,,,,-0.08%,,44.08%,0.01%,82.40%,0.09%,-0.08%
+0.03%,0%,Tpool3_-1,nr-softmodem,nr_modulation,PHY,HIGH PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,feptx,libdfts.so,idft64@plt,PHY,LOW PHY,DFT,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,thread_FH,[kernel.kallsyms],kmem_cache_alloc_node,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0.11%,RLC,queue,[k],RLC,,,,-0.08%,,44.08%,0.01%,82.40%,0.09%,-0.08%
+0.03%,0.02%,thread_FH,nr-softmodem,rx_rf,PHY,LOW PHY,,0.01%,,,44.08%,0.01%,82.40%,0.02%,0.00%
+0.03%,0%,Tpool3_-1,nr-softmodem,phy_procedures_gNB_TX,PHY,,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,Tpool2_-1,nr-softmodem,gNB_dlsch_ulsch_scheduler,MAC,,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0.21%,thread_FH,[kernel.kallsyms],__sched_text_start,PHY,LOW PHY,,,-0.18%,,44.08%,0.01%,82.40%,0.17%,-0.16%
+0.03%,0%,thread_FH,librfsimulator.so,epoll_wait@plt,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,feptx,[kernel.kallsyms],futex_wait,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,thread_FH,[kernel.kallsyms],tcp_write_xmit,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0.11%,RLC,queue,[k],RLC,,,,-0.08%,,44.08%,0.01%,82.40%,0.09%,-0.08%
+0.03%,0%,thread_FH,[kernel.kallsyms],netif_skb_features,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,feprx,libpthread-2.27.so,__pthread_disable_asynccancel,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,thread_FH,[kernel.kallsyms],ktime_get,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,TASK_GTPV1_U,[kernel.kallsyms],page_frag_free,NG,,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,thread_FH,[kernel.kallsyms],__wake_up_common,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0.03%,thread_FH,[kernel.kallsyms],ktime_get_ts64,PHY,LOW PHY,,0.00%,,,44.08%,0.01%,82.40%,0.02%,-0.01%
+0.03%,0%,thread_FH,[kernel.kallsyms],sock_poll,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,thread_FH,libpthread-2.27.so,__pthread_disable_asynccancel,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0.02%,thread_FH,[kernel.kallsyms],ctx_sched_out,PHY,LOW PHY,,0.01%,,,44.08%,0.01%,82.40%,0.02%,0.00%
+0.03%,0%,TASK_GTPV1_U,[kernel.kallsyms],mutex_unlock,NG,,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,Tpool2_-1,libldpc.so,nrLDPC_bnProc_BG2_R13_AVX2,PHY,HIGH PHY,LDPC,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,Tpool3_-1,nr-softmodem,nr_fr1_ulsch_preprocessor,MAC,,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0.08%,RLC,queue,[.],RLC,,,,-0.05%,,44.08%,0.01%,82.40%,0.07%,-0.05%
+0.03%,0%,feptx,[kernel.kallsyms],entry_SYSCALL_64,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,thread_FH,[kernel.kallsyms],sched_clock,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,thread_FH,[kernel.kallsyms],do_epoll_wait,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0.02%,thread_FH,[kernel.kallsyms],plist_add,PHY,LOW PHY,,0.01%,,,44.08%,0.01%,82.40%,0.02%,0.00%
+0.03%,0.05%,TASK_RRC_GNB,[kernel.kallsyms],do_syscall_64,RRC,,,,-0.02%,,44.08%,0.01%,82.40%,0.04%,-0.03%
+0.03%,0%,feprx,[kernel.kallsyms],dequeue_top_rt_rq,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0.08%,thread_FH,[kernel.kallsyms],pick_next_task_idle,PHY,LOW PHY,,,-0.05%,,44.08%,0.01%,82.40%,0.07%,-0.05%
+0.03%,0%,thread_FH,[kernel.kallsyms],packet_rcv,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0.02%,feprx,nr-softmodem,get_samples_per_slot,PHY,LOW PHY,,0.01%,,,44.08%,0.01%,82.40%,0.02%,0.00%
+0.03%,0%,thread_FH,[kernel.kallsyms],ip_queue_xmit,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0.11%,RLC,queue,[k],RLC,,,,-0.08%,,44.08%,0.01%,82.40%,0.09%,-0.08%
+0.03%,0.01%,thread_FH,[kernel.kallsyms],rb_erase,PHY,LOW PHY,,0.02%,,,44.08%,0.01%,82.40%,0.01%,0.00%
+0.03%,0%,TASK_GTPV1_U,[kernel.kallsyms],record_times,NG,,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,TASK_GTPV1_U,[kernel.kallsyms],copy_user_generic_unrolled,NG,,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,feprx,[kernel.kallsyms],__perf_event_task_sched_out,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0.01%,thread_FH,[kernel.kallsyms],event_sched_in.isra.115.part.116,PHY,LOW PHY,,0.02%,,,44.08%,0.01%,82.40%,0.01%,0.00%
+0.03%,0%,Tpool3_-1,libdfts.so,idft256,PHY,LOW PHY,DFT,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0.02%,TASK_GTPV1_U,[kernel.kallsyms],select_task_rq_rt,NG,,,0.01%,,,44.08%,0.01%,82.40%,0.02%,0.00%
+0.03%,0.04%,TASK_GTPV1_U,[kernel.kallsyms],skb_release_data,NG,,,,-0.01%,,44.08%,0.01%,82.40%,0.03%,-0.02%
+0.03%,0%,TASK_GTPV1_U,nr-softmodem,pthread_mutex_lock@plt,NG,,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,Tpool3_-1,nr-softmodem,getRBGSize,MAC,,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,Tpool0_-1,libdfts.so,idft1024,PHY,LOW PHY,DFT,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0.11%,RLC,queue,[k],RLC,,,,-0.08%,,44.08%,0.01%,82.40%,0.09%,-0.08%
+0.03%,0%,Tpool3_-1,nr-softmodem,nr_rlc_entity_am_generate_pdu,RLC,,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,Tpool2_-1,libdfts.so,idft1024,PHY,LOW PHY,DFT,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,thread_FH,[kernel.kallsyms],cpupri_find,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0.01%,TASK_GTPV1_U,[kernel.kallsyms],resched_curr,NG,,,0.02%,,,44.08%,0.01%,82.40%,0.01%,0.00%
+0.03%,0%,feptx,nr-softmodem,pthread_mutex_lock@plt,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,TASK_GTPV1_U,[kernel.kallsyms],mark_wake_futex,NG,,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,feptx,[kernel.kallsyms],record_times,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0.02%,TASK_RRC_GNB,[kernel.kallsyms],switch_fpu_return,RRC,,,0.01%,,,44.08%,0.01%,82.40%,0.02%,0.00%
+0.03%,0.11%,RLC,queue,[k],RLC,,,,-0.08%,,44.08%,0.01%,82.40%,0.09%,-0.08%
+0.03%,0%,TASK_GTPV1_U,[kernel.kallsyms],__fget_light,NG,,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,thread_FH,[kernel.kallsyms],timerqueue_del,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0.01%,thread_FH,[kernel.kallsyms],__hrtimer_init,PHY,LOW PHY,,0.02%,,,44.08%,0.01%,82.40%,0.01%,0.00%
+0.03%,0%,thread_FH,libpthread-2.27.so,pthread_cond_wait@@GLIBC_2.3.2,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,Tpool2_-1,nr-softmodem,NR_UL_indication,MAC,,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,TASK_GNB_APP,nr-softmodem,dump_mac_stats,SL,,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,Tpool1_-1,libldpc.so,nrLDPC_bnProc_BG2_R13_AVX2,PHY,HIGH PHY,LDPC,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,feprx,[kernel.kallsyms],_raw_spin_lock,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,thread_FH,[kernel.kallsyms],__local_bh_enable_ip,PHY,LOW PHY,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.03%,0%,pdcp_timer,[kernel.kallsyms],ctx_sched_in,PDCP,,,0.03%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.02%,0%,thread_FH,[kernel.kallsyms],_raw_write_unlock_irq,PHY,LOW PHY,,0.02%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.02%,0%,Tpool3_-1,libdfts.so,idft64,PHY,LOW PHY,DFT,0.02%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.02%,0%,thread_FH,[kernel.kallsyms],ipv4_dst_check,PHY,LOW PHY,,0.02%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.02%,0.01%,TASK_GNB_APP,libc-2.27.so,__GI___printf_fp_l,SL,,,0.01%,,,44.08%,0.01%,82.40%,0.01%,0.00%
+0.02%,0%,TASK_GTPV1_U,[kernel.kallsyms],__first_packet_length,NG,,,0.02%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.02%,0.11%,RLC,queue,[k],RLC,,,,-0.09%,,44.08%,0.01%,82.40%,0.09%,-0.08%
+0.02%,0%,Tpool2_-1,libldpc.so,nrLDPC_decoder_core.isra.1,PHY,HIGH PHY,LDPC,0.02%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.02%,0%,TASK_GTPV1_U,[kernel.kallsyms],__sys_recvfrom,NG,,,0.02%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.02%,0.02%,TASK_GTPV1_U,libc-2.27.so,malloc,NG,,,0.00%,,,44.08%,0.01%,82.40%,0.02%,-0.01%
+0.02%,0%,Tpool3_-1,nr-softmodem,ldpc8blocks,PHY,HIGH PHY,LDPC,0.02%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.02%,0%,TASK_RRC_GNB,[kernel.kallsyms],__perf_event_task_sched_in,RRC,,,0.02%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.02%,0%,TASK_GTPV1_U,[kernel.kallsyms],update_rt_migration,NG,,,0.02%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.02%,0%,TASK_GTPV1_U,[kernel.kallsyms],__perf_event_task_sched_out,NG,,,0.02%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.02%,0%,Tpool2_-1,nr-softmodem,nr_rlc_pdu_encoder_put_bits,RLC,,,0.02%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.02%,0.03%,TASK_GTPV1_U,libpthread-2.27.so,__pthread_mutex_unlock,NG,,,,-0.01%,,44.08%,0.01%,82.40%,0.02%,-0.02%
+0.02%,0%,TASK_RRC_GNB,[kernel.kallsyms],__rcu_read_unlock,RRC,,,0.02%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.02%,0%,Tpool0_-1,nr-softmodem,nr_rate_matching_ldpc_rx,PHY,HIGH PHY,LDPC,0.02%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.02%,0.08%,RLC,queue,[.],RLC,,,,-0.06%,,44.08%,0.01%,82.40%,0.07%,-0.06%
+0.02%,0.51%,Tpool2_-1,nr-softmodem,polar_encoder_fast,PHY,HIGH PHY,,,-0.49%,,44.08%,0.01%,82.40%,0.42%,-0.41%
+0.02%,0%,TASK_GTPV1_U,[kernel.kallsyms],__skb_checksum,NG,,,0.02%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.02%,0%,pdcp_timer,[kernel.kallsyms],visit_groups_merge,PDCP,,,0.02%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.02%,0.02%,TASK_GTPV1_U,[kernel.kallsyms],entry_SYSCALL_64_after_hwframe,NG,,,0.00%,,,44.08%,0.01%,82.40%,0.02%,-0.01%
+0.02%,0%,TASK_GTPV1_U,[kernel.kallsyms],pull_rt_task,NG,,,0.02%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.02%,0.01%,TASK_GTPV1_U,[kernel.kallsyms],event_sched_in.isra.115.part.116,NG,,,0.01%,,,44.08%,0.01%,82.40%,0.01%,0.00%
+0.02%,0%,Tpool1_-1,nr-softmodem,gNB_dlsch_ulsch_scheduler,MAC,,,0.02%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.02%,0.02%,PDCP,data,libpthread-2.27.so,PDCP,,,0.00%,,,44.08%,0.01%,82.40%,0.02%,-0.01%
+0.02%,0%,pdcp_timer,[kernel.kallsyms],finish_task_switch,PDCP,,,0.02%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.02%,0%,TASK_RRC_GNB,[kernel.kallsyms],psi_task_change,RRC,,,0.02%,,,44.08%,0.01%,82.40%,0.00%,0.01%
+0.00%,0%,pdcp_timer,[kernel.kallsyms],nmi_handle,PDCP,,,0.00%,,,44.08%,0.00%,82.40%,0.00%,0.00%
+0.00%,0%,feprx,[kernel.kallsyms],native_flush_tlb_one_user,PHY,LOW PHY,,0.00%,,,44.08%,0.00%,82.40%,0.00%,0.00%
+0.00%,0.00%,feptx,[kernel.kallsyms],nmi_cpu_backtrace_handler,PHY,LOW PHY,,0.00%,,,44.08%,0.00%,82.40%,0.00%,0.00%
+0.00%,0.00%,TASK_GTPV1_U,[kernel.kallsyms],nmi_cpu_backtrace_handler,NG,,,0.00%,,,44.08%,0.00%,82.40%,0.00%,0.00%
+0.00%,0.11%,RLC,queue,[k],RLC,,,,-0.11%,,44.08%,0.00%,82.40%,0.09%,-0.09%
+0.00%,0%,feprx,[kernel.kallsyms],nmi_cpu_backtrace,PHY,LOW PHY,,0.00%,,,44.08%,0.00%,82.40%,0.00%,0.00%
+0.00%,0.00%,TASK_RRC_GNB,[kernel.kallsyms],nmi_cpu_backtrace_handler,RRC,,,0.00%,,,44.08%,0.00%,82.40%,0.00%,0.00%
+0.00%,0.00%,pdcp_timer,[kernel.kallsyms],native_sched_clock,PDCP,,,0.00%,,,44.08%,0.00%,82.40%,0.00%,0.00%
+0.00%,0.38%,thread_FH,[kernel.kallsyms],native_sched_clock,PHY,LOW PHY,,,-0.38%,,44.08%,0.00%,82.40%,0.31%,-0.31%
+0.00%,0.00%,TASK_GNB_APP,[kernel.kallsyms],native_write_msr,SL,,,0.00%,,,44.08%,0.00%,82.40%,0.00%,0.00%
+0.00%,0%,TASK_RRC_GNB,[kernel.kallsyms],nmi_cpu_backtrace,RRC,,,0.00%,,,44.08%,0.00%,82.40%,0.00%,0.00%
+0.00%,0.11%,RLC,queue,[k],RLC,,,,-0.11%,,44.08%,0.00%,82.40%,0.09%,-0.09%
+0.00%,0%,feptx,[kernel.kallsyms],nmi_cpu_backtrace,PHY,LOW PHY,,0.00%,,,44.08%,0.00%,82.40%,0.00%,0.00%
+0.00%,0%,feprx,[kernel.kallsyms],nmi_cpu_backtrace_handler,PHY,LOW PHY,,0.00%,,,44.08%,0.00%,82.40%,0.00%,0.00%
+0.00%,0.00%,TASK_RRC_GNB,[kernel.kallsyms],native_sched_clock,RRC,,,0.00%,,,44.08%,0.00%,82.40%,0.00%,0.00%
+0.00%,0%,TASK_GTPV1_U,[kernel.kallsyms],nmi_handle,NG,,,0.00%,,,44.08%,0.00%,82.40%,0.00%,0.00%
+0.00%,0.00%,pdcp_timer,[kernel.kallsyms],nmi_cpu_backtrace_handler,PDCP,,,0.00%,,,44.08%,0.00%,82.40%,0.00%,0.00%
+0.00%,0.00%,feprx,[kernel.kallsyms],native_write_msr,PHY,LOW PHY,,0.00%,,,44.08%,0.00%,82.40%,0.00%,0.00%
+0.00%,0.11%,RLC,queue,[k],RLC,,,,-0.11%,,44.08%,0.00%,82.40%,0.09%,-0.09%
+0.00%,0.02%,TASK_GTPV1_U,[kernel.kallsyms],native_write_msr,NG,,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0.00%,0.00%,TASK_RRC_GNB,[kernel.kallsyms],native_write_msr,RRC,,,0.00%,,,44.08%,0.00%,82.40%,0.00%,0.00%
+0.00%,0.03%,PDCP,data,[kernel.kallsyms],PDCP,,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0.00%,0%,pdcp_timer,[kernel.kallsyms],intel_bts_enable_local,PDCP,,,0.00%,,,44.08%,0.00%,82.40%,0.00%,0.00%
+0.00%,0.00%,pdcp_timer,[kernel.kallsyms],native_write_msr,PDCP,,,0.00%,,,44.08%,0.00%,82.40%,0.00%,0.00%
+0%,5.62%,feptx,libdfts.so,idft1536,PHY,LOW PHY,DFT,,-5.62%,,44.08%,0.00%,82.40%,4.63%,-4.63%
+0%,2.19%,thread_FH,liboai_usrpdevif.so,trx_usrp_read,PHY,LOW PHY,,,-2.19%,,44.08%,0.00%,82.40%,1.80%,-1.80%
+0%,1.63%,nr-softmodem,liboai_usrpdevif.so,tx_rf,PHY,LOW PHY,,,-1.63%,,44.08%,0.00%,82.40%,1.34%,-1.34%
+0%,1.60%,Tpool0_-1,libc-2.27.so,ldpc8blocks,PHY,HIGH PHY,LDPC,,-1.60%,,44.08%,0.00%,82.40%,1.32%,-1.32%
+0%,1.48%,thread_FH,libuhd.so.4.1.0,0x00000000001f59b0,PHY,LOW PHY,,,-1.48%,,44.08%,0.00%,82.40%,1.22%,-1.22%
+0%,1.45%,Tpool2_-1,libc-2.27.so,#NAME?,PHY,HIGH PHY,LDPC,,-1.45%,,44.08%,0.00%,82.40%,1.19%,-1.19%
+0%,1.31%,Tpool1_-1,libc-2.27.so,ldpc8blocks,PHY,HIGH PHY,LDPC,,-1.31%,,44.08%,0.00%,82.40%,1.08%,-1.08%
+0%,1.23%,thread_FH,libpthread-2.27.so,__pthread_mutex_lock,PHY,LOW PHY,,,-1.23%,,44.08%,0.00%,82.40%,1.01%,-1.01%
+0%,1.12%,feprx,libdfts.so,dft512,PHY,LOW PHY,DFT,,-1.12%,,44.08%,0.00%,82.40%,0.92%,-0.92%
+0%,1.06%,nr-softmodem,libuhd.so.4.1.0,[.],0x00000000001f5820,PHY,LOW PHY,,-1.06%,,44.08%,0.00%,82.40%,0.87%,-0.87%
+0%,0.99%,feprx,libdfts.so,dft1536,PHY,LOW PHY,DFT,,-0.99%,,44.08%,0.00%,82.40%,0.82%,-0.82%
+0%,0.84%,Tpool2_-1,libc-2.27.so,nrLDPC_decod,PHY,HIGH PHY,LDPC,,-0.84%,,44.08%,0.00%,82.40%,0.69%,-0.69%
+0%,0.83%,thread_FH,[kernel.kallsyms],memset_erms,PHY,LOW PHY,,,-0.83%,,44.08%,0.00%,82.40%,0.68%,-0.68%
+0%,0.67%,feptx,libdfts.so,idft512,PHY,LOW PHY,DFT,,-0.67%,,44.08%,0.00%,82.40%,0.55%,-0.55%
+0%,0.66%,Tpool1_-1,libldpc.so,ldpc288_byte,PHY,HIGH PHY,LDPC,,-0.66%,,44.08%,0.00%,82.40%,0.54%,-0.54%
+0%,0.62%,thread_FH,[kernel.kallsyms],_raw_spin_lock_irqsave,PHY,LOW PHY,,,-0.62%,,44.08%,0.00%,82.40%,0.51%,-0.51%
+0%,0.62%,Tpool2_-1,nr-softmodem,pf_ul,MAC,,,,-0.62%,,44.08%,0.00%,82.40%,0.51%,-0.51%
+0%,0.57%,thread_FH,libpthread-2.27.so,__pthread_mutex_unlock,PHY,LOW PHY,,,-0.57%,,44.08%,0.00%,82.40%,0.47%,-0.47%
+0%,0.55%,nr-softmodem,[kernel.kallsyms],proc_do_submiturb,PHY,LOW PHY,,,-0.55%,,44.08%,0.00%,82.40%,0.45%,-0.45%
+0%,0.51%,thread_FH,libdfts.so,dft1536,PHY,LOW PHY,DFT,,-0.51%,,44.08%,0.00%,82.40%,0.42%,-0.42%
+0%,0.40%,thread_FH,[kernel.kallsyms],proc_do_submiturb,PHY,LOW PHY,,,-0.40%,,44.08%,0.00%,82.40%,0.33%,-0.33%
+0%,0.39%,nr-softmodem,[kernel.kallsyms],proc_do_submiturb,PHY,LOW PHY,,,-0.39%,,44.08%,0.00%,82.40%,0.32%,-0.32%
+0%,0.37%,feptx,[kernel.kallsyms],get_futex_key_refs.isra.10,PHY,LOW PHY,,,-0.37%,,44.08%,0.00%,82.40%,0.30%,-0.30%
+0%,0.37%,thread_FH,[kernel.kallsyms],processcompl,PHY,LOW PHY,,,-0.37%,,44.08%,0.00%,82.40%,0.30%,-0.30%
+0%,0.33%,thread_FH,[kernel.kallsyms],put_pid,PHY,LOW PHY,,,-0.33%,,44.08%,0.00%,82.40%,0.27%,-0.27%
+0%,0.33%,Tpool2_-1,nr-softmodem,crc24a,PHY,HIGH PHY,,,-0.33%,,44.08%,0.00%,82.40%,0.27%,-0.27%
+0%,0.32%,thread_FH,[kernel.kallsyms],mutex_spin_on_owner,PHY,LOW PHY,,,-0.32%,,44.08%,0.00%,82.40%,0.26%,-0.26%
+0%,0.31%,thread_FH,[kernel.kallsyms],futex_wake,PHY,LOW PHY,,,-0.31%,,44.08%,0.00%,82.40%,0.26%,-0.26%
+0%,0.30%,thread_FH,[kernel.kallsyms],_raw_spin_unlock_irqrestore,PHY,LOW PHY,,,-0.30%,,44.08%,0.00%,82.40%,0.25%,-0.25%
+0%,0.29%,thread_FH,[kernel.kallsyms],do_sys_poll,PHY,LOW PHY,,,-0.29%,,44.08%,0.00%,82.40%,0.24%,-0.24%
+0%,0.28%,nr-softmodem,nr-softmodem,nr_slot_select,PHY,LOW PHY,,,-0.28%,,44.08%,0.00%,82.40%,0.23%,-0.23%
+0%,0.28%,thread_FH,libc-2.27.so,cfree@GLIBC_2.2.5,PHY,LOW PHY,,,-0.28%,,44.08%,0.00%,82.40%,0.23%,-0.23%
+0%,0.28%,thread_FH,libdfts.so,dft512,PHY,LOW PHY,DFT,,-0.28%,,44.08%,0.00%,82.40%,0.23%,-0.23%
+0%,0.24%,nr-softmodem,libuhd.so.4.1.0,[.],0x00000000001f582b,PHY,LOW PHY,,-0.24%,,44.08%,0.00%,82.40%,0.20%,-0.20%
+0%,0.24%,nr-softmodem,libuhd.so.4.1.0,[.],uhd::transport::vrt::if_hdr_pack_le,PHY,LOW PHY,,-0.24%,,44.08%,0.00%,82.40%,0.20%,-0.20%
+0%,0.21%,thread_FH,libpthread-2.27.so,pthread_cond_timedwait@@GLIBC_2.3.2,PHY,LOW PHY,,,-0.21%,,44.08%,0.00%,82.40%,0.17%,-0.17%
+0%,0.21%,thread_FH,libuhd.so.4.1.0,0x00000000001f59b5,PHY,LOW PHY,,,-0.21%,,44.08%,0.00%,82.40%,0.17%,-0.17%
+0%,0.19%,thread_FH,[kernel.kallsyms],futex_wait_setup,PHY,LOW PHY,,,-0.19%,,44.08%,0.00%,82.40%,0.16%,-0.16%
+0%,0.18%,thread_FH,[kernel.kallsyms],mark_wake_futex,PHY,LOW PHY,,,-0.18%,,44.08%,0.00%,82.40%,0.15%,-0.15%
+0%,0.17%,thread_FH,libc-2.27.so,__GI___ioctl,PHY,LOW PHY,,,-0.17%,,44.08%,0.00%,82.40%,0.14%,-0.14%
+0%,0.17%,thread_FH,[kernel.kallsyms],kfree,PHY,LOW PHY,,,-0.17%,,44.08%,0.00%,82.40%,0.14%,-0.14%
+0%,0.16%,thread_FH,[kernel.kallsyms],clear_page_erms,PHY,LOW PHY,,,-0.16%,,44.08%,0.00%,82.40%,0.13%,-0.13%
+0%,0.16%,thread_FH,[kernel.kallsyms],async_getcompleted,PHY,LOW PHY,,,-0.16%,,44.08%,0.00%,82.40%,0.13%,-0.13%
+0%,0.16%,thread_FH,[kernel.kallsyms],pick_next_task_stop,PHY,LOW PHY,,,-0.16%,,44.08%,0.00%,82.40%,0.13%,-0.13%
+0%,0.15%,thread_FH,[kernel.kallsyms],resched_curr,PHY,LOW PHY,,,-0.15%,,44.08%,0.00%,82.40%,0.12%,-0.12%
+0%,0.15%,Tpool1_-1,nr-softmodem,dB_fixed_times10,PHY,LOW PHY,,,-0.15%,,44.08%,0.00%,82.40%,0.12%,-0.12%
+0%,0.15%,thread_FH,[kernel.kallsyms],switch_fpu_return,PHY,LOW PHY,,,-0.15%,,44.08%,0.00%,82.40%,0.12%,-0.12%
+0%,0.15%,thread_FH,libusb-1.0.so.0.1.0,libusb_submit_transfer,PHY,LOW PHY,,,-0.15%,,44.08%,0.00%,82.40%,0.12%,-0.12%
+0%,0.15%,thread_FH,libuhd.so.4.1.0,0x00000000001f59bf,PHY,LOW PHY,,,-0.15%,,44.08%,0.00%,82.40%,0.12%,-0.12%
+0%,0.15%,thread_FH,libc-2.27.so,__libc_calloc,PHY,LOW PHY,,,-0.15%,,44.08%,0.00%,82.40%,0.12%,-0.12%
+0%,0.15%,thread_FH,[kernel.kallsyms],__pollwait,PHY,LOW PHY,,,-0.15%,,44.08%,0.00%,82.40%,0.12%,-0.12%
+0%,0.14%,thread_FH,libusb-1.0.so.0.1.0,0x000000000000d2db,PHY,LOW PHY,,,-0.14%,,44.08%,0.00%,82.40%,0.12%,-0.12%
+0%,0.14%,thread_FH,[kernel.kallsyms],__rcu_read_unlock,PHY,LOW PHY,,,-0.14%,,44.08%,0.00%,82.40%,0.12%,-0.12%
+0%,0.14%,thread_FH,[kernel.kallsyms],select_task_rq_rt,PHY,LOW PHY,,,-0.14%,,44.08%,0.00%,82.40%,0.12%,-0.12%
+0%,0.12%,thread_FH,[kernel.kallsyms],usbdev_do_ioctl,PHY,LOW PHY,,,-0.12%,,44.08%,0.00%,82.40%,0.10%,-0.10%
+0%,0.12%,thread_FH,libpthread-2.27.so,__lll_unlock_wake,PHY,LOW PHY,,,-0.12%,,44.08%,0.00%,82.40%,0.10%,-0.10%
+0%,0.12%,thread_FH,[kernel.kallsyms],__x64_sys_futex,PHY,LOW PHY,,,-0.12%,,44.08%,0.00%,82.40%,0.10%,-0.10%
+0%,0.12%,thread_FH,[kernel.kallsyms],__x64_sys_poll,PHY,LOW PHY,,,-0.12%,,44.08%,0.00%,82.40%,0.10%,-0.10%
+0%,0.11%,thread_FH,[kernel.kallsyms],__put_user_4,PHY,LOW PHY,,,-0.11%,,44.08%,0.00%,82.40%,0.09%,-0.09%
+0%,0.11%,thread_FH,libc-2.27.so,_int_malloc,PHY,LOW PHY,,,-0.11%,,44.08%,0.00%,82.40%,0.09%,-0.09%
+0%,0.11%,Tpool0_-1,nr-softmodem,pdcp_run,PDCP,,,,-0.11%,,44.08%,0.00%,82.40%,0.09%,-0.09%
+0%,0.10%,thread_FH,[kernel.kallsyms],newidle_balance,PHY,LOW PHY,,,-0.10%,,44.08%,0.00%,82.40%,0.08%,-0.08%
+0%,0.10%,TASK_GTPV1_U,[kernel.kallsyms],syscall_return_via_sysret,NG,,,,-0.10%,,44.08%,0.00%,82.40%,0.08%,-0.08%
+0%,0.10%,thread_FH,[kernel.kallsyms],__fget_light,PHY,LOW PHY,,,-0.10%,,44.08%,0.00%,82.40%,0.08%,-0.08%
+0%,0.09%,thread_FH,[kernel.kallsyms],poll_schedule_timeout.constprop.13,PHY,LOW PHY,,,-0.09%,,44.08%,0.00%,82.40%,0.07%,-0.07%
+0%,0.09%,thread_FH,[kernel.kallsyms],get_futex_key_refs.isra.10,PHY,LOW PHY,,,-0.09%,,44.08%,0.00%,82.40%,0.07%,-0.07%
+0%,0.09%,thread_FH,[kernel.kallsyms],update_rt_rq_load_avg,PHY,LOW PHY,,,-0.09%,,44.08%,0.00%,82.40%,0.07%,-0.07%
+0%,0.09%,TASK_RRC_GNB,[kernel.kallsyms],irq_work_tick,RRC,,,,-0.09%,,44.08%,0.00%,82.40%,0.07%,-0.07%
+0%,0.09%,thread_FH,libpthread-2.27.so,__pthread_enable_asynccancel,PHY,LOW PHY,,,-0.09%,,44.08%,0.00%,82.40%,0.07%,-0.07%
+0%,0.08%,thread_FH,[kernel.kallsyms],__kmalloc,PHY,LOW PHY,,,-0.08%,,44.08%,0.00%,82.40%,0.07%,-0.07%
+0%,0.08%,thread_FH,libc-2.27.so,__tz_convert,PHY,LOW PHY,,,-0.08%,,44.08%,0.00%,82.40%,0.07%,-0.07%
+0%,0.08%,thread_FH,[kernel.kallsyms],unfreeze_partials.isra.84,PHY,LOW PHY,,,-0.08%,,44.08%,0.00%,82.40%,0.07%,-0.07%
+0%,0.08%,thread_FH,[kernel.kallsyms],dequeue_top_rt_rq,PHY,LOW PHY,,,-0.08%,,44.08%,0.00%,82.40%,0.07%,-0.07%
+0%,0.08%,thread_FH,[kernel.kallsyms],group_sched_in,PHY,LOW PHY,,,-0.08%,,44.08%,0.00%,82.40%,0.07%,-0.07%
+0%,0.08%,thread_FH,libuhd.so.4.1.0,0x00000000001f59ba,PHY,LOW PHY,,,-0.08%,,44.08%,0.00%,82.40%,0.07%,-0.07%
+0%,0.07%,thread_FH,libuhd.so.4.1.0,uhd::time_spec_t::from_ticks,PHY,LOW PHY,,,-0.07%,,44.08%,0.00%,82.40%,0.06%,-0.06%
+0%,0.07%,thread_FH,[kernel.kallsyms],current_time,PHY,LOW PHY,,,-0.07%,,44.08%,0.00%,82.40%,0.06%,-0.06%
+0%,0.07%,thread_FH,[kernel.kallsyms],usb_hcd_submit_urb,PHY,LOW PHY,,,-0.07%,,44.08%,0.00%,82.40%,0.06%,-0.06%
+0%,0.07%,thread_FH,[kernel.kallsyms],__perf_event_task_sched_out,PHY,LOW PHY,,,-0.07%,,44.08%,0.00%,82.40%,0.06%,-0.06%
+0%,0.07%,thread_FH,[kernel.kallsyms],usbdev_poll,PHY,LOW PHY,,,-0.07%,,44.08%,0.00%,82.40%,0.06%,-0.06%
+0%,0.07%,thread_FH,[kernel.kallsyms],rb_next,PHY,LOW PHY,,,-0.07%,,44.08%,0.00%,82.40%,0.06%,-0.06%
+0%,0.07%,thread_FH,[kernel.kallsyms],usb_free_urb,PHY,LOW PHY,,,-0.07%,,44.08%,0.00%,82.40%,0.06%,-0.06%
+0%,0.07%,pdcp_timer,[kernel.kallsyms],psi_task_change,PDCP,,,,-0.07%,,44.08%,0.00%,82.40%,0.06%,-0.06%
+0%,0.07%,RLC,queue,[k],RLC,,,,-0.07%,,44.08%,0.00%,82.40%,0.06%,-0.06%
+0%,0.06%,thread_FH,[kernel.kallsyms],pipe_poll,PHY,LOW PHY,,,-0.06%,,44.08%,0.00%,82.40%,0.05%,-0.05%
+0%,0.06%,thread_FH,[kernel.kallsyms],pick_next_task_fair,PHY,LOW PHY,,,-0.06%,,44.08%,0.00%,82.40%,0.05%,-0.05%
+0%,0.06%,thread_FH,[kernel.kallsyms],__put_user_8,PHY,LOW PHY,,,-0.06%,,44.08%,0.00%,82.40%,0.05%,-0.05%
+0%,0.06%,thread_FH,[kernel.kallsyms],usbfs_increase_memory_usage,PHY,LOW PHY,,,-0.06%,,44.08%,0.00%,82.40%,0.05%,-0.05%
+0%,0.06%,thread_FH,[kernel.kallsyms],new_slab,PHY,LOW PHY,,,-0.06%,,44.08%,0.00%,82.40%,0.05%,-0.05%
+0%,0.06%,thread_FH,[kernel.kallsyms],perf_event_sched_in,PHY,LOW PHY,,,-0.06%,,44.08%,0.00%,82.40%,0.05%,-0.05%
+0%,0.06%,thread_FH,[kernel.kallsyms],try_to_wake_up,PHY,LOW PHY,,,-0.06%,,44.08%,0.00%,82.40%,0.05%,-0.05%
+0%,0.06%,thread_FH,libuhd.so.4.1.0,uhd::transport::vrt::if_hdr_unpack_le,PHY,LOW PHY,,,-0.06%,,44.08%,0.00%,82.40%,0.05%,-0.05%
+0%,0.06%,thread_FH,[kernel.kallsyms],___slab_alloc,PHY,LOW PHY,,,-0.06%,,44.08%,0.00%,82.40%,0.05%,-0.05%
+0%,0.06%,thread_FH,nr-softmodem,nr_fep0,PHY,LOW PHY,,,-0.06%,,44.08%,0.00%,82.40%,0.05%,-0.05%
+0%,0.06%,thread_FH,libc-2.27.so,__offtime,PHY,LOW PHY,,,-0.06%,,44.08%,0.00%,82.40%,0.05%,-0.05%
+0%,0.06%,thread_FH,libuhd.so.4.1.0,0x000000000077fb69,PHY,LOW PHY,,,-0.06%,,44.08%,0.00%,82.40%,0.05%,-0.05%
+0%,0.05%,RLC,queue,[k],RLC,,,,-0.05%,,44.08%,0.00%,82.40%,0.04%,-0.04%
+0%,0.05%,thread_FH,libuhd.so.4.1.0,0x00000000001f59ca,PHY,LOW PHY,,,-0.05%,,44.08%,0.00%,82.40%,0.04%,-0.04%
+0%,0.05%,thread_FH,libusb-1.0.so.0.1.0,0x000000000000d325,PHY,LOW PHY,,,-0.05%,,44.08%,0.00%,82.40%,0.04%,-0.04%
+0%,0.05%,RLC,queue,[.],RLC,,,,-0.05%,,44.08%,0.00%,82.40%,0.04%,-0.04%
+0%,0.05%,RLC,queue,[k],RLC,,,,-0.05%,,44.08%,0.00%,82.40%,0.04%,-0.04%
+0%,0.05%,thread_FH,[kernel.kallsyms],copy_user_generic_unrolled,PHY,LOW PHY,,,-0.05%,,44.08%,0.00%,82.40%,0.04%,-0.04%
+0%,0.05%,thread_FH,[kernel.kallsyms],xhci_check_args,PHY,LOW PHY,,,-0.05%,,44.08%,0.00%,82.40%,0.04%,-0.04%
+0%,0.05%,pdcp_timer,libpthread-2.27.so,__pthread_mutex_lock,PDCP,,,,-0.05%,,44.08%,0.00%,82.40%,0.04%,-0.04%
+0%,0.05%,thread_FH,[kernel.kallsyms],__rcu_read_lock,PHY,LOW PHY,,,-0.05%,,44.08%,0.00%,82.40%,0.04%,-0.04%
+0%,0.05%,thread_FH,[kernel.kallsyms],ttwu_do_wakeup,PHY,LOW PHY,,,-0.05%,,44.08%,0.00%,82.40%,0.04%,-0.04%
+0%,0.05%,thread_FH,libuhd.so.4.1.0,0x000000000077fe59,PHY,LOW PHY,,,-0.05%,,44.08%,0.00%,82.40%,0.04%,-0.04%
+0%,0.05%,thread_FH,[kernel.kallsyms],update_rq_clock,PHY,LOW PHY,,,-0.05%,,44.08%,0.00%,82.40%,0.04%,-0.04%
+0%,0.05%,thread_FH,[kernel.kallsyms],perf_swevent_add,PHY,LOW PHY,,,-0.05%,,44.08%,0.00%,82.40%,0.04%,-0.04%
+0%,0.05%,RLC,queue,[k],RLC,,,,-0.05%,,44.08%,0.00%,82.40%,0.04%,-0.04%
+0%,0.05%,thread_FH,[kernel.kallsyms],put_prev_task_rt,PHY,LOW PHY,,,-0.05%,,44.08%,0.00%,82.40%,0.04%,-0.04%
+0%,0.05%,thread_FH,[kernel.kallsyms],sched_clock_cpu,PHY,LOW PHY,,,-0.05%,,44.08%,0.00%,82.40%,0.04%,-0.04%
+0%,0.05%,thread_FH,[kernel.kallsyms],prepare_ring,PHY,LOW PHY,,,-0.05%,,44.08%,0.00%,82.40%,0.04%,-0.04%
+0%,0.05%,thread_FH,[kernel.kallsyms],timerfd_poll,PHY,LOW PHY,,,-0.05%,,44.08%,0.00%,82.40%,0.04%,-0.04%
+0%,0.05%,thread_FH,[kernel.kallsyms],_raw_spin_unlock_irq,PHY,LOW PHY,,,-0.05%,,44.08%,0.00%,82.40%,0.04%,-0.04%
+0%,0.05%,thread_FH,[kernel.kallsyms],pick_next_task_rt,PHY,LOW PHY,,,-0.05%,,44.08%,0.00%,82.40%,0.04%,-0.04%
+0%,0.05%,thread_FH,libuhd.so.4.1.0,0x00000000008eee40,PHY,LOW PHY,,,-0.05%,,44.08%,0.00%,82.40%,0.04%,-0.04%
+0%,0.05%,TASK_GTPV1_U,[kernel.kallsyms],pick_next_task_rt,NG,,,,-0.05%,,44.08%,0.00%,82.40%,0.04%,-0.04%
+0%,0.05%,RLC,queue,[.],RLC,,,,-0.05%,,44.08%,0.00%,82.40%,0.04%,-0.04%
+0%,0.04%,thread_FH,[kernel.kallsyms],do_futex,PHY,LOW PHY,,,-0.04%,,44.08%,0.00%,82.40%,0.03%,-0.03%
+0%,0.04%,thread_FH,[kernel.kallsyms],findintfep.isra.20,PHY,LOW PHY,,,-0.04%,,44.08%,0.00%,82.40%,0.03%,-0.03%
+0%,0.04%,thread_FH,libpthread-2.27.so,__pthread_mutex_unlock_usercnt,PHY,LOW PHY,,,-0.04%,,44.08%,0.00%,82.40%,0.03%,-0.03%
+0%,0.04%,thread_FH,[kernel.kallsyms],usb_get_urb,PHY,LOW PHY,,,-0.04%,,44.08%,0.00%,82.40%,0.03%,-0.03%
+0%,0.04%,thread_FH,[kernel.kallsyms],kmem_cache_alloc_trace,PHY,LOW PHY,,,-0.04%,,44.08%,0.00%,82.40%,0.03%,-0.03%
+0%,0.04%,TASK_GTPV1_U,[kernel.kallsyms],native_irq_return_iret,NG,,,,-0.04%,,44.08%,0.00%,82.40%,0.03%,-0.03%
+0%,0.04%,thread_FH,[kernel.kallsyms],wake_up_q,PHY,LOW PHY,,,-0.04%,,44.08%,0.00%,82.40%,0.03%,-0.03%
+0%,0.04%,thread_FH,libuhd.so.4.1.0,uhd::time_spec_t::operator+=,PHY,LOW PHY,,,-0.04%,,44.08%,0.00%,82.40%,0.03%,-0.03%
+0%,0.04%,thread_FH,[kernel.kallsyms],timestamp_truncate,PHY,LOW PHY,,,-0.04%,,44.08%,0.00%,82.40%,0.03%,-0.03%
+0%,0.04%,thread_FH,[kernel.kallsyms],_raw_spin_unlock,PHY,LOW PHY,,,-0.04%,,44.08%,0.00%,82.40%,0.03%,-0.03%
+0%,0.04%,thread_FH,libuhd.so.4.1.0,0x00000000008ef5fc,PHY,LOW PHY,,,-0.04%,,44.08%,0.00%,82.40%,0.03%,-0.03%
+0%,0.04%,TASK_RRC_GNB,[kernel.kallsyms],fput_many,RRC,,,,-0.04%,,44.08%,0.00%,82.40%,0.03%,-0.03%
+0%,0.04%,RLC,queue,[k],RLC,,,,-0.04%,,44.08%,0.00%,82.40%,0.03%,-0.03%
+0%,0.04%,thread_FH,[kernel.kallsyms],intel_pmu_disable_all,PHY,LOW PHY,,,-0.04%,,44.08%,0.00%,82.40%,0.03%,-0.03%
+0%,0.04%,thread_FH,[kernel.kallsyms],get_partial_node.isra.85,PHY,LOW PHY,,,-0.04%,,44.08%,0.00%,82.40%,0.03%,-0.03%
+0%,0.04%,thread_FH,[kernel.kallsyms],queue_trb,PHY,LOW PHY,,,-0.04%,,44.08%,0.00%,82.40%,0.03%,-0.03%
+0%,0.04%,thread_FH,[kernel.kallsyms],usb_submit_urb,PHY,LOW PHY,,,-0.04%,,44.08%,0.00%,82.40%,0.03%,-0.03%
+0%,0.04%,pdcp_timer,[kernel.kallsyms],futex_wait_queue_me,PDCP,,,,-0.04%,,44.08%,0.00%,82.40%,0.03%,-0.03%
+0%,0.04%,thread_FH,libusb-1.0.so.0.1.0,0x000000000000c25a,PHY,LOW PHY,,,-0.04%,,44.08%,0.00%,82.40%,0.03%,-0.03%
+0%,0.04%,RLC,queue,[k],RLC,,,,-0.04%,,44.08%,0.00%,82.40%,0.03%,-0.03%
+0%,0.04%,thread_FH,libuhd.so.4.1.0,0x0000000000381b83,PHY,LOW PHY,,,-0.04%,,44.08%,0.00%,82.40%,0.03%,-0.03%
+0%,0.04%,Tpool1_-1,libldpc.so,[.],memcpy@plt,PHY,HIGH PHY,,-0.04%,,44.08%,0.00%,82.40%,0.03%,-0.03%
+0%,0.04%,thread_FH,[kernel.kallsyms],flexible_sched_in,PHY,LOW PHY,,,-0.04%,,44.08%,0.00%,82.40%,0.03%,-0.03%
+0%,0.04%,feptx,[kernel.kallsyms],pick_next_task_rt,PHY,LOW PHY,,,-0.04%,,44.08%,0.00%,82.40%,0.03%,-0.03%
+0%,0.04%,feptx,libpthread-2.27.so,__pthread_mutex_unlock,PHY,LOW PHY,,,-0.04%,,44.08%,0.00%,82.40%,0.03%,-0.03%
+0%,0.04%,pdcp_timer,libpthread-2.27.so,__pthread_mutex_unlock,PDCP,,,,-0.04%,,44.08%,0.00%,82.40%,0.03%,-0.03%
+0%,0.04%,TASK_GTPV1_U,[kernel.kallsyms],_raw_write_unlock_irq,NG,,,,-0.04%,,44.08%,0.00%,82.40%,0.03%,-0.03%
+0%,0.04%,thread_FH,libuhd.so.4.1.0,0x00000000008ee530,PHY,LOW PHY,,,-0.04%,,44.08%,0.00%,82.40%,0.03%,-0.03%
+0%,0.03%,thread_FH,[kernel.kallsyms],xhci_queue_bulk_tx,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,thread_FH,[kernel.kallsyms],__x64_sys_ioctl,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,thread_FH,[kernel.kallsyms],usb_hcd_map_urb_for_dma,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,thread_FH,[kernel.kallsyms],usbdev_ioctl,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,thread_FH,[kernel.kallsyms],__mutex_lock.isra.10,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,thread_FH,[kernel.kallsyms],hrtimer_start_range_ns,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,pdcp_timer,[kernel.kallsyms],entry_SYSCALL_64,PDCP,,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,thread_FH,libc-2.27.so,__tzfile_compute,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,thread_FH,[kernel.kallsyms],usb_hcd_is_primary_hcd,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,pdcp_timer,nr-softmodem,nr_pdcp_timer_thread,PDCP,,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,thread_FH,[kernel.kallsyms],get_futex_key,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,thread_FH,libuhd.so.4.1.0,uhd::time_spec_t::time_spec_t,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,thread_FH,[kernel.kallsyms],poll_freewait,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,feptx,[kernel.kallsyms],ctx_sched_in,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,feptx,[kernel.kallsyms],entry_SYSCALL_64_after_hwframe,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,feptx,[kernel.kallsyms],futex_wait_queue_me,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,feptx,[kernel.kallsyms],perf_event_sched_in,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,feptx,[kernel.kallsyms],perf_swevent_add,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,thread_FH,[kernel.kallsyms],intel_map_page,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,thread_FH,libuhd.so.4.1.0,0x00000000008ed2c6,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,TASK_GTPV1_U,nr-softmodem,gtpv1uTask,NG,,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,RLC,queue,[.],RLC,,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,thread_FH,[kernel.kallsyms],_extract_crng,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,TASK_GTPV1_U,[kernel.kallsyms],__check_object_size,NG,,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,thread_FH,[kernel.kallsyms],balance_rt,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,TASK_RRC_GNB,nr-softmodem,itti_receive_msg,RRC,,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,TASK_GTPV1_U,libc-2.27.so,__libc_disable_asynccancel,NG,,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,thread_FH,[kernel.kallsyms],futex_wait_queue_me,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,thread_FH,libuhd.so.4.1.0,0x000000000077f973,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,thread_FH,[kernel.kallsyms],__cgroup_account_cputime,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,pdcp_timer,[kernel.kallsyms],x86_pmu_disable,PDCP,,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,thread_FH,[kernel.kallsyms],__fdget,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,thread_FH,[kernel.kallsyms],remove_wait_queue,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,thread_FH,libusb-1.0.so.0.1.0,0x000000000000d369,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,thread_FH,libuhd.so.4.1.0,0x00000000008ef710,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,thread_FH,libuhd.so.4.1.0,0x00000000001f59a9,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,TASK_RRC_GNB,[kernel.kallsyms],mutex_lock,RRC,,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,thread_FH,[kernel.kallsyms],ksys_ioctl,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,TASK_RRC_GNB,[kernel.kallsyms],ctx_sched_out,RRC,,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,TASK_RRC_GNB,[kernel.kallsyms],rcu_irq_enter,RRC,,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,TASK_RRC_GNB,libc-2.27.so,__libc_disable_asynccancel,RRC,,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,thread_FH,[kernel.kallsyms],free_async,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.03%,thread_FH,[kernel.kallsyms],deactivate_task,PHY,LOW PHY,,,-0.03%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,TASK_RRC_GNB,libc-2.27.so,cfree@GLIBC_2.2.5,RRC,,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,libuhd.so.4.1.0,pthread_mutex_unlock@plt,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,TASK_GTPV1_U,[kernel.kallsyms],pick_next_task_stop,NG,,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,libuhd.so.4.1.0,0x000000000077f944,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,libuhd.so.4.1.0,0x000000000077f97f,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,TASK_GNB_APP,[kernel.kallsyms],cpuacct_charge,SL,,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,[kernel.kallsyms],cgroup_rstat_updated,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,[vdso],__vdso_gettimeofday,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,libuhd.so.4.1.0,0x00000000002fe412,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,[kernel.kallsyms],free_pcppages_bulk,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,[kernel.kallsyms],ktime_get_coarse_real_ts64,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,TASK_GTPV1_U,[kernel.kallsyms],dequeue_task_rt,NG,,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,[vdso],0x0000000000000747,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,RLC,queue,[k],RLC,,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,libuhd.so.4.1.0,0x0000000000306e45,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,libusb-1.0.so.0.1.0,0x000000000000443f,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,[kernel.kallsyms],lock_hrtimer_base,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,[kernel.kallsyms],push_rt_task,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,TASK_GTPV1_U,nr-softmodem,sdap_data_req,NG,,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,libpthread-2.27.so,__pthread_mutex_trylock,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,[kernel.kallsyms],copy_urb_data_to_user,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,[kernel.kallsyms],__slab_alloc.isra.86,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,libusb-1.0.so.0.1.0,0x000000000000873f,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,TASK_GNB_APP,[kernel.kallsyms],__sched_text_start,SL,,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,[kernel.kallsyms],balance_fair,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,TASK_GTPV1_U,[kernel.kallsyms],ctx_sched_out,NG,,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,TASK_GTPV1_U,nr-softmodem,gtpv1uReceiver,NG,,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,libuhd.so.4.1.0,0x00000000002fcfd8,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,libuhd.so.4.1.0,0x00000000006d36b8,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,libuhd.so.4.1.0,0x00000000006d369f,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,TASK_GTPV1_U,[kernel.kallsyms],cpupri_find,NG,,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,TASK_GTPV1_U,[kernel.kallsyms],flexible_sched_in,NG,,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,libusb-1.0.so.0.1.0,libusb_handle_events_timeout_completed,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,libuhd.so.4.1.0,0x000000000084fc9f,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,[kernel.kallsyms],fpregs_assert_state_consistent,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,[kernel.kallsyms],add_wait_queue,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,libpthread-2.27.so,pthread_cond_broadcast@@GLIBC_2.3.2,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,[kernel.kallsyms],hrtimer_interrupt,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,[kernel.kallsyms],__check_heap_object,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,RLC,queue,[k],RLC,,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,feprx,[kernel.kallsyms],__unqueue_futex,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,feprx,[kernel.kallsyms],ctx_sched_out,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,feprx,[kernel.kallsyms],newidle_balance,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,feprx,libpthread-2.27.so,__pthread_mutex_lock,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,feprx,libpthread-2.27.so,pthread_cond_wait@@GLIBC_2.3.2,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,feprx,nr-softmodem,nr_slot_fep_ul,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,libuhd.so.4.1.0,0x00000000008eee09,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,libuhd.so.4.1.0,0x00000000008ee554,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,[kernel.kallsyms],wake_q_add_safe,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,[kernel.kallsyms],update_rt_migration,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,RLC,queue,[.],RLC,,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,TASK_GNB_APP,libc-2.27.so,_IO_default_xsputn,SL,,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,RLC,queue,[.],RLC,,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,[vdso],__vdso_clock_gettime,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,libusb-1.0.so.0.1.0,pthread_setspecific@plt,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,TASK_GTPV1_U,[kernel.kallsyms],simple_copy_to_iter,NG,,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,libuhd.so.4.1.0,0x00000000006d3727,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,[kernel.kallsyms],plist_del,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,RLC,queue,[k],RLC,,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,[kernel.kallsyms],intel_tfa_pmu_enable_all,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,PDCP,data,nr-softmodem,PDCP,,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,[kernel.kallsyms],perf_pmu_nop_void,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,[kernel.kallsyms],activate_task,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,nr-softmodem,nr_fep_full_2thread,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,[kernel.kallsyms],pick_next_task_dl,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,RLC,queue,[k],RLC,,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,libuhd.so.4.1.0,0x00000000008ee638,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,RLC,queue,[k],RLC,,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,libusb-1.0.so.0.1.0,libusb_get_next_timeout,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,libuhd.so.4.1.0,0x000000000077fb0f,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,libusb-1.0.so.0.1.0,0x000000000000478a,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,RLC,queue,[k],RLC,,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,TASK_GTPV1_U,nr-softmodem,itti_get_events_locked,NG,,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,libuhd.so.4.1.0,0x00000000008ef698,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,RLC,queue,[k],RLC,,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,TASK_GTPV1_U,libc-2.27.so,epoll_wait,NG,,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.02%,thread_FH,[kernel.kallsyms],__free_slab,PHY,LOW PHY,,,-0.02%,,44.08%,0.00%,82.40%,0.02%,-0.02%
+0%,0.01%,thread_FH,libuhd.so.4.1.0,0x00000000008b992d,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],do_vfs_ioctl,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,TASK_GTPV1_U,[kernel.kallsyms],__free_pages_ok,NG,,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,libusb-1.0.so.0.1.0,0x000000000000dd2b,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,libuhd.so.4.1.0,0x00000000002fc670,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,RLC,queue,[k],RLC,,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],irq_work_run_list,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,TASK_GTPV1_U,nr-softmodem,pthread_mutex_unlock@plt,NG,,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],perf_pmu_nop_int,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,libc-2.27.so,__libc_disable_asynccancel,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],free_unref_page_commit,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,TASK_GTPV1_U,[kernel.kallsyms],enqueue_task_rt,NG,,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,libusb-1.0.so.0.1.0,0x000000000000f212,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,RLC,queue,[.],RLC,,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,RLC,queue,[.],RLC,,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],get_futex_value_locked,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,TASK_GTPV1_U,[kernel.kallsyms],deactivate_task,NG,,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],set_next_task_idle,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],balance_runtime,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],account_system_index_time,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,TASK_GTPV1_U,[kernel.kallsyms],newidle_balance,NG,,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],__free_pages,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],__x86_indirect_thunk_rdx,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],futex_wait,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],get_page_from_freelist,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,libuhd.so.4.1.0,0x00000000006d360d,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,RLC,queue,[k],RLC,,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,libc-2.27.so,__poll,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],native_irq_return_iret,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,nr-softmodem,nr_slot_select,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,RLC,queue,[k],RLC,,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,libusb-1.0.so.0.1.0,0x0000000000004418,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,TASK_GTPV1_U,[kernel.kallsyms],__rcu_read_lock,NG,,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,libusb-1.0.so.0.1.0,0x0000000000009217,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,PDCP,data,[kernel.kallsyms],PDCP,,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,libusb-1.0.so.0.1.0,0x000000000000d271,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,TASK_GNB_APP,libc-2.27.so,vfprintf,SL,,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,libuhd.so.4.1.0,0x0000000000719e00,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,RLC,queue,[k],RLC,,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],__update_load_avg_cfs_rq,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,TASK_GTPV1_U,[kernel.kallsyms],update_rq_clock,NG,,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],__intel_pmu_enable_all.constprop.31,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],usb_hcd_link_urb_to_ep,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,libusb-1.0.so.0.1.0,0x0000000000004761,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],poll_select_set_timeout,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,libuhd.so.4.1.0,0x00000000008ef43a,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,RLC,queue,[.],RLC,,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],perf_log_itrace_start,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],__unqueue_futex,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],dma_direct_map_page,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,libusb-1.0.so.0.1.0,0x0000000000004775,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,libuhd.so.4.1.0,0x00000000008ee580,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,libusb-1.0.so.0.1.0,0x000000000000946d,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],cyc2ns_read_begin,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,libuhd.so.4.1.0,0x00000000008ef690,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],perf_pmu_nop_txn,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,libusb-1.0.so.0.1.0,0x000000000000c059,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,libusb-1.0.so.0.1.0,0x000000000000f28a,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,libusb-1.0.so.0.1.0,pthread_mutex_unlock@plt,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],prepare_transfer,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],__remove_hrtimer,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],perf_event_set_state.part.46,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],fput,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],x86_pmu_enable,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],__accumulate_pelt_segments,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],enqueue_hrtimer,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,libusb-1.0.so.0.1.0,0x00000000000096a0,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,libuhd.so.4.1.0,0x00000000008ef57b,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,libusb-1.0.so.0.1.0,0x0000000000009207,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],check_preempt_curr,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],kmalloc_slab,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,TASK_GTPV1_U,nr-softmodem,nr_sdap_get_entity,NG,,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],arch_perf_update_userpage,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,nr-softmodem,libuhd.so.4.1.0,[.],0x0000000000715e9b,PHY,LOW PHY,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,RLC,queue,[.],RLC,,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,libuhd.so.4.1.0,0x00000000006d37f9,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,libusb-1.0.so.0.1.0,0x00000000000043f5,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,TASK_GTPV1_U,[kernel.kallsyms],ttwu_do_wakeup,NG,,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],irq_work_run,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,[kernel.kallsyms],get_timespec64,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,thread_FH,libuhd.so.4.1.0,0x00000000002fe410,PHY,LOW PHY,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.01%,RLC,queue,[.],RLC,,,,-0.01%,,44.08%,0.00%,82.40%,0.01%,-0.01%
+0%,0.00%,feprx,[kernel.kallsyms],x86_pmu_enable,PHY,LOW PHY,,,0.00%,,44.08%,0.00%,82.40%,0.00%,0.00%
+0%,0.00%,RLC,queue,[k],RLC,,,,0.00%,,44.08%,0.00%,82.40%,0.00%,0.00%
+0%,0.00%,pdcp_timer,[kernel.kallsyms],nmi_cpu_backtrace,PDCP,,,,0.00%,,44.08%,0.00%,82.40%,0.00%,0.00%
+0%,0.00%,PDCP,data,[kernel.kallsyms],PDCP,,,,0.00%,,44.08%,0.00%,82.40%,0.00%,0.00%
+0%,0.00%,feprx,[kernel.kallsyms],native_sched_clock,PHY,LOW PHY,,,0.00%,,44.08%,0.00%,82.40%,0.00%,0.00%
+0%,0.00%,TASK_GTPV1_U,[kernel.kallsyms],nmi_cpu_backtrace,NG,,,,0.00%,,44.08%,0.00%,82.40%,0.00%,0.00%
+0%,0.00%,feptx,[kernel.kallsyms],nmi_handle,PHY,LOW PHY,,,0.00%,,44.08%,0.00%,82.40%,0.00%,0.00%
+0%,0.00%,RLC,queue,[k],RLC,,,,0.00%,,44.08%,0.00%,82.40%,0.00%,0.00%
+0%,0.00%,thread_FH,[kernel.kallsyms],nmi_cpu_backtrace,PHY,LOW PHY,,,0.00%,,44.08%,0.00%,82.40%,0.00%,0.00%
+0%,0.00%,feptx,[kernel.kallsyms],sched_clock,PHY,LOW PHY,,,0.00%,,44.08%,0.00%,82.40%,0.00%,0.00%
+0%,0.00%,RLC,queue,[k],RLC,,,,0.00%,,44.08%,0.00%,82.40%,0.00%,0.00%
+0%,0.00%,thread_FH,[kernel.kallsyms],perf_sample_event_took,PHY,LOW PHY,,,0.00%,,44.08%,0.00%,82.40%,0.00%,0.00%
+0%,0.00%,TASK_GNB_APP,[kernel.kallsyms],native_sched_clock,SL,,,,0.00%,,44.08%,0.00%,82.40%,0.00%,0.00%
+0%,0.00%,PDCP,data,[kernel.kallsyms],PDCP,,,,0.00%,,44.08%,0.00%,82.40%,0.00%,0.00%
+0%,0.00%,TASK_GNB_APP,[kernel.kallsyms],intel_pmu_handle_irq,SL,,,,0.00%,,44.08%,0.00%,82.40%,0.00%,0.00%
+0%,0.00%,feprx,[kernel.kallsyms],intel_bts_enable_local,PHY,LOW PHY,,,0.00%,,44.08%,0.00%,82.40%,0.00%,0.00%
+0%,0.00%,thread_FH,[kernel.kallsyms],intel_bts_enable_local,PHY,LOW PHY,,,0.00%,,44.08%,0.00%,82.40%,0.00%,0.00%
+0%,0.00%,RLC,queue,[k],RLC,,,,0.00%,,44.08%,0.00%,82.40%,0.00%,0.00%

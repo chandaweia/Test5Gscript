@@ -49,6 +49,7 @@ def graph4DLvs4UL(data):
     
     plt.show()
 
+#Success
 def graph4DLvs4UL_CPU(data):
     print(data)
     width=15
@@ -57,17 +58,64 @@ def graph4DLvs4UL_CPU(data):
     print("Kan------->X:",X)
     fig,ax=plt.subplots()
     print(X-2*width)
-    highphy=ax.bar(X-2*width,data['HIGH PHY_CPU'],width,color='limegreen',edgecolor='k',hatch='....') #peru
-    lowphy=ax.bar(X-1*width,data['LOW PHY_CPU'],width,color='red',edgecolor='k',hatch='///') #limegreen
-    otherphys=ax.bar(X,data['OTHERS_CPU'],width,color='mediumslateblue',edgecolor='k',hatch='\\\\\\\\') #gold
-    ldpc=ax.bar(X+1*width,data['LDPC_CPU'],width,color='peru',edgecolor='k',hatch='++++')#deepink
-    dft=ax.bar(X+2*width,data['DFT_CPU'],width,color='gold',edgecolor='k',hatch='xxxx')#teal
+    highphy=ax.bar(X-2*width,data['HIGH PHY_CPU'],width,color='green',edgecolor='k',hatch='.') #peru
+    lowphy=ax.bar(X-1*width,data['LOW PHY_CPU'],width,color='lightcoral',edgecolor='k',hatch='/') #limegreen
+    otherphys=ax.bar(X,data['OTHERS_CPU'],width,color='gold',edgecolor='k',hatch='\\') #gold
+    ldpc=ax.bar(X+1*width,data['LDPC_CPU'],width,color='purple',edgecolor='k',hatch='+')#deepink
+    dft=ax.bar(X+2*width,data['DFT_CPU'],width,color='aqua',edgecolor='k',hatch='x')#teal
 
     ax.set_xticks(X)
     #ax.set_xticklabels(X)
     ax.set_xticklabels(data['Rate(Mbps)'])
-    ax.set_xlabel('Sending Rate(Mbps)',fontweight='bold')
+    ax.set_xlabel('UE Throughput(Mbps)',fontweight='bold')
     ax.set_ylabel("CPU Usage(%)",fontweight='bold')
+    #ax.set_title("CPU Usage: 4Mbps UL vs Idle vs 4Mbps DL")
+    ax.set_xlim(0,x_max)
+    ax.set_ylim(0,150)
+
+    ax.spines['bottom'].set_color('black')
+    ax.spines['top'].set_color('black')
+    ax.spines['left'].set_color('black')
+    ax.spines['right'].set_color('black')
+    plt.grid(True,color='black',linestyle='-.', linewidth = 0.5)
+    ax.xaxis.label.set_color('black')
+    ax.yaxis.label.set_color('black')
+    ax.tick_params(colors='black')
+
+    ax.legend([highphy,lowphy,otherphys,ldpc,dft],\
+        ['HIGH PHY','LOW PHY','L2+L3+SYS','LDPC','DFT'],loc='upper right',framealpha=0.8,fontsize=18)
+    #plot.legend([highphy,lowphy,otherphys,ldpc,dft],\
+    #    ['High PHY','LOW PHY','OTHERS','LDPC','DFT'],loc='upper left',framealpha=0.8,fontsize=22,frameon=False)
+    #ax.legend(loc='upper center', fancybox=False, framealpha=0.8,fontsize=20)
+    plt.savefig(graphsdir+"/4UL4DL90DL.png",transparent=True,dpi=500)
+    plt.show()
+
+def graph4DLvs4UL_CPU2(data):
+    fix,ax = plt.subplots()
+    print(data)
+    
+    width=2
+    X=np.arange(start=10,stop=(len(data['ID'])+1)*10, step=10)
+    x_max=(len(data['ID'])+1)*10
+    print("Kan------->X:",X)
+    ax.bar(X-width,data['DFT_CPU'],2*width,label='DFT',color='aqua',edgecolor='k',hatch='x')
+    ax.bar(X-width,data['LOW-DFT_CPU'],2*width,label='LOW PHY',bottom=data['DFT_CPU'],color='lightcoral',edgecolor='k',hatch='/')
+    ax.bar(X+width,data['LDPC_CPU'],2*width,label='LDPC',color='purple',edgecolor='k',hatch='+')
+    ax.bar(X+width,data['HIGH-LDPC_CPU'],2*width,label='HIGH PHY',bottom=data['LDPC_CPU'],color='green',edgecolor='k',hatch='.')
+
+
+    """print(X-2*width)
+    highphy=ax.bar(X-2*width,data['HIGH PHY_CPU'],width,color='green',edgecolor='k',hatch='.') #peru
+    lowphy=ax.bar(X-1*width,data['LOW PHY_CPU'],width,color='lightcoral',edgecolor='k',hatch='/') #limegreen
+    otherphys=ax.bar(X,data['OTHERS_CPU'],width,color='gold',edgecolor='k',hatch='\\') #gold
+    ldpc=ax.bar(X+1*width,data['LDPC_CPU'],width,color='purple',edgecolor='k',hatch='+')#deepink
+    dft=ax.bar(X+2*width,data['DFT_CPU'],width,color='aqua',edgecolor='k',hatch='x')#teal
+    """
+    ax.set_xticks(X)
+    #ax.set_xticklabels(X)
+    ax.set_xticklabels(data['Rate(Mbps)'])
+    ax.set_xlabel('UE Throughput (Mbps)',fontweight='bold')
+    ax.set_ylabel("CPU Usage (%)",fontweight='bold')
     #ax.set_title("CPU Usage: 4Mbps UL vs Idle vs 4Mbps DL")
     ax.set_xlim(0,x_max)
     ax.set_ylim(0,80)
@@ -81,14 +129,14 @@ def graph4DLvs4UL_CPU(data):
     ax.yaxis.label.set_color('black')
     ax.tick_params(colors='black')
 
-    ax.legend([highphy,lowphy,otherphys,ldpc,dft],\
-        ['High PHY','LOW PHY','L2+L3','LDPC','DFT'],loc='upper left',framealpha=0.8,fontsize=22)
+    #ax.legend([highphy,lowphy,otherphys,ldpc,dft],\
+    #    ['HIGH PHY','LOW PHY','L2+L3+SYS','LDPC','DFT'],loc='upper left',framealpha=0.8,fontsize=22)
     #plot.legend([highphy,lowphy,otherphys,ldpc,dft],\
     #    ['High PHY','LOW PHY','OTHERS','LDPC','DFT'],loc='upper left',framealpha=0.8,fontsize=22,frameon=False)
     #ax.legend(loc='upper center', fancybox=False, framealpha=0.8,fontsize=20)
-    plt.savefig(graphsdir+"/4UL4DL90DL.pdf",transparent=True)
+    ax.legend(loc='upper right',framealpha=0.8,fontsize=17)
+    plt.savefig(graphsdir+"/new4UL4DL90DL.png",transparent=True,dpi=500)
     plt.show()
-
 
 
 #Not success
@@ -154,14 +202,18 @@ def args_is_diff_group(file1,*args):
     """
 def read4DLvs4UL(file4):
     data1=pd.read_csv(file4)    
-    graph4DLvs4UL(data1)
-    graph4DLvs4UL_CPU(data1)
+    #graph4DLvs4UL(data1)
+    graph4DLvs4UL_CPU2(data1)
+    #graph4DLvs4UL_CPU(data1)
 
 ##################Main################
+#Figure 8
 file4="/Users/cuidi/iCloud/Research/5G/Sigcomm_Test/UsefulData/4DLvs4UL.csv"
-#os.system("sed -i '' 's/%//g' /Users/cuidi/iCloud/Research/5G/Sigcomm_Test/UsefulData/4DLvs4UL.csv")##Mac OS Version
+
+#os.system("sed -i '' 's/%//g' /Users/cuidi/iCloud/Research/5G/Sigcomm_Test/UsefulData/DataTest_multipleUEs_emulateradio/graphdata/cpu_usage.csv")##Mac OS Version
 #os.system("sed -i '' 's/%//g' 4DLvs4UL_test.csv") ##Linux Version
 read4DLvs4UL(file4)
 #args_is_diff_group(file4,'TotalCPU','LDPC_CPU')
 #df = pd.read_csv(file4,encoding= 'utf-8',header=None)
-
+#file8="/Users/cuidi/iCloud/Research/5G/Sigcomm_Test/UsefulData/DataTest_multipleUEs_emulateradio/graphdata/cpu_usage.csv"
+#read4DLvs4UL(file8)

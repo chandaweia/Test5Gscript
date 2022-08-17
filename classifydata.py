@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*-
 
 import re
 import os
@@ -57,16 +58,18 @@ def layerclassify(str):
         if str_list[1].find(commandlist[i][0]) != -1:
             #print("commandlist[i][0]:{0},str_list[1]:{1},len(str_list):{2}".format(commandlist[i][0],str_list[1],len(str_list)))
             #print("commandlist str_list[0]",str_list[0])
-            
+            #res=""
             if(str.find('dft')!=-1 and commandlist[i][5].strip()==""):
                 #print("find dft:",str)
                 res = str_list[0]+","+str_list[1]+","+str_list[2]+","+str_list[4]+","\
                 +commandlist[i][3]+","+commandlist[i][4]+",DFT"+"\n"
+                return res
             else:
                 res = str_list[0]+","+str_list[1]+","+str_list[2]+","+str_list[4]+","\
                     +commandlist[i][3]+","+commandlist[i][4]+","+commandlist[i][5]+"\n"
-            #print("匹配：commandlist[i][0]",commandlist[i][0])
-            return res
+                return res
+
+
     for i in range(1, len(symbollist)):
         #print("symbollist str_list[0]",str_list[0])
         #if symbollist[i][2].find(str_list[4]) != -1: #-1 not found, 0 found

@@ -4,7 +4,7 @@ from cProfile import label
 from collections import namedtuple
 from tkinter import font
 from turtle import color
-import drawgraphs
+#import drawgraphs
 import sys
 import csv
 import numpy as np
@@ -24,7 +24,9 @@ graphsdir="/Users/cuidi/iCloud/Research/5G/Sigcomm_Test/UsefulData/Graphs"
 #plt.rcdefaults()
 
 #For Experiment 1
+#TWO BARS in a graph: Emulated and Real Radio
 def stacked_bargraph(labels, highlist, lowlist, otherlist,highlist2, lowlist2,otherlist2):
+    plt.rcParams['figure.figsize'] = (12,8)
     fix,ax = plt.subplots()
     #plt.rcParams['font.size'] = 100
     print(labels)
@@ -36,17 +38,88 @@ def stacked_bargraph(labels, highlist, lowlist, otherlist,highlist2, lowlist2,ot
     highlist2=np.array(highlist2)
     otherlist2=np.array(otherlist2)
     
-    ax.bar(labels-1.5, lowlist2, 3, label="LOW PHY-Real Radio",color='red',edgecolor='k',hatch='////')
-    ax.bar(labels-1.5, highlist2, 3, bottom=lowlist2, label="HIGH PHY-Real Radio",color='limegreen',edgecolor='k',hatch='....')
-    ax.bar(labels-1.5, otherlist2, 3, bottom=lowlist2+highlist2, label='(L2+L3)-Real Radio',color='mediumslateblue',edgecolor='k',hatch='\\\\\\\\')
+    
+    ax.bar(labels-1.5, lowlist2, 3, label="LOW PHY: Real Radio",color='lightcoral',edgecolor='k',hatch='/')
+    ax.bar(labels-1.5, highlist2, 3, bottom=lowlist2, label="HIGH PHY: Real Radio",color='green',edgecolor='k',hatch='.')
+    ax.bar(labels-1.5, otherlist2, 3, bottom=lowlist2+highlist2, label='(L2+L3+SYS): Real Radio',color='gold',edgecolor='k',hatch='\\')
 
-    ax.bar(labels+1.5, lowlist, 3, label="LOW PHY-Simulated Radio",color='red',edgecolor='k',hatch='----')
-    ax.bar(labels+1.5, highlist, 3, bottom=lowlist, label="HIGH PHY-Simulated Radio",color='limegreen',edgecolor='k',hatch='++++')
-    ax.bar(labels+1.5, otherlist, 3, bottom=lowlist+highlist, label='(L2+L3)-Simulated Radio',color='mediumslateblue',edgecolor='k',hatch='xxxx')
+    ax.bar(labels+1.5, lowlist, 3, label="LOW PHY: Emulated Radio",color='saddlebrown',edgecolor='k',hatch='-')
+    ax.bar(labels+1.5, highlist, 3, bottom=lowlist, label="HIGH PHY: Emulated Radio",color='olive',edgecolor='k',hatch='|')
+    ax.bar(labels+1.5, otherlist, 3, bottom=lowlist+highlist, label='(L2+L3+SYS): Emulated Radio',color='orange',edgecolor='k',hatch='x')
+    ax.set_ylim(0,140)
+    figpath=graphsdir+"/realvssimulation.png"
+    '''
+    ax.bar(labels-1.5, lowlist2, 3, label="LOW PHY-Line",color='lightcoral',edgecolor='k',hatch='/')
+    ax.bar(labels-1.5, highlist2, 3, bottom=lowlist2, label="HIGH PHY-Line",color='green',edgecolor='k',hatch='.')
+    ax.bar(labels-1.5, otherlist2, 3, bottom=lowlist2+highlist2, label='(L2+L3+SYS)-Line',color='gold',edgecolor='k',hatch='\\')
+
+    ax.bar(labels+1.5, lowlist, 3, label="LOW PHY-Centric",color='lightcoral',edgecolor='k',hatch='-')
+    ax.bar(labels+1.5, highlist, 3, bottom=lowlist, label="HIGH PHY-Centric",color='green',edgecolor='k',hatch='|')
+    ax.bar(labels+1.5, otherlist, 3, bottom=lowlist+highlist, label='(L2+L3+SYS)-Centric',color='gold',edgecolor='k',hatch='x')
+    ax.set_ylim(0,160)
+    figpath=graphsdir+"/Centri_vs_Link.png"
+    '''
 
     ax.set_xticks(labels)
     ax.set_xticklabels(labels)
-    ax.set_xlabel("Sending Rate(Mbps)",fontweight='bold')
+    ax.set_xlabel("UE Throughput (Mbps)",fontweight='bold')
+    ax.set_ylabel("CPU Usage (%)",fontweight='bold')
+    
+    #ax.set_title("CPU Usage: Emulated Radio vs Real Radio")
+    ax.spines['bottom'].set_color('black')
+    ax.spines['top'].set_color('black')
+    ax.spines['left'].set_color('black')
+    ax.spines['right'].set_color('black')
+    plt.grid(True,color='black',linestyle='-.', linewidth = 0.5)
+    ax.xaxis.label.set_color('black')
+    ax.yaxis.label.set_color('black')
+    ax.tick_params(colors='black')
+
+
+    #ax.set_facecolor('transparent')
+    ax.legend(loc='upper right',framealpha=0.8,fontsize=17)
+    #ax.set_facecolor("transparent")
+    #ax.set(facecolor = "transparent")
+    plt.savefig(figpath,transparent=True,dpi=500)
+    plt.show()
+
+def emulate_real_bargraph_split(labels, highlist, lowlist, otherlist,highlist2, lowlist2,otherlist2):
+    plt.rcParams['figure.figsize'] = (9,9)
+    plt.rc('font', size=32)
+    fig,ax = plt.subplots()
+    fig.subplots_adjust(bottom=0.2)
+    fig.subplots_adjust(left=0.2)
+    
+    #plt.rcParams['font.size'] = 100
+    print(labels)
+    print(highlist)
+    lowlist=np.array(lowlist)
+    highlist=np.array(highlist)
+    otherlist=np.array(otherlist)
+    lowlist2=np.array(lowlist2)
+    highlist2=np.array(highlist2)
+    otherlist2=np.array(otherlist2)
+    
+    #Real Raio
+    #ax.bar(labels, lowlist2, 3, label="LOW PHY",color='lightcoral',edgecolor='k',hatch='/')
+    #ax.bar(labels, highlist2, 3, bottom=lowlist2, label="HIGH PHY",color='green',edgecolor='k',hatch='.')
+    #ax.bar(labels, otherlist2, 3, bottom=lowlist2+highlist2, label='L2+L3+SYS',color='gold',edgecolor='k',hatch='\\')
+    #Emulate Radio
+    ax.bar(labels, lowlist, 3, label="LOW PHY",color='lightcoral',edgecolor='k',hatch='-')
+    ax.bar(labels, highlist, 3, bottom=lowlist, label="HIGH PHY",color='green',edgecolor='k',hatch='|')
+    ax.bar(labels, otherlist, 3, bottom=lowlist+highlist, label='L2+L3+SYS',color='gold',edgecolor='k',hatch='x')
+
+    #ax.bar(labels-1.5, lowlist2, 3, label="LOW PHY-Real Radio",color='lightcoral',edgecolor='k',hatch='/')
+    #ax.bar(labels-1.5, highlist2, 3, bottom=lowlist2, label="HIGH PHY-Real Radio",color='green',edgecolor='k',hatch='.')
+    #ax.bar(labels-1.5, otherlist2, 3, bottom=lowlist2+highlist2, label='(L2+L3+SYS)-Real Radio',color='gold',edgecolor='k',hatch='\\')
+
+    #ax.bar(labels+1.5, lowlist, 3, label="LOW PHY-Emulated Radio",color='lightcoral',edgecolor='k',hatch='-')
+    #ax.bar(labels+1.5, highlist, 3, bottom=lowlist, label="HIGH PHY-Emulated Radio",color='green',edgecolor='k',hatch='|')
+    #ax.bar(labels+1.5, otherlist, 3, bottom=lowlist+highlist, label='(L2+L3+SYS)-Emulated Radio',color='gold',edgecolor='k',hatch='x')
+
+    ax.set_xticks(labels)
+    ax.set_xticklabels(labels)
+    ax.set_xlabel("UE Throughput(Mbps)",fontweight='bold')
     ax.set_ylabel("CPU Usage(%)",fontweight='bold')
     ax.set_ylim(0,150)
     #ax.set_title("CPU Usage: Emulated Radio vs Real Radio")
@@ -60,15 +133,16 @@ def stacked_bargraph(labels, highlist, lowlist, otherlist,highlist2, lowlist2,ot
     ax.tick_params(colors='black')
     
     #plt.ylim(0,150)
-    figpath=graphsdir+"/realvssimulation.pdf"
+    #figpath=graphsdir+"/RealRadio.png"
+    figpath=graphsdir+"/EmulateRadioc220g1.png"
+    print("save to",figpath)
 
     #ax.set_facecolor('transparent')
-    ax.legend(loc='upper right',framealpha=0.8,fontsize=17)
+    ax.legend(loc='upper right',framealpha=0.8,fontsize=26)
     #ax.set_facecolor("transparent")
     #ax.set(facecolor = "transparent")
-    plt.savefig(figpath,transparent=True)
+    plt.savefig(figpath,transparent=True,dpi=500)
     plt.show()
-
 
 #For Experiment 1
 def readCpuUsage2(csvfile):
@@ -82,17 +156,18 @@ def readCpuUsage2(csvfile):
     with open(csvfile) as f:
         f_csv = csv.DictReader(f)
         for row in f_csv:
-            if(row['ID']=="Cuidi"):
+            if(row['ID']=="Cuidi"):   #Cuidi 
                 ratelist.append(float(row['Rate'].rstrip('%')))
                 highlist.append(float(row['HIGH PHY_CPU'].rstrip('%')))
                 lowlist.append(float(row['LOW PHY_CPU'].rstrip('%')))
                 otherlist.append(float(row['OTHERS_CPU'].rstrip('%')))
-            elif(row['ID']=="Ahan"):
+            elif(row['ID']=="Ahan"):    #Ahan
                 highlist_ahan.append(float(row['HIGH PHY_CPU'].rstrip('%')))
                 lowlist_ahan.append(float(row['LOW PHY_CPU'].rstrip('%')))
                 otherlist_ahan.append(float(row['OTHERS_CPU'].rstrip('%')))
     ratelist=np.array(ratelist)
-    stacked_bargraph(ratelist, highlist, lowlist, otherlist, highlist_ahan, lowlist_ahan, otherlist_ahan)
+    stacked_bargraph(ratelist, highlist, lowlist, otherlist, highlist_ahan, lowlist_ahan, otherlist_ahan)  #posted in paper
+    #emulate_real_bargraph_split(ratelist, highlist, lowlist, otherlist, highlist_ahan, lowlist_ahan, otherlist_ahan)
 
 #For Experiment 2
 #Called by readgnbvscudu_trend
@@ -128,22 +203,23 @@ def stacked_std_linegraph2(labels, culist, dulist, cudulist, gnblist):
 
 def stacked_std_linegraph3(labels, culist, dulist, cudulist, gnblist):
     print("stacked_std_linegraph")
+    plt.rcParams['figure.figsize'] = (12,8)
     #fig=plt.figure()
     #ax=fig.add_subplot(111)
     fig,ax=plt.subplots()
     cu=ax.plot(labels, culist, label='CU', color='limegreen', marker='x', linestyle='solid', linewidth=3,markersize=14)
     ax.plot(labels, dulist, label='DU', color='red', marker='v', linestyle='solid', linewidth=3,markersize=14)
-    ax.plot(labels, gnblist, label='GNB', color='darkcyan', marker='o', linestyle='solid', linewidth=3,markersize=14)
+    ax.plot(labels, gnblist, label='gNB', color='darkcyan', marker='o', linestyle='solid', linewidth=3,markersize=14)
 
     #plt.title("CPU Usage of CU/DU and gNB")
     ax.spines['bottom'].set_color('black')
     ax.spines['top'].set_color('black')
     ax.spines['left'].set_color('black')
     ax.spines['right'].set_color('black')
-    ax.set_xlabel("Sending Rate(Mbps)",fontweight='bold')
-    ax.set_ylabel("CPU Usage(%)",fontweight='bold')
-    ax.set_ylim(0,90)
-    plt.grid(True,color='black',linestyle='-.', linewidth = 0.5)
+    ax.set_xlabel("UE Throughput (Mbps)",fontweight='bold')
+    ax.set_ylabel("CPU Usage (%)",fontweight='bold')
+    ax.set_ylim(0,100)
+    plt.grid(True,color='black',linestyle='-.', linewidth = 0.5,alpha=0.4)
     ax.xaxis.label.set_color('black')
     ax.yaxis.label.set_color('black')
     ax.tick_params(colors='black')
@@ -277,9 +353,39 @@ def std_latency2_extralatency(labels,cudu_avg_rtt,gnb_avg_rtt,cudu_std_rtt,gnb_s
     #ax.xlabel("Sending Rate(Mbps)")
     #plt.ylabel("RTT(ms)")
     #plt.ylim(0,20)
-    fignm=graphsdir+"/std_latency_extra.pdf"
+    fignm=graphsdir+"/std_latency.pdf"
     plt.savefig(fignm, transparent=True)
     plt.show()
+
+def std_latency2_andextralatency(labels,cudu_avg_rtt,gnb_avg_rtt,cudu_std_rtt,gnb_std_rtt,cudu_avg_rtt_extra,cudu_std_rtt_extra):
+    plt.rcParams['figure.figsize'] = (12,8)
+    plt.rc('font', size=25)
+    fig,ax=plt.subplots()
+    #fig.subplots_adjust(bottom=0.17)
+    #fig.subplots_adjust(left=0.17)
+    x=labels
+    ax.errorbar(x,cudu_avg_rtt,cudu_std_rtt,color='red',linestyle='solid',marker='o',label='CU+DU',linewidth=3,markersize=14,alpha=0.6)
+    ax.errorbar(x,gnb_avg_rtt,gnb_std_rtt,color='blue',linestyle='solid',marker='x',label='gNB',linewidth=3,markersize=14,alpha=0.6)
+    ax.errorbar(x,cudu_avg_rtt_extra,cudu_std_rtt_extra,color='green',linestyle='solid',marker='v',label='CU+DU-Extra',linewidth=3,markersize=14,alpha=0.6)
+    ax.spines['bottom'].set_color('black')
+    ax.spines['top'].set_color('black')
+    ax.spines['left'].set_color('black')
+    ax.spines['right'].set_color('black')
+    ax.set_xlabel("UE Throughput (Mbps)",fontweight='bold')
+    ax.set_ylabel("RTT (ms)",fontweight='bold')
+    ax.set_ylim(0,25)
+    plt.grid(True,color='black',linestyle='-.', linewidth = 0.5, alpha=0.4)
+    ax.xaxis.label.set_color('black')
+    ax.yaxis.label.set_color('black')
+    ax.tick_params(colors='black')
+    ax.legend(loc='lower left',framealpha=0.8,fontsize=25)
+    #ax.xlabel("Sending Rate(Mbps)")
+    #plt.ylabel("RTT(ms)")
+    #plt.ylim(0,20)
+    fignm=graphsdir+"/std_latency_andextra_errorbar.pdf"
+    plt.savefig(fignm, transparent=True)
+    plt.show()
+
 
 #For Experiment 3
 def readlatencycsv(csvfile):
@@ -292,6 +398,8 @@ def readlatencycsv(csvfile):
     gnb_max_rtt=[]
     cudu_std_rtt=[]
     gnb_std_rtt=[]
+    cudu_avg_rtt_extra=[]
+    cudu_std_rtt_extra=[]
     with open(csvfile) as f:
         f_csv = csv.DictReader(f)
         for row in f_csv:
@@ -304,6 +412,8 @@ def readlatencycsv(csvfile):
                     cudu_min_rtt.append(float(row['min rtt(ms)']))
                     cudu_max_rtt.append(float(row['max rtt(ms)']))
                     cudu_std_rtt.append(float(row['mdev rtt(ms)']))
+                    cudu_avg_rtt_extra.append(float(row['extra_avg rtt(ms)']))
+                    cudu_std_rtt_extra.append(float(row['extra_mdev rtt(ms)']))
                 elif row['Version']=="gnb" and row['UEs']=="1":
                     gnb_avg_rtt.append(float(row['avg rtt(ms)']))
                     gnb_min_rtt.append(float(row['min rtt(ms)']))
@@ -314,7 +424,7 @@ def readlatencycsv(csvfile):
     #smoothline_latency(ratelist,cudu_avg_rtt,gnb_avg_rtt,cudu_min_rtt,gnb_min_rtt,cudu_max_rtt,gnb_max_rtt)
     
     #std_latency2_extralatency(ratelist,cudu_avg_rtt,gnb_avg_rtt,cudu_std_rtt,gnb_std_rtt)
-    std_latency2(ratelist,cudu_avg_rtt,gnb_avg_rtt,cudu_std_rtt,gnb_std_rtt)
+    std_latency2_andextralatency(ratelist,cudu_avg_rtt,gnb_avg_rtt,cudu_std_rtt,gnb_std_rtt,cudu_avg_rtt_extra,cudu_std_rtt_extra)
 
 #For Experiment 4
 #def graph_4DLvs4UL(labelslist,highlist,lowlist,otherlist,ldpclist,dftlist,totalcpus,\
@@ -385,8 +495,10 @@ def CPUUsage_Stackedbar(data):
 """
 #Experiment 5
 def CPUUsage_Stackedbar(data):
+    plt.rcParams['figure.figsize'] = (12,8)
     #xticks=data['Rate']
-    xticks=['4UL','Idle','4DL','10DL','20DL','30DL','40DL','90DL']
+    plt.rc('font', size=24)
+    xticks=['4 UL','Idle','4 DL','10 DL','20 DL','30 DL','40 DL','90 DL']
     X=np.arange(start=1,stop=len(data['Rate'])+1,step=1)
     print(X)
     print(data['Rate'])
@@ -396,13 +508,13 @@ def CPUUsage_Stackedbar(data):
     others=data['OTHERS_CPU']
 
     fig,ax = plt.subplots()
-    ax.bar(X,lowphy,label="LOW PHY",color='red',edgecolor='k',hatch='////')
-    ax.bar(X,highphy,bottom=lowphy,label='HIGH PHY',color='limegreen',edgecolor='k',hatch='....')
-    ax.bar(X,others,bottom=lowphy+highphy,label="L2+L3",color='mediumslateblue',edgecolor='k',hatch='\\\\\\')
+    ax.bar(X,lowphy,label="LOW PHY",color='lightcoral',edgecolor='k',hatch='/')
+    ax.bar(X,highphy,bottom=lowphy,label='HIGH PHY',color='green',edgecolor='k',hatch='.')
+    ax.bar(X,others,bottom=lowphy+highphy,label="L2+L3+SYS",color='gold',edgecolor='k',hatch='\\')
     ax.set_xticks(X)
     ax.set_xticklabels(xticks)
-    ax.set_xlabel("Sending Rate(Mbps)",fontweight='bold')
-    ax.set_ylabel("CPU Usage(%)",fontweight='bold')
+    ax.set_xlabel("UE Throughput (Mbps)",fontweight='bold')
+    ax.set_ylabel("CPU Usage (%)",fontweight='bold')
     #ax.set_title("CPU Usage of Function Layers")
     ax.spines['bottom'].set_color('black')
     ax.spines['top'].set_color('black')
@@ -413,8 +525,9 @@ def CPUUsage_Stackedbar(data):
     ax.yaxis.label.set_color('black')
     ax.tick_params(colors='black')
     #ax.legend(facecolor='transparent',loc='upper center',fontsize=22)
+    ax.set_ylim(0,120)
     ax.legend(loc='upper center', fancybox=False, framealpha=0.8,fontsize=20)
-    plt.savefig(graphsdir+"/highlowother_stacked.pdf",transparent=True)
+    plt.savefig(graphsdir+"/highlowother_stacked.png",transparent=True,dpi=500)
     plt.show()
     print("save to:",graphsdir)
 
@@ -478,19 +591,22 @@ def graph_mcs_cpu(data1):
     plt.show()
 
 def graph_mcs_cpu_throughput(data1):
+    from matplotlib.ticker import AutoMinorLocator, FormatStrFormatter
     plt.rcParams['figure.figsize'] = (12,8)
     plt.rc('font', size=25)
     fig,ax=plt.subplots()
     ax.plot(data1['Index'],data1['Throughput(Mbps)'],linestyle='solid',label='Throughput',marker='o',linewidth=3,markersize=14)
     ax.set_xlabel("MCS Index",fontweight='bold')
-    ax.set_ylabel("Throughput(Mbps)",fontweight='bold',color='red')
-    ax.set_ylim(0,110)
+    ax.set_ylabel("Throughput (Mbps)",fontweight='bold',color='red')
+    ax.set_ylim(0,120)
+    ax.set_xlim(5,30)
+    ax.xaxis.set_minor_locator(AutoMinorLocator())
     
 
     ax2=ax.twinx()
     ax2.plot(data1['Index'],data1['TotalCPU'],linestyle='solid',label='CPU Usage',color='darkcyan',marker='^',linewidth=3,markersize=14)
-    ax2.set_ylim(0,110)
-    ax2.set_ylabel("CPU Usage(%)",fontweight='bold',color='darkcyan')
+    ax2.set_ylim(0,120)
+    ax2.set_ylabel("CPU Usage (%)",fontweight='bold',color='darkcyan')
     ax.xaxis.label.set_color('black')
     ax.yaxis.label.set_color('black')
     ax2.yaxis.label.set_color('black')
@@ -507,8 +623,8 @@ def graph_mcs_cpu_throughput(data1):
     ax2.spines['right'].set_color('black')
     ax.grid(True,color='black',linestyle='-.', linewidth = 0.5)
     ax2.grid(True,color='black',linestyle='-.', linewidth = 0.5)
-    ax.legend(loc='lower left',framealpha=0.8,fontsize=25)
-    ax2.legend(loc='lower right',framealpha=0.8,fontsize=25)
+    ax.legend(loc='lower center',framealpha=0.8,fontsize=23)
+    ax2.legend(loc='lower right',framealpha=0.8,fontsize=23)
     #plt.legend(framealpha=0.8,fontsize=25)
     plt.savefig(graphsdir+"/MCS_cpu_throughput.pdf", transparent=True)
     plt.show()
@@ -517,28 +633,79 @@ def read_mcs_cpu_throughput(filename):
     
     data1=pd.read_csv(filename)
     graph_mcs_cpu_throughput(data1)
-    #graph_mcs_throughput(data1)
-    #graph_mcs_cpu(data1)
 
+#for Experiment 7 - large scale
+def graph_throughputcpu_largescale(filename):
+    data1=pd.read_csv(filename)
+    plt.rcParams['figure.figsize'] = (12,8)
+    plt.rc('font', size=25)
+    fig,ax=plt.subplots()
+
+    ax.plot(data1['No_of_cells'],data1['Avg Throughput(Mbps)'],linestyle='solid',label='Throughput',marker='o',linewidth=3,markersize=14)
+    ax.set_xlabel("Number of Cells",fontweight='bold')
+    ax.set_ylabel("Throughput per Cell (Mbps)",fontweight='bold',color='red')
+    #ax.set_ylim(0,110)
+    
+
+    ax2=ax.twinx()
+    ax2.plot(data1['No_of_cells'],data1['TotalCPU'],linestyle='solid',label='CPU Usage',color='darkcyan',marker='^',linewidth=3,markersize=14)
+    ax2.set_ylim(0,120)
+    ax.set_ylim(0,120)
+    ax.set_xlim(0,11)
+    ax.set_xticks(data1['No_of_cells'])
+    ax2.set_ylabel("CPU Usage (%)",fontweight='bold',color='darkcyan')
+    ax.xaxis.label.set_color('black')
+    ax.yaxis.label.set_color('black')
+    ax2.yaxis.label.set_color('black')
+    ax.tick_params(colors='black')
+    ax2.tick_params(colors='black')
+    #plt.legend(framealpha=0.8,fontsize=22)
+    ax.spines['bottom'].set_color('black')
+    ax.spines['top'].set_color('black')
+    ax.spines['left'].set_color('black')
+    ax.spines['right'].set_color('black')
+    ax2.spines['bottom'].set_color('black')
+    ax2.spines['top'].set_color('black')
+    ax2.spines['left'].set_color('black')
+    ax2.spines['right'].set_color('black')
+    ax.grid(True,color='black',linestyle='-.', linewidth = 0.5)
+    ax2.grid(True,color='black',linestyle='-.', linewidth = 0.5)
+    fig.subplots_adjust(wspace=0.2)
+    fig.subplots_adjust(hspace=0.2)
+    ax.legend(loc='lower center',framealpha=0.8,fontsize=23)
+    ax2.legend(loc='lower right',framealpha=0.8,fontsize=23)
+    #plt.legend(framealpha=0.8,fontsize=25)
+    
+    plt.savefig(graphsdir+"/largescale_cpu_throughput.pdf", transparent=True)
+    plt.show()
 
 #############main##############
-#For Experiment 1
-#file1="/Users/cuidi/iCloud/Research/5G/Sigcomm_Test/UsefulData/rate_usage_stackedbar.csv"
+#For Experiment 1 in paper
+#figure 4  #rate_usage_stackedbarwithMaxMCS.xlsx
+#file1="/Users/cuidi/iCloud/Research/5G/Sigcomm_Test/UsefulData/rate_usage_stackedbar.csv"  #Original data. Abandoned
+#file1="/Users/cuidi/iCloud/Research/5G/Sigcomm_Test/UsefulData/rate_usage_stackedbarc_emuvsreal_ahan.csv"   #Posted in paper
+#file1="/Users/cuidi/iCloud/Research/5G/Sigcomm_Test/UsefulData/rate_cpu_centri_vs_line.csv"   #ID change to Cuidi and Ahan
 #readCpuUsage2(file1)
 
+#For Experiment 1 in Presentation
+#PLEASE SEE graphtest.py
+
 #For Experiment 2
+#Figure 5
 #file2="/Users/cuidi/iCloud/Research/5G/Sigcomm_Test/UsefulData/gnbvscudu_trend.csv"
 #readgnbvscudu_trend(file2)
 
 #For Experiment 3
-file3="/Users/cuidi/iCloud/Research/5G/Sigcomm_Test/UsefulData/extralatency_cudugnb.csv"
-readlatencycsv(file3)
+#Figure6
+#file3="/Users/cuidi/iCloud/Research/5G/Sigcomm_Test/UsefulData/latencyandextra_cudugnb.csv"
+#readlatencycsv(file3)
 
 #For Experiment 4 failed, See trypd.py
 #file4="/Users/cuidi/iCloud/Research/5G/Sigcomm_Test/UsefulData/4DLvs4UL.csv"
 #func4DLvs4UL(file4)
 
 #For Experiment 5
+#Figure 7
 #file5="/Users/cuidi/iCloud/Research/5G/Sigcomm_Test/UsefulData/real_cpu_rate_stackedbar.csv"
 #os.system("sed -i '' 's/%//g' /Users/cuidi/iCloud/Research/5G/Sigcomm_Test/UsefulData/real_cpu_rate_stackedbar.csv")
 #read_CPUUsage_real(file5)
@@ -547,3 +714,8 @@ readlatencycsv(file3)
 #file6="/Users/cuidi/iCloud/Research/5G/Sigcomm_Test/UsefulData/MCS_CPUThroughput.csv"
 #os.system("sed -i '' 's/%//g' /Users/cuidi/iCloud/Research/5G/Sigcomm_Test/UsefulData/MCS_CPUThroughput.csv")
 #read_mcs_cpu_throughput(file6)
+
+#For Large Scale Experiment
+#file7="/Users/cuidi/iCloud/Research/5G/Sigcomm_Test/UsefulData/cpuusage_largescale.csv"
+#os.system("sed -i '' 's/%//g' /Users/cuidi/iCloud/Research/5G/Sigcomm_Test/UsefulData/cpuusage_largescale.csv")
+#graph_throughputcpu_largescale(file7)

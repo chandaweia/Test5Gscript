@@ -5,6 +5,7 @@ import sys
 import csv
 import numpy as np
 import matplotlib.pyplot as plt
+import string
 #plt.rcdefaults()
 graphsdir="/Users/cuidi/iCloud/Research/5G/Sigcomm_Test/UsefulData/Graphs"
 plt.rcParams['figure.figsize'] = (9,6)
@@ -42,15 +43,16 @@ def countoverhead(filename):
 def bargraph_cpuusage(X,Y,savefig):
 	#print("X:",X)
 	#print("Y:",Y)
+	plt.rc('font', size=18)
 	Xticks=np.arange(len(X))
 	plt.bar(X, Y, 0.8, color="blue")  
 	#plt.bar(XX,YY,1,color="yellow")
 	plt.xlabel("Layers",fontweight='bold')  
-	plt.ylabel("CPU Usage(%)",fontweight='bold')  
+	plt.ylabel("CPU Usage (%)",fontweight='bold')  
 	#plt.title("CPU Usage")
 	#use text to show the value
 	for a,b in zip(Xticks,Y):
-		plt.text(x=a-0.4 , y=b+0.05 , s=f"{b}%" , fontdict=dict(fontsize=16))
+		plt.text(x=a-0.4 , y=b+0.05, s=f"{b}%", fontdict=dict(fontsize=16))
 		#plt.text(x=a , y = b , s=f"{b}" , fontdict=dict(fontsize=10))
 	
 	plt.ylim(0,100)    #set y-axis range
@@ -58,6 +60,8 @@ def bargraph_cpuusage(X,Y,savefig):
 	plt.show()
 
 def bargraph(X,Y,savefig):
+	print(X)
+	print(Y)
 	Xticks=np.arange(len(X))
 	plt.bar(X, Y, 0.8, color="blue")  
 	#plt.bar(XX,YY,1,color="yellow")
@@ -67,7 +71,7 @@ def bargraph(X,Y,savefig):
 	print("will save to:",savefig)
 	#use text to show the value
 	for a,b in zip(Xticks,Y):
-		plt.text(x=a-0.25 , y=b+0.05 , s=f"{b}" , fontdict=dict(fontsize=10))
+		plt.text(x=a-0.25 , y=b+0.05 , s=f"{b}%" , fontdict=dict(fontsize=10))
 		#plt.text(x=a-0.25 , y=b+0.05, fontdict=dict(fontsize=10))
 		#plt.text(x=a , y = b , s=f"{b}" , fontdict=dict(fontsize=10))
 	
@@ -90,7 +94,8 @@ def draw1file(filename,totalcpu):
 	print("layersum:",layersum)
 	#print("Layers:",layers)
 	print("+++Perf Sample:",layers,":",sums)
-	print("+++Perf Sample:",layers2,sums2)
+	print("+++Perf Sample:",layers2,sums2,end=',')
+	print("L2+L3+SYS:",100-sum(sums2))
 	print("+++Perf Sample:",layers3,sums3)
 	
 	bargraph(layers,sums,"")
@@ -100,15 +105,18 @@ def draw1file(filename,totalcpu):
 
 	if(totalcpu==0):
 		return
+	#print("+++++++totalcpu:",totalcpu)
 	sums=[(round(i*totalcpu,2)) for i in sums]
 	sums2=[(round(i*totalcpu,2)) for i in sums2]
 	sums3=[(round(i*totalcpu,2)) for i in sums3]
 	print("+++CPU Usage:",layers,":",sums)
-	print("+++CPU Usage:",layers2,sums2)
+	print("+++CPU Usage:",layers2,sums2,end=',')
+	print("L2+L3+SYS:",totalcpu*100-sum(sums2))
 	print("+++CPU Usage:",layers3,sums3)
-	savefig=graphsdir+"/4MbpsUL_overall_dis_new.pdf"
+	savefig=graphsdir+"/90MbpsDL_overall_dis.pdf"
 	bargraph_cpuusage(layers,sums,savefig)
-	savefig=graphsdir+"/4MbpsUL_highlow_new.pdf"
+	print("+++++save to:",savefig)
+	savefig=graphsdir+"/90MbpsDL_highlow_dis.pdf"
 	bargraph_cpuusage(layers2,sums2,savefig)
 def draw1file_perfsample(filename):
 	savetopic=filename.rstrip(".csv")
